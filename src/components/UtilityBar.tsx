@@ -23,7 +23,7 @@ export default function UtilityBar() {
             <Link href="/payment-information">Payment Information</Link>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <Link href="/contact">Contact</Link>
           </li>
           <li>
             <a href="#">EN</a>

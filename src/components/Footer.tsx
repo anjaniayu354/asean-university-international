@@ -3,33 +3,26 @@
 import React from 'react';
 import Link from 'next/link';
 
+export type AppView =
+  | 'home'
+  | 'detail'
+  | 'about'
+  | 'structure'
+  | 'admissions'
+  | 'academic'
+  | 'accreditation'
+  | 'payment'
+  | 'contact'
+  | 'privacy'
+  | 'terms'
+  | 'accessibility';
+
 interface FooterProps {
-  onNavigate?: (
-    view:
-      | 'home'
-      | 'detail'
-      | 'about'
-      | 'structure'
-      | 'admissions'
-      | 'academic'
-      | 'accreditation'
-      | 'payment'
-  ) => void;
+  onNavigate?: (view: AppView) => void;
 }
 
 export default function Footer({ onNavigate }: FooterProps) {
-  const handleView = (
-    e: React.MouseEvent,
-    view:
-      | 'home'
-      | 'detail'
-      | 'about'
-      | 'structure'
-      | 'admissions'
-      | 'academic'
-      | 'accreditation'
-      | 'payment'
-  ) => {
+  const handleView = (e: React.MouseEvent, view: AppView) => {
     if (onNavigate) {
       e.preventDefault();
       onNavigate(view);
@@ -100,6 +93,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <li><Link href="/accreditation" onClick={(e) => handleView(e, 'accreditation')}>Accreditation</Link></li>
               <li><a href="#news">News &amp; Articles</a></li>
               <li><Link href="/payment-information" onClick={(e) => handleView(e, 'payment')}>Payment &amp; Bank Details</Link></li>
+              <li><Link href="/contact" onClick={(e) => handleView(e, 'contact')}>Contact Information</Link></li>
               <li><a href="#network">AUI Network</a></li>
               <li><a href="#tuition">Scholarship Available</a></li>
               <li><a href="#anywhere">Study From Anywhere</a></li>
@@ -115,15 +109,32 @@ export default function Footer({ onNavigate }: FooterProps) {
               <li style={{ marginTop: '8px' }}>
                 F-2-23, Jalan BG 3B/1 Bangi Gateway 3B, Seksyen 15, 43650 Bandar Baru Bangi, Selangor, Malaysia
               </li>
+              <li style={{ marginTop: '8px' }}>
+                <Link href="/contact" onClick={(e) => handleView(e, 'contact')} className="link-gold" style={{ fontWeight: 600 }}>
+                  View Campus Map &amp; Directions &rarr;
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
         <div className="ftr-btm">
           <span>ASIAN INTERNATIONAL EDUCATION SDN BHD | 2026 &copy; All Rights Reserved.</span>
           <ul>
-            <li><a href="#privacy">Privacy Policy</a></li>
-            <li><a href="#terms">Terms of Use</a></li>
-            <li><a href="#accessibility">Accessibility</a></li>
+            <li>
+              <Link href="/privacy" onClick={(e) => handleView(e, 'privacy')}>
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link href="/terms" onClick={(e) => handleView(e, 'terms')}>
+                Terms of Use
+              </Link>
+            </li>
+            <li>
+              <Link href="/accessibility" onClick={(e) => handleView(e, 'accessibility')}>
+                Accessibility
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

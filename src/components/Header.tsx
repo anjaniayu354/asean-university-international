@@ -3,27 +3,23 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
+export type AppView =
+  | 'home'
+  | 'detail'
+  | 'about'
+  | 'structure'
+  | 'admissions'
+  | 'academic'
+  | 'accreditation'
+  | 'payment'
+  | 'contact'
+  | 'privacy'
+  | 'terms'
+  | 'accessibility';
+
 interface HeaderProps {
-  currentView?:
-    | 'home'
-    | 'detail'
-    | 'about'
-    | 'structure'
-    | 'admissions'
-    | 'academic'
-    | 'accreditation'
-    | 'payment';
-  onNavigate?: (
-    view:
-      | 'home'
-      | 'detail'
-      | 'about'
-      | 'structure'
-      | 'admissions'
-      | 'academic'
-      | 'accreditation'
-      | 'payment'
-  ) => void;
+  currentView?: AppView;
+  onNavigate?: (view: AppView) => void;
 }
 
 export default function Header({ currentView = 'home', onNavigate }: HeaderProps) {
@@ -54,15 +50,7 @@ export default function Header({ currentView = 'home', onNavigate }: HeaderProps
 
   const handleLinkClick = (
     e: React.MouseEvent,
-    view:
-      | 'home'
-      | 'detail'
-      | 'about'
-      | 'structure'
-      | 'admissions'
-      | 'academic'
-      | 'accreditation'
-      | 'payment'
+    view: AppView
   ) => {
     if (onNavigate) {
       e.preventDefault();
@@ -178,6 +166,64 @@ export default function Header({ currentView = 'home', onNavigate }: HeaderProps
       } else {
         window.location.href = '/payment-information';
       }
+    } else if (
+      query.includes('contact') ||
+      query.includes('hubungi') ||
+      query.includes('peta') ||
+      query.includes('map') ||
+      query.includes('maps') ||
+      query.includes('lokasi') ||
+      query.includes('alamat') ||
+      query.includes('telepon') ||
+      query.includes('phone') ||
+      query.includes('whatsapp') ||
+      query.includes('email') ||
+      query.includes('bangi')
+    ) {
+      if (onNavigate) {
+        onNavigate('contact');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else {
+        window.location.href = '/contact';
+      }
+    } else if (
+      query.includes('privacy') ||
+      query.includes('privasi') ||
+      query.includes('pdpa') ||
+      query.includes('dpo')
+    ) {
+      if (onNavigate) {
+        onNavigate('privacy');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else {
+        window.location.href = '/privacy';
+      }
+    } else if (
+      query.includes('term') ||
+      query.includes('syarat') ||
+      query.includes('ketentuan') ||
+      query.includes('tos') ||
+      query.includes('legal')
+    ) {
+      if (onNavigate) {
+        onNavigate('terms');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else {
+        window.location.href = '/terms';
+      }
+    } else if (
+      query.includes('accessib') ||
+      query.includes('aksesibilitas') ||
+      query.includes('wcag') ||
+      query.includes('disabilitas') ||
+      query.includes('a11y')
+    ) {
+      if (onNavigate) {
+        onNavigate('accessibility');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else {
+        window.location.href = '/accessibility';
+      }
     } else {
       if (onNavigate) {
         onNavigate('academic');
@@ -232,6 +278,34 @@ export default function Header({ currentView = 'home', onNavigate }: HeaderProps
         window.scrollTo({ top: 0, behavior: 'instant' });
       } else {
         window.location.href = '/payment-information';
+      }
+    } else if (query.includes('contact') || query.includes('map') || query.includes('lokasi')) {
+      if (onNavigate) {
+        onNavigate('contact');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else {
+        window.location.href = '/contact';
+      }
+    } else if (query.includes('privacy')) {
+      if (onNavigate) {
+        onNavigate('privacy');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else {
+        window.location.href = '/privacy';
+      }
+    } else if (query.includes('term')) {
+      if (onNavigate) {
+        onNavigate('terms');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else {
+        window.location.href = '/terms';
+      }
+    } else if (query.includes('accessib')) {
+      if (onNavigate) {
+        onNavigate('accessibility');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else {
+        window.location.href = '/accessibility';
       }
     } else {
       if (onNavigate) {

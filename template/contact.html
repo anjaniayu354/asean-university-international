@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Information &amp; Campus Location — ASEAN University International (AUI)</title>
+    <meta name="description" content="Contact ASEAN University International (AUI) — campus location in Bangi Gateway, Selangor, Malaysia, admissions hotline, email desk, and interactive Google Map.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Karla:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --brand: #0A2E52;
+            --brand-2: #12467A;
+            --brand-3: #071E38;
+            --gold: #C9962E;
+            --gold-2: #AC7F22;
+            --gold-soft: #F0DFB4;
+            --cream: #FBF8F1;
+            --paper: #FFF;
+            --ink: #152232;
+            --muted: #5C6B7D;
+            --line: rgba(10, 46, 82, .14);
+            --line-soft: rgba(10, 46, 82, .08);
+            --radius: 6px;
+            --maxw: 1240px;
+            --serif: "Fraunces", Georgia, serif;
+            --sans: "Karla", Helvetica, sans-serif;
+            --mono: "JetBrains Mono", monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--sans);
+            color: var(--ink);
+            background: var(--cream);
+            font-size: 16px;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color .2s ease;
+        }
+
+        button {
+            font-family: inherit;
+            cursor: pointer;
+            border: 0;
+            background: none;
+        }
+
+        .wrap {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        /* UTIL BAR */
+        .util {
+            background: var(--brand-3);
+            color: rgba(255, 255, 255, .7);
+            font-size: 12.5px;
+            border-bottom: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .util .wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        .util ul {
+            display: flex;
+            gap: 18px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .util a:hover {
+            color: #fff;
+        }
+
+        .util .sep {
+            opacity: .3;
+        }
+
+        /* HEADER */
+        .hdr {
+            position: sticky;
+            top: 0;
+            z-index: 80;
+            background: rgba(255, 255, 255, .95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--line-soft);
+        }
+
+        .hdr .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-link img {
+            height: 48px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14.5px;
+            font-weight: 600;
+            letter-spacing: .02em;
+            color: var(--brand);
+            padding: 8px 0;
+            position: relative;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--gold);
+        }
+
+        .nav-links a.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            font-weight: 700;
+            font-size: 13.5px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            border-radius: var(--radius);
+            transition: all .2s ease;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: #fff;
+        }
+
+        .btn-gold:hover {
+            background: var(--gold-2);
+            color: #fff;
+            transform: translateY(-1px);
+        }
+
+        .btn-line {
+            border: 1px solid var(--line);
+            color: var(--brand);
+            background: #fff;
+        }
+
+        .btn-line:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .btn-block {
+            width: 100%;
+        }
+
+        /* HERO */
+        .ahero {
+            position: relative;
+            background: var(--brand-3);
+            color: #fff;
+            padding: 90px 0 80px;
+            overflow: hidden;
+        }
+
+        .ahero-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .25;
+            mix-blend-mode: luminosity;
+        }
+
+        .ahero .wrap {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .ahero h1 {
+            font-family: var(--serif);
+            font-size: 50px;
+            line-height: 1.15;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .ahero .sub {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 21px;
+            color: var(--gold-soft);
+            margin-bottom: 20px;
+        }
+
+        .ahero .lede {
+            font-size: 17.5px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, .82);
+            margin-bottom: 28px;
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, .1);
+            border: 1px solid rgba(255, 255, 255, .18);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 13.5px;
+            color: #fff;
+            backdrop-filter: blur(8px);
+        }
+
+        .chip-dot {
+            width: 7px;
+            height: 7px;
+            background: var(--gold);
+            border-radius: 50%;
+        }
+
+        /* QUICK INFO */
+        .qinfo {
+            background: #fff;
+            border-bottom: 1px solid var(--line-soft);
+        }
+
+        .qinfo .wrap {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .qi {
+            padding: 32px 24px;
+            border-right: 1px solid var(--line-soft);
+        }
+
+        .qi:last-child {
+            border-right: 0;
+        }
+
+        .qi-ic {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .qi-t {
+            font-size: 11px;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--muted);
+            margin-bottom: 6px;
+        }
+
+        .qi-d {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--brand);
+            line-height: 1.45;
+        }
+
+        /* SECTION */
+        .sec {
+            padding: 80px 0;
+        }
+
+        .sec-head {
+            margin-bottom: 40px;
+        }
+
+        .sec-head h2 {
+            font-family: var(--serif);
+            font-size: 38px;
+            line-height: 1.2;
+            color: var(--brand);
+            margin-bottom: 12px;
+        }
+
+        .sec-head .lead {
+            font-size: 17px;
+            color: var(--muted);
+            max-width: 820px;
+        }
+
+        /* MAP SHOWCASE */
+        .map-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(10, 46, 82, .06);
+        }
+
+        .map-card-bar {
+            background: var(--brand);
+            color: #fff;
+            padding: 14px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13.5px;
+        }
+
+        .map-card-bar strong {
+            color: var(--gold-soft);
+        }
+
+        .map-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            min-height: 480px;
+        }
+
+        .map-iframe-wrap {
+            position: relative;
+            background: #eef1f5;
+        }
+
+        .map-iframe-wrap iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 460px;
+            border: 0;
+            display: block;
+        }
+
+        .map-info {
+            padding: 36px 32px;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .map-badge {
+            display: inline-block;
+            background: var(--gold-soft);
+            color: var(--brand-3);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .12em;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+
+        .map-info h3 {
+            font-family: var(--serif);
+            font-size: 24px;
+            color: var(--brand);
+            margin-bottom: 6px;
+        }
+
+        .map-info .sub-title {
+            font-size: 14px;
+            color: var(--gold-2);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .map-address-box {
+            display: flex;
+            gap: 12px;
+            background: var(--cream);
+            padding: 16px 18px;
+            border: 1px solid var(--line-soft);
+            border-radius: var(--radius);
+            margin-bottom: 24px;
+            font-size: 14px;
+            color: var(--ink);
+        }
+
+        .map-actions {
+            display: grid;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .map-transit {
+            border-top: 1px solid var(--line-soft);
+            padding-top: 18px;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .map-transit h4 {
+            font-size: 12.5px;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            color: var(--brand);
+            margin-bottom: 8px;
+        }
+
+        .map-transit ul {
+            list-style: none;
+            display: grid;
+            gap: 6px;
+        }
+
+        /* 2-COLUMN MAIN */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .dept-card {
+            background: #fff;
+            border: 1px solid var(--line-soft);
+            border-radius: var(--radius);
+            padding: 22px 24px;
+            margin-bottom: 16px;
+            display: flex;
+            gap: 16px;
+        }
+
+        .dept-ic {
+            font-size: 24px;
+            flex: none;
+            width: 44px;
+            height: 44px;
+            border: 1px solid var(--line-soft);
+            display: grid;
+            place-items: center;
+            border-radius: 6px;
+            background: var(--cream);
+        }
+
+        .dept-card h4 {
+            font-family: var(--serif);
+            font-size: 18px;
+            color: var(--brand);
+            margin-bottom: 6px;
+        }
+
+        .dept-card p {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 10px;
+        }
+
+        .dept-card a {
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--brand);
+        }
+
+        .dept-card a:hover {
+            color: var(--gold);
+        }
+
+        /* FORM */
+        .form-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 38px 34px;
+            box-shadow: 0 8px 24px rgba(10, 46, 82, .05);
+        }
+
+        .form-card h3 {
+            font-family: var(--serif);
+            font-size: 26px;
+            color: var(--brand);
+            margin-bottom: 8px;
+        }
+
+        .form-card p {
+            font-size: 14.5px;
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+
+        .fgroup {
+            margin-bottom: 18px;
+        }
+
+        .fgroup label {
+            display: block;
+            font-size: 12.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            color: var(--brand);
+            margin-bottom: 6px;
+        }
+
+        .fgroup input,
+        .fgroup select,
+        .fgroup textarea {
+            width: 100%;
+            padding: 12px 14px;
+            font-family: inherit;
+            font-size: 14.5px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: #fff;
+            color: var(--ink);
+            transition: border .2s ease;
+        }
+
+        .fgroup input:focus,
+        .fgroup select:focus,
+        .fgroup textarea:focus {
+            outline: 0;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(201, 150, 46, .18);
+        }
+
+        .frow-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        /* FOOTER */
+        .ftr {
+            background: var(--brand-3);
+            color: #fff;
+            padding: 80px 0 32px;
+            font-size: 14px;
+        }
+
+        .ftr-main {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 60px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+        }
+
+        .ftr h4 {
+            font-family: var(--serif);
+            font-size: 18px;
+            color: var(--gold-soft);
+            margin-bottom: 18px;
+        }
+
+        .ftr ul {
+            list-style: none;
+            display: grid;
+            gap: 10px;
+        }
+
+        .ftr a {
+            color: rgba(255, 255, 255, .75);
+        }
+
+        .ftr a:hover {
+            color: #fff;
+        }
+
+        .ftr-btm {
+            padding-top: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12.5px;
+            color: rgba(255, 255, 255, .5);
+        }
+
+        .ftr-btm ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        @media (max-width: 900px) {
+            .map-grid {
+                grid-template-columns: 1fr;
+            }
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .qinfo .wrap {
+                grid-template-columns: 1fr 1fr;
+            }
+            .ftr-main {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .qinfo .wrap {
+                grid-template-columns: 1fr;
+            }
+            .frow-2 {
+                grid-template-columns: 1fr;
+            }
+            .ftr-btm {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- UTIL -->
+    <div class="util">
+        <div class="wrap">
+            <ul>
+                <li><a href="mailto:admin@aui.university">✉ admin@aui.university</a></li>
+                <li class="sep">|</li>
+                <li><a href="tel:+60165680906">☎ +60 165 680 906</a></li>
+                <li class="sep">|</li>
+                <li><a href="#students">Portal AUI (Students)</a></li>
+            </ul>
+            <ul>
+                <li><a href="payment.html">Payment Information</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">EN</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="hdr">
+        <div class="wrap">
+            <a href="sample.html" class="brand-link">
+                <img src="../public/img/logo.png" alt="ASEAN University International">
+            </a>
+            <ul class="nav-links">
+                <li><a href="sample.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="sample.html#structure">Structure</a></li>
+                <li><a href="addmissions.html">Admissions</a></li>
+                <li><a href="accademic.html">Academic</a></li>
+                <li><a href="sample.html#accreditation">Accreditation</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <a href="addmissions.html" class="btn btn-gold">Apply Now</a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="ahero">
+        <img class="ahero-img" src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1800&q=70" alt="ASEAN University International Campus">
+        <div class="wrap">
+            <div class="eyebrow">Contact &amp; Global Secretariat</div>
+            <h1>Contact Information</h1>
+            <div class="sub">Connect with ASEAN University International</div>
+            <p class="lede">
+                Our admissions counselors, faculty secretariats, and international student advisory
+                teams are ready to assist with your academic enrollment, credit transfers, and
+                campus visits in Malaysia.
+            </p>
+            <div class="chips">
+                <span class="chip"><span class="chip-dot"></span> 📍 Bangi Gateway, Selangor, Malaysia</span>
+                <span class="chip"><span class="chip-dot"></span> ⏱ Response SLA: ≤ 24 Hours</span>
+                <span class="chip"><span class="chip-dot"></span> 🌐 Online &amp; In-Person Consultations</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUICK INFO -->
+    <section class="qinfo">
+        <div class="wrap">
+            <div class="qi">
+                <div class="qi-ic">📍</div>
+                <div class="qi-t">Campus Location</div>
+                <div class="qi-d">F-2-23, Bangi Gateway 3B, Seksyen 15, 43650 Bandar Baru Bangi, Selangor, Malaysia</div>
+            </div>
+            <div class="qi">
+                <div class="qi-ic">☎</div>
+                <div class="qi-t">Phone &amp; WhatsApp</div>
+                <div class="qi-d">
+                    <a href="tel:+60165680906">+60 165 680 906</a><br>
+                    <span style="font-size:12px; color:#888;">Direct admissions hotline</span>
+                </div>
+            </div>
+            <div class="qi">
+                <div class="qi-ic">✉</div>
+                <div class="qi-t">Official Email Desk</div>
+                <div class="qi-d">
+                    <a href="mailto:admin@aui.university">admin@aui.university</a><br>
+                    <a href="mailto:finance@aui.university" style="font-size:12px;">finance@aui.university</a>
+                </div>
+            </div>
+            <div class="qi">
+                <div class="qi-ic">🕒</div>
+                <div class="qi-t">Operating Hours</div>
+                <div class="qi-d">Mon – Fri: 08:30 – 17:30 (MYT)<br>Sat: 09:00 – 13:00 (MYT)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP SHOWCASE -->
+    <section class="sec" id="campus-map">
+        <div class="wrap">
+            <div class="sec-head">
+                <div class="eyebrow">Interactive Campus Location</div>
+                <h2>Visit Our Malaysia Campus &amp; Administrative Headquarters</h2>
+                <p class="lead">
+                    Conveniently located at Bangi Gateway in Bandar Baru Bangi, Selangor — just 25 minutes
+                    from Kuala Lumpur International Airport (KLIA) and directly accessible via the PLUS
+                    North-South Expressway.
+                </p>
+            </div>
+
+            <div class="map-card">
+                <div class="map-card-bar">
+                    <div><strong>Asean University International</strong> — Bangi Gateway Complex</div>
+                    <div>GPS: 2.9289° N, 101.7647° E • Selangor, Malaysia</div>
+                </div>
+                <div class="map-grid">
+                    <div class="map-iframe-wrap">
+                        <iframe title="AUI Google Maps Location" src="https://maps.google.com/maps?q=2.9289376,101.7647136&hl=en&z=16&output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="map-info">
+                        <div>
+                            <span class="map-badge">Official Campus</span>
+                            <h3>Asean International Education SDN. BHD</h3>
+                            <div class="sub-title">Asean University International (AUI)</div>
+                            <div class="map-address-box">
+                                <div>📍</div>
+                                <div>
+                                    <strong>Full Postal Address:</strong><br>
+                                    F-2-23, Jalan BG 3B/1 Bangi Gateway 3B, Seksyen 15, 43650 Bandar Baru Bangi, Selangor Darul Ehsan, Malaysia
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="map-actions">
+                                <a href="https://maps.app.goo.gl/4FWdMa4oNG3x3BGi7" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-block" id="btn-open-google-maps">
+                                    Buka di Google Maps ↗
+                                </a>
+                                <a href="https://maps.app.goo.gl/4FWdMa4oNG3x3BGi7" target="_blank" rel="noopener noreferrer" class="btn btn-line btn-block">
+                                    🚗 Petunjuk Arah (Directions)
+                                </a>
+                            </div>
+
+                            <div class="map-transit">
+                                <h4>Getting Here:</h4>
+                                <ul>
+                                    <li>✈️ <b>By Air:</b> ~25 mins from KLIA 1 &amp; 2 via ELITE/PLUS.</li>
+                                    <li>🚆 <b>By Rail:</b> KTM Komuter UKM or Bangi Station (~7 mins).</li>
+                                    <li>🚗 <b>By Car:</b> Exit 212 (Bangi Interchange) from PLUS Expressway.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN DIRECTORY & FORM -->
+    <section class="sec" style="background:#fbf9f4;">
+        <div class="wrap">
+            <div class="main-grid">
+                <!-- Left: Department Directory -->
+                <div>
+                    <div class="eyebrow">Department Directory</div>
+                    <h2 style="font-family:var(--serif); font-size:32px; color:var(--brand); margin-bottom:24px;">Direct Department Contacts</h2>
+                    <p style="color:var(--muted); font-size:15px; margin-bottom:32px;">Need targeted assistance? Reach out directly to the specialized division overseeing your academic or administrative inquiry.</p>
+
+                    <div class="dept-card">
+                        <div class="dept-ic">🎓</div>
+                        <div>
+                            <h4>Admissions &amp; Enrollment Office</h4>
+                            <p>Program prerequisites, international student admission, credit transfers, and academic track selection.</p>
+                            <a href="mailto:admin@aui.university">✉ admin@aui.university</a> • <a href="tel:+60165680906">☎ +60 165 680 906</a>
+                        </div>
+                    </div>
+
+                    <div class="dept-card">
+                        <div class="dept-ic">💳</div>
+                        <div>
+                            <h4>Bursary &amp; Tuition Payment Services</h4>
+                            <p>Tuition fees verification, wire transfers, payment receipts, student invoicing, and payment plan inquiries.</p>
+                            <a href="mailto:finance@aui.university">✉ finance@aui.university</a> • <a href="payment.html" style="color:var(--gold);">View Bank Accounts &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="dept-card">
+                        <div class="dept-ic">📜</div>
+                        <div>
+                            <h4>Academic Affairs &amp; Registrar</h4>
+                            <p>Official transcripts, graduation eligibility, student ID verification, and academic status certifications.</p>
+                            <a href="mailto:admin@aui.university">✉ registrar@aui.university</a> • <a href="#students">Student Portal Access</a>
+                        </div>
+                    </div>
+
+                    <div class="dept-card">
+                        <div class="dept-ic">🏛️</div>
+                        <div>
+                            <h4>Corporate Governance &amp; MoUs</h4>
+                            <p>ASEAN university partnerships, international collaboration agreements, and institutional accreditation inquiries.</p>
+                            <a href="mailto:admin@aui.university">✉ secretariat@aui.university</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Form -->
+                <div>
+                    <div class="form-card">
+                        <h3>Submit an Online Inquiry</h3>
+                        <p>Fill out the form below and an AUI Academic Advisor will review your details and reply within 24 hours.</p>
+
+                        <form id="enquiryForm" onsubmit="event.preventDefault(); document.getElementById('enquiryForm').style.display='none'; document.getElementById('successMsg').style.display='block';">
+                            <div class="frow-2">
+                                <div class="fgroup">
+                                    <label for="fullName">Full Name *</label>
+                                    <input id="fullName" name="fullName" type="text" required placeholder="Your name">
+                                </div>
+                                <div class="fgroup">
+                                    <label for="email">Email Address *</label>
+                                    <input id="email" name="email" type="email" required placeholder="you@email.com">
+                                </div>
+                            </div>
+                            <div class="frow-2">
+                                <div class="fgroup">
+                                    <label for="phone">Phone / WhatsApp</label>
+                                    <input id="phone" name="phone" type="tel" placeholder="+60 12 345 6789">
+                                </div>
+                                <div class="fgroup">
+                                    <label for="country">Country</label>
+                                    <input id="country" name="country" type="text" placeholder="Your country">
+                                </div>
+                            </div>
+                            <div class="fgroup">
+                                <label for="programme">Programme of Interest</label>
+                                <select id="programme" name="programme">
+                                    <option>Bachelor Degree (MYR 35,000)</option>
+                                    <option>Master Degree (MYR 45,000)</option>
+                                    <option>Doctoral / Ph.D. (MYR 65,000)</option>
+                                    <option>General Inquiry</option>
+                                </select>
+                            </div>
+                            <div class="fgroup">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Tell us about your background or inquiry..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-gold btn-block">Send Inquiry &amp; Request Consultation &rarr;</button>
+                        </form>
+
+                        <div id="successMsg" style="display:none; text-align:center; padding:24px 12px; background:var(--cream); border:1px solid var(--gold); border-radius:var(--radius);">
+                            <div style="font-size:32px; color:var(--gold); margin-bottom:8px;">✓</div>
+                            <h4 style="font-family:var(--serif); font-size:20px; color:var(--brand); margin-bottom:6px;">Inquiry Sent Successfully!</h4>
+                            <p style="font-size:14px; color:var(--muted);">Our admissions officer will contact your email within 24 business hours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="ftr">
+        <div class="wrap">
+            <div class="ftr-main">
+                <div>
+                    <img src="../public/img/logo-footer.png" alt="AUI Logo" style="height:48px; margin-bottom:18px;">
+                    <p style="color:rgba(255,255,255,.7); max-width:340px; line-height:1.6;">
+                        ASEAN University International (AUI) is committed to accessible, world-class higher education across Southeast Asia and globally.
+                    </p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About AUI</a></li>
+                        <li><a href="sample.html#structure">Structure</a></li>
+                        <li><a href="addmissions.html">Admissions</a></li>
+                        <li><a href="accademic.html">Academic</a></li>
+                        <li><a href="payment.html">Payment Information</a></li>
+                        <li><a href="contact.html">Contact Information</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>✉ <a href="mailto:admin@aui.university">admin@aui.university</a></li>
+                        <li>☎ <a href="tel:+60165680906">+60 165 680 906</a></li>
+                        <li>F-2-23, Bangi Gateway 3B, Seksyen 15, 43650 Bandar Baru Bangi, Selangor, Malaysia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ftr-btm">
+                <span>ASIAN INTERNATIONAL EDUCATION SDN BHD | 2026 &copy; All Rights Reserved.</span>
+                <ul>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Use</a></li>
+                    <li><a href="#accessibility">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import UtilityBar from '@/components/UtilityBar';
-import Header from '@/components/Header';
+import Header, { AppView } from '@/components/Header';
 import Footer from '@/components/Footer';
 import AboutView from '@/components/AboutView';
 import { useRouter } from 'next/navigation';
@@ -10,17 +10,7 @@ import { useRouter } from 'next/navigation';
 export default function AboutPage() {
   const router = useRouter();
 
-  const handleNavigate = (
-    view:
-      | 'home'
-      | 'detail'
-      | 'about'
-      | 'structure'
-      | 'admissions'
-      | 'academic'
-      | 'accreditation'
-      | 'payment'
-  ) => {
+  const handleNavigate = (view: AppView) => {
     if (view === 'home') {
       router.push('/');
     } else if (view === 'detail' || view === 'academic') {
@@ -33,6 +23,14 @@ export default function AboutPage() {
       router.push('/accreditation');
     } else if (view === 'payment') {
       router.push('/payment-information');
+    } else if (view === 'contact') {
+      router.push('/contact');
+    } else if (view === 'privacy') {
+      router.push('/privacy');
+    } else if (view === 'terms') {
+      router.push('/terms');
+    } else if (view === 'accessibility') {
+      router.push('/accessibility');
     } else if (view === 'about') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
