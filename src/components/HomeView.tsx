@@ -49,7 +49,7 @@ const NEWS_ARTICLES: NewsItem[] = [
     date: '18 Oct 2026',
     readTime: '5 min read',
     tag: 'Graduation',
-    image: '/img/news-commencement.jpg',
+    image: '/img/89376r98172e09812r.jpeg',
     excerpt: 'AUI honours its global graduating cohort in a historic hybrid celebration uniting scholars, ambassadors, and faculty from around the world.'
   },
   {
@@ -592,14 +592,14 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
                     </div>
                     <div className="about-figure rv">
                         <img loading="lazy"
-                            src="/img/Kompleks%20Kampus%20Bata%20dengan%20Langit%20Putih.png"
-                            alt="AUI campus institution" />
+                            src="/img/depan-asen-university-international.webp"
+                            alt="Gedung Kampus Utama ASEAN University International" />
                         <img loading="lazy"
-                            src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=500&q=70"
-                            alt="Professional lecturer" />
+                            src="/img/bawah-asean-university-international.webp"
+                            alt="Kompleks Riset & Akademik AUI" />
                         <img loading="lazy"
-                            src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=500&q=70"
-                            alt="Students in class" />
+                            src="/img/89376r98172e09812r.jpeg"
+                            alt="Graduation Achievement ASEAN University International" />
                     </div>
                 </div>
             </div>
@@ -669,6 +669,86 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
                         <img loading="lazy"
                             src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=70"
                             alt="Admissions support" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/*  08.5 — GRADUATION ACHIEVEMENT & CONVOCATION SHOWCASE  */}
+        <section className="achievement-sec" id="graduation-achievement">
+            <div className="wrap">
+                <div className="achievement-grid rv">
+                    <div className="achievement-img-wrap">
+                        <img
+                            src="/img/89376r98172e09812r.jpeg"
+                            alt="ASEAN University International Graduation Achievement & Convocation"
+                            className="achievement-img"
+                            loading="lazy"
+                        />
+                        <div className="achievement-badge-floating">
+                            <div className="achievement-badge-icon">🎓</div>
+                            <div className="achievement-badge-text">
+                                <strong>Official Convocation &amp; Graduation Milestone</strong>
+                                <span>ASEAN University International Global Alumni Celebration</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="achievement-content">
+                        <div className="eyebrow">Academic Milestone &amp; Student Success</div>
+                        <h2>Graduation Achievement: Empowering Tomorrow&apos;s Leaders</h2>
+                        <p className="lead">
+                            Setiap upacara wisuda di ASEAN University International menandai keberhasilan transformatif mahasiswa dari berbagai negara ASEAN dan dunia. Lulusan kami dibekali kompetensi kepemimpinan praktis, wawasan global, dan gelar terakreditasi internasional yang diakui dunia industri.
+                        </p>
+
+                        <div className="achievement-stats-row">
+                            <div className="astat-box">
+                                <div className="astat-num">90%+</div>
+                                <div className="astat-lbl">Employability &le; 6 Months</div>
+                            </div>
+                            <div className="astat-box">
+                                <div className="astat-num">3,000+</div>
+                                <div className="astat-lbl">Graduates Worldwide</div>
+                            </div>
+                            <div className="astat-box">
+                                <div className="astat-num">5+</div>
+                                <div className="astat-lbl">Member Countries</div>
+                            </div>
+                            <div className="astat-box">
+                                <div className="astat-num">100+</div>
+                                <div className="astat-lbl">Global Industry Partners</div>
+                            </div>
+                        </div>
+
+                        <div className="achievement-actions">
+                            <Link
+                                href="/admissions"
+                                onClick={(e) => {
+                                    if (onNavigate) {
+                                        e.preventDefault();
+                                        onNavigate('admissions');
+                                        window.scrollTo({ top: 0, behavior: 'instant' });
+                                    }
+                                }}
+                                className="btn btn-gold"
+                            >
+                                Apply for Next Intake &rarr;
+                            </Link>
+                            <Link
+                                href="/academic"
+                                onClick={(e) => {
+                                    if (onNavigate) {
+                                        e.preventDefault();
+                                        onNavigate('academic');
+                                        window.scrollTo({ top: 0, behavior: 'instant' });
+                                    }
+                                }}
+                                className="btn btn-line"
+                                style={{ background: 'rgba(255,255,255,.12)', color: '#fff', borderColor: 'rgba(255,255,255,.3)' }}
+                            >
+                                Explore Programmes
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>
