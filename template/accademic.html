@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Academic — ASEAN University International (AUI)</title>
+<meta name="description" content="AUI Academic — 8 faculties and full course catalog from Bachelor to Doctoral level.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brand:#0A2E52;--brand-2:#12467A;--brand-3:#071E38;
+  --gold:#C9962E;--gold-2:#AC7F22;--gold-soft:#F0DFB4;
+  --cream:#FBF8F1;--paper:#FFF;
+  --ink:#152232;--muted:#5C6B7D;
+  --line:rgba(10,46,82,.14);--line-soft:rgba(10,46,82,.08);
+  --radius:6px;--maxw:1240px;
+  --serif:"Fraunces",Georgia,serif;--sans:"Karla",Helvetica,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:0;background:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--gold);display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--gold)}
+.sec{padding:104px 0}
+.sec-head{max-width:720px;margin-bottom:56px}
+.sec-head h2{font-family:var(--serif);font-weight:600;font-size:clamp(30px,3.6vw,44px);line-height:1.12}
+.sec-head p{color:var(--muted);margin-top:16px;font-size:17px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border-radius:var(--radius);transition:.25s}
+.btn-gold{background:var(--gold);color:#fff}.btn-gold:hover{background:var(--gold-2);letter-spacing:.2em}
+.btn-ghost{border:1px solid rgba(255,255,255,.55);color:#fff}.btn-ghost:hover{background:#fff;color:var(--brand)}
+.btn-brand{background:var(--brand);color:#fff}.btn-brand:hover{background:var(--brand-2);letter-spacing:.2em}
+.btn-line{border:1px solid var(--line);color:var(--brand);background:var(--paper)}.btn-line:hover{border-color:var(--gold);color:var(--gold)}
+.link-gold{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:inline-flex;gap:8px;align-items:center;transition:.2s}.link-gold:hover{gap:14px}
+
+/* UTILITY */
+.util{background:var(--brand-3);color:rgba(255,255,255,.75);font-size:12.5px}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;min-height:42px;gap:16px;flex-wrap:wrap;padding-top:6px;padding-bottom:6px}
+.util ul{display:flex;gap:20px;list-style:none;white-space:nowrap}
+.util a:hover{color:var(--gold-soft)}.util .sep{opacity:.35}
+
+/* HEADER */
+.hdr{position:sticky;top:0;z-index:100;background:rgba(251,248,241,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:86px;gap:24px}
+.logo{display:flex;align-items:center}.logo img{height:54px;width:auto}
+.nav{display:flex;gap:28px;list-style:none}
+.nav a{font-size:13.5px;font-weight:600;color:var(--brand);position:relative;padding:6px 0}
+.nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--gold);transition:.25s}
+.nav a:hover::after,.nav a.is-active::after{width:100%}
+.hdr-cta{display:flex;gap:12px;align-items:center}
+.lang{font-size:12px;font-weight:700;color:var(--muted);border-left:1px solid var(--line);padding-left:14px}
+.burger{display:none;flex-direction:column;gap:5px;padding:8px}.burger span{width:22px;height:2px;background:var(--brand)}
+
+/* CRUMB */
+.crumb{font-size:12px;color:var(--muted);padding:22px 0;display:flex;gap:10px;flex-wrap:wrap}
+.crumb a:hover{color:var(--gold)}.crumb span{opacity:.5}
+
+/* HERO */
+.ahero{background:var(--brand);color:#fff;position:relative;overflow:hidden}
+.ahero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.25}
+.ahero .wrap{position:relative;z-index:2;padding:80px 32px 72px}
+.ahero .eyebrow{color:var(--gold-soft)}
+.ahero h1{font-family:var(--serif);font-weight:400;font-size:clamp(38px,5vw,64px);line-height:1.04;margin-bottom:12px}
+.ahero .sub{font-family:var(--serif);font-style:italic;font-size:21px;color:var(--gold-soft);margin-bottom:22px}
+.ahero .lede{font-size:17px;color:rgba(255,255,255,.82);max-width:780px}
+.ahero-stats{display:flex;gap:36px;flex-wrap:wrap;margin-top:36px;padding-top:32px;border-top:1px solid rgba(255,255,255,.15)}
+.ahero-stats b{font-family:var(--serif);font-size:34px;font-weight:600;color:var(--gold-soft);display:block;line-height:1.1}
+.ahero-stats span{font-size:12px;color:rgba(255,255,255,.6);display:block;margin-top:4px;letter-spacing:.05em}
+
+/* QUICK STRIP */
+.qstrip{background:var(--paper);border-bottom:1px solid var(--line-soft)}
+.qstrip .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.qs{padding:28px 22px;text-align:center;border-right:1px solid var(--line-soft)}
+.qs:last-child{border:0}
+.qs b{font-family:var(--serif);font-size:20px;color:var(--brand);display:block}
+.qs span{font-size:12.5px;color:var(--muted)}
+
+/* ============================================================
+   FACULTIES GRID
+   ============================================================ */
+.fac-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.fac{background:#fff;border:1px solid var(--line-soft);display:flex;flex-direction:column;transition:.3s;overflow:hidden}
+.fac:hover{transform:translateY(-5px);box-shadow:0 24px 48px -24px rgba(10,46,82,.3)}
+.fac figure{aspect-ratio:16/10;overflow:hidden;background:var(--brand-2);position:relative}
+.fac figure img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.fac:hover figure img{transform:scale(1.06)}
+.fac figure::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.fac .body{padding:24px 22px 26px;display:flex;flex-direction:column;flex:1}
+.fac h3{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--brand);margin-bottom:8px;line-height:1.25}
+.fac p{font-size:13px;color:var(--muted);flex:1;margin-bottom:18px}
+.fac .btn{width:100%;justify-content:center;padding:11px 18px;font-size:11px}
+
+/* ============================================================
+   COURSE CATALOG
+   ============================================================ */
+.catalog{background:#fff;border-top:1px solid var(--line-soft)}
+.cat-intro{max-width:720px;margin:0 auto 52px;text-align:center}
+.cat-intro .eyebrow{justify-content:center}
+.cat-intro .eyebrow::before{display:none}
+.cat-intro h2{font-family:var(--serif);font-weight:600;font-size:clamp(28px,3.4vw,42px);line-height:1.12;margin-bottom:14px}
+.cat-intro p{color:var(--muted);font-size:16px}
+
+/* faculty tabs */
+.ftabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:44px}
+.ftab{
+  padding:10px 20px;border:1px solid var(--line);border-radius:99px;font-size:12px;
+  font-weight:700;letter-spacing:.08em;color:var(--muted);background:var(--cream);transition:.2s;
+  cursor:pointer;white-space:nowrap;
+}
+.ftab:hover{border-color:var(--gold);color:var(--gold)}
+.ftab.on{background:var(--brand);border-color:var(--brand);color:#fff}
+
+/* faculty panel */
+.fpanel{display:none}
+.fpanel.on{display:block}
+
+/* 3-level grid */
+.lv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.lv-card{background:var(--cream);border:1px solid var(--line-soft);display:flex;flex-direction:column;transition:.3s}
+.lv-card:hover{box-shadow:0 16px 36px -16px rgba(10,46,82,.2)}
+.lv-card header{padding:22px 26px 0;display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.lv-card .badge{
+  width:40px;height:40px;border-radius:50%;display:grid;place-items:center;
+  font-family:var(--serif);font-size:15px;font-weight:700;color:#fff;flex:none;
+}
+.lv-card .badge.s1{background:var(--brand)}
+.lv-card .badge.s2{background:var(--brand-2)}
+.lv-card .badge.s3{background:var(--gold)}
+.lv-card header div h4{font-family:var(--serif);font-size:16px;font-weight:600;color:var(--brand)}
+.lv-card header div span{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.lv-card .divider{height:1px;background:var(--line-soft);margin:0 26px}
+.lv-card ul{list-style:none;padding:18px 26px 26px;display:grid;gap:10px;flex:1}
+.lv-card ul li{
+  font-size:13.5px;color:var(--muted);display:flex;gap:10px;align-items:flex-start;
+  padding:8px 12px;background:#fff;border:1px solid var(--line-soft);border-radius:3px;
+}
+.lv-card ul li::before{content:"✦";color:var(--gold);font-size:10px;flex:none;margin-top:3px}
+.lv-card footer{padding:0 26px 24px}
+.lv-card footer .btn{width:100%;justify-content:center;padding:11px 18px;font-size:11px}
+
+/* ============================================================
+   STATS BAND
+   ============================================================ */
+.stats-band{background:var(--brand-3);color:#fff;position:relative;overflow:hidden}
+.stats-band::before{content:"";position:absolute;right:-120px;top:-80px;width:340px;height:340px;border:1px solid rgba(224,191,112,.18);border-radius:50%}
+.stats-band .wrap{position:relative;z-index:2;display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.12)}
+.sband{background:var(--brand-3);padding:38px 22px;text-align:center}
+.sband .row{display:flex;align-items:baseline;justify-content:center;gap:1px;margin-bottom:6px}
+.sband b{font-family:var(--serif);font-size:38px;font-weight:600;color:var(--gold-soft);display:block;line-height:1.1}
+.sband .sym{font-family:var(--serif);font-size:20px;color:var(--gold);display:block;transform:translateY(-2px);opacity:0;transition:opacity .5s}
+.sband .sym.on{opacity:1}
+.sband span{font-size:12px;color:rgba(255,255,255,.65);display:block;line-height:1.5}
+
+/* CTA */
+.visit{background:var(--gold);color:#fff}
+.visit .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:46px 32px;flex-wrap:wrap}
+.visit h3{font-family:var(--serif);font-size:30px;font-weight:600;margin-bottom:6px}
+.visit p{font-size:14.5px;color:rgba(255,255,255,.92)}
+.visit .btn-brand:hover{background:var(--brand-3)}
+
+/* CONTACT */
+.cband{background:var(--cream);border-top:1px solid var(--line-soft);padding:64px 0}
+.cband-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.cband-item{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line-soft);padding:24px 22px}
+.cband-item .ic{width:40px;height:40px;border:1px solid var(--line);display:grid;place-items:center;color:var(--gold);flex:none;font-size:16px}
+.cband-item b{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.cband-item a,.cband-item span{font-size:14px;font-weight:600;color:var(--brand)}
+.cband-item a:hover{color:var(--gold)}
+
+/* FOOTER */
+.ftr{background:var(--brand-3);color:rgba(255,255,255,.72);font-size:14px}
+.ftr-main{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:44px;padding:72px 0 56px}
+.ftr h4{color:#fff;font-family:var(--serif);font-size:16px;font-weight:600;margin-bottom:20px}
+.ftr ul{list-style:none;display:grid;gap:10px}
+.ftr a:hover{color:var(--gold-soft)}
+.ftr .logo img{height:56px;background:#fff;padding:6px 12px;border-radius:3px}
+.ftr-brand p{margin:20px 0 22px;font-size:13.5px;max-width:300px}
+.soc{display:flex;gap:10px}.soc a{width:36px;height:36px;border:1px solid rgba(255,255,255,.25);display:grid;place-items:center;font-size:13px;transition:.2s}.soc a:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+.newsletter{display:flex;margin-top:18px;border:1px solid rgba(255,255,255,.25)}
+.newsletter input{flex:1;background:transparent;border:0;padding:12px 14px;color:#fff;font-family:var(--sans);font-size:13px;outline:none}
+.newsletter input::placeholder{color:rgba(255,255,255,.45)}
+.newsletter button{background:var(--gold);color:#fff;padding:0 18px;font-size:11px;font-weight:700;letter-spacing:.12em}
+.ftr-btm{border-top:1px solid rgba(255,255,255,.12);padding:22px 0;display:flex;justify-content:space-between;gap:16px;font-size:12.5px;flex-wrap:wrap}
+.ftr-btm ul{display:flex;gap:22px;list-style:none}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+
+/* RESPONSIVE */
+@media(max-width:1080px){
+  .nav,.hdr-cta .btn,.lang{display:none}.burger{display:flex}
+  .fac-grid{grid-template-columns:repeat(2,1fr)}
+  .lv-grid{grid-template-columns:1fr;gap:20px}
+  .stats-band .wrap{grid-template-columns:repeat(3,1fr)}
+  .qstrip .wrap{grid-template-columns:repeat(2,1fr)}
+  .qs{border-bottom:1px solid var(--line-soft)}
+  .qs:nth-child(2){border-right:0}
+  .cband-grid{grid-template-columns:1fr 1fr}
+  .ftr-main{grid-template-columns:1fr 1fr}
+  .ahero-stats{gap:24px}
+}
+@media(max-width:760px){
+  .wrap{padding:0 20px}.sec{padding:72px 0}
+  .hdr.nav-open .nav{display:flex;position:absolute;top:86px;left:0;right:0;background:var(--cream);flex-direction:column;padding:26px 24px;gap:18px;border-bottom:1px solid var(--line)}
+  .fac-grid{grid-template-columns:1fr}
+  .stats-band .wrap,.qstrip .wrap,.cband-grid,.ftr-main{grid-template-columns:1fr}
+  .qs{border-right:0}
+  .ahero .wrap{padding:60px 20px 56px}
+  .ahero-stats{flex-direction:column;gap:18px}
+  .ftabs{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;padding-bottom:8px;-webkit-overflow-scrolling:touch}
+  .ftabs::-webkit-scrollbar{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- UTILITY -->
+<div class="util">
+  <div class="wrap">
+    <ul><li><a href="mailto:admin@aui.university">✉ admin@aui.university</a></li><li class="sep">|</li><li><a href="tel:+60165680906">☎ +60 165 680 906</a></li><li class="sep">|</li><li><a href="#">Portal AUI (Students)</a></li></ul>
+    <ul><li><a href="#">Payment Information</a></li><li><a href="#contact">Contact</a></li><li><a href="#">EN</a></li></ul>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a href="#" class="logo"><img src="https://aui.university/wp-content/uploads/2026/05/logo-title-asean-university-international.webp" alt="AUI logo"></a>
+    <nav><ul class="nav">
+      <li><a href="#">Home</a></li><li><a href="#">About</a></li>
+      <li><a href="#">Admissions</a></li><li><a href="#" class="is-active">Academic</a></li>
+      <li><a href="#">Payment Information</a></li><li><a href="#">Students</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+    <div class="hdr-cta">
+      <a href="#" class="btn btn-gold">Apply now</a>
+      <span class="lang">EN / 中文</span>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<div class="wrap"><div class="crumb"><a href="#">Home</a><span>/</span><b style="color:var(--brand)">Academic</b></div></div>
+
+<main>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="ahero">
+  <img class="ahero-img" src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1800&q=70" alt="AUI academic">
+  <div class="wrap">
+    <div class="eyebrow">Academic · Faculties &amp; Divisions</div>
+    <h1>Our Faculties &amp;<br>Academic Divisions</h1>
+    <p class="lede">Explore our comprehensive range of faculties supporting various undergraduate, graduate, and honorary degree programs.</p>
+    <div class="ahero-stats">
+      <div><b><span data-count="8">0</span></b><span>Academic Faculties</span></div>
+      <div><b><span data-count="24">0</span></b><span>Programme Levels</span></div>
+      <div><b><span data-count="20">0</span>+</b><span>Research Centers</span></div>
+      <div><b>3</b><span>Degree Levels · S1 · S2 · S3</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK STRIP -->
+<div class="qstrip">
+  <div class="wrap">
+    <div class="qs"><b>Undergraduate (S1)</b><span>Bachelor Degree · 3.5–4 Years</span></div>
+    <div class="qs"><b>Graduate (S2)</b><span>Master Degree · 1.5–2 Years</span></div>
+    <div class="qs"><b>Doctoral (S3)</b><span>Ph.D / Doctorate · 3–5 Years</span></div>
+    <div class="qs"><b>Scholarship</b><span>Available for All Levels</span></div>
+  </div>
+</div>
+
+<!-- ============================================================
+     01 — FACULTIES GRID (8 cards)
+     ============================================================ -->
+<section class="sec" id="faculties">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">01 — Faculties</div>
+      <h2>Eight academic faculties</h2>
+      <p>Setiap fakultas menaungi programme S1, S2, dan S3 dengan kurikulum yang dirancang bersama industri dan mitra riset global.</p>
+    </div>
+    <div class="fac-grid">
+
+      <article class="fac rv">
+        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=700&q=70" alt="Business and Economics"></figure>
+        <div class="body">
+          <h3>Faculty of Business and Economics</h3>
+          <p>Developing visionary business leaders, economists, and entrepreneurs for the global market.</p>
+          <a href="#" class="btn btn-brand">Apply Now</a>
+        </div>
+      </article>
+
+      <article class="fac rv">
+        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=700&q=70" alt="Engineering and Technology"></figure>
+        <div class="body">
+          <h3>Faculty of Engineering and Technology</h3>
+          <p>Driving technological advancements, engineering solutions, and digital innovation.</p>
+          <a href="#" class="btn btn-brand">Apply Now</a>
+        </div>
+      </article>
+
+      <article class="fac rv">
+        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=700&q=70" alt="Social Sciences and Humanities"></figure>
+        <div class="body">
+          <h3>Faculty of Social Sciences and Humanities</h3>
+          <p>Understanding human society, culture, and interpersonal dynamics in a changing world.</p>
+          <a href="#" class="btn btn-brand">Apply Now</a>
+        </div>
+      </article>
+
+      <article class="fac rv">
+        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=700&q=70" alt="Law"></figure>
+        <div class="body">
+          <h3>Faculty of Law</h3>
+          <p>Upholding justice, legal frameworks, and international regulatory standards.</p>
+          <a href="#" class="btn btn-brand">Apply Now</a>
+        </div>
+      </article>
+
+      <article class="fac rv">
+        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=700&q=70" alt="Humaniora"></figure>
+        <div class="body">
+          <h3>Faculty of Humaniora</h3>
+          <p>Exploring philosophy, arts, literature, and human history to enrich cultural perspectives.</p>
+          <a href="#" class="btn btn-brand">Apply Now</a>
+        </div>
+      </article>
+
+      <article class="fac rv">
+        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=700&q=70" alt="Health Sciences"></figure>
+        <div class="body">
+          <h3>Faculty of Health Sciences</h3>
+          <p>Advancing public wellness, medical care, and health-related research innovations.</p>
+          <a href="#" class="btn btn-brand">Apply Now</a>
+        </div>
+      </article>
+
+      <article class="fac rv">
+        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1585036156171-384164a8c675?auto=format&fit=crop&w=700&q=70" alt="Islamic Studies"></figure>
+        <div class="body">
+          <h3>Faculty of Islamic Studies</h3>
+          <p>Deepening the academic study of Islamic jurisprudence, history, and civilization.</p>
+          <a href="#" class="btn btn-brand">Apply Now</a>
+        </div>
+      </article>
+
+      <article class="fac rv">
+        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=700&q=70" alt="Politics and Social Sciences"></figure>
+        <div class="body">
+          <h3>Faculty of Politics and Social Sciences</h3>
+          <p>Analyzing political systems, governance, public policy, and international relations.</p>
+          <a href="#" class="btn btn-brand">Apply Now</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     02 — COURSE CATALOG (tabs)
+     ============================================================ -->
+<section class="sec catalog" id="catalog">
+  <div class="wrap">
+    <div class="cat-intro rv">
+      <div class="eyebrow">02 — Course Catalog</div>
+      <h2>Academic Course Catalog</h2>
+      <p>Pilih fakultas untuk melihat kurikulum programme Bachelor, Master, dan Doctoral.</p>
+    </div>
+
+    <!-- TAB BUTTONS -->
+    <div class="ftabs rv" id="ftabs">
+      <button class="ftab on" data-fac="fbe">Business &amp; Economics</button>
+      <button class="ftab" data-fac="fet">Engineering &amp; Tech</button>
+      <button class="ftab" data-fac="fsh">Social Sciences &amp; Hum.</button>
+      <button class="ftab" data-fac="flw">Law</button>
+      <button class="ftab" data-fac="fhu">Humaniora</button>
+      <button class="ftab" data-fac="fhs">Health Sciences</button>
+      <button class="ftab" data-fac="fis">Islamic Studies</button>
+      <button class="ftab" data-fac="fps">Politics &amp; Soc. Sciences</button>
+    </div>
+
+    <!-- ========================================================
+         FACULTY: BUSINESS & ECONOMICS
+         ======================================================== -->
+    <div class="fpanel on" id="fac-fbe">
+      <div class="sec-head" style="margin-bottom:36px">
+        <div class="eyebrow">Faculty of Business and Economics</div>
+        <h2 style="font-size:clamp(24px,2.8vw,34px)">Business &amp; Economics</h2>
+        <p>Developing visionary business leaders, economists, and entrepreneurs for the global market.</p>
+      </div>
+      <div class="lv-grid">
+        <div class="lv-card">
+          <header><div class="badge s1">S1</div><div><span>Bachelor Degree</span><h4>Undergraduate</h4></div></header>
+          <div class="divider"></div>
+          <ul>
+            <li>Principles of Management</li>
+            <li>Microeconomics</li>
+            <li>Business Communication</li>
+            <li>Financial Accounting</li>
+          </ul>
+          <footer><a href="#" class="btn btn-brand">Apply Now</a></footer>
+        </div>
+        <div class="lv-card">
+          <header><div class="badge s2">S2</div><div><span>Master Degree</span><h4>Graduate</h4></div></header>
+          <div class="divider"></div>
+          <ul>
+            <li>Strategic Management</li>
+            <li>Advanced Macroeconomics</li>
+            <li>Corporate Finance</li>
+            <li>International Business Strategy</li>
+          </ul>
+          <footer><a href="#" class="btn btn-brand">Apply Now</a></footer>
+        </div>
+        <div class="lv-card">
+          <header><div class="badge s3">S3</div><div><span>Doctoral Degree</span><h4>Ph.D / Doctorate</h4></div></header>
+          <div class="divider"></div>
+          <ul>
+            <li>Advanced Research Methodology</li>
+            <li>Economic Theory Seminar</li>
+            <li>Global Markets Analysis</li>
+            <li>Dissertation Research</li>
+          </ul>
+          <footer><a href="#" class="btn btn-brand">Apply Now</a></footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================
+         FACULTY: ENGINEERING & TECHNOLOGY
+         ======================================================== -->
+    <div class="fpanel" id="fac-fet">
+      <div class="sec-head" style="margin-bottom:36px">
+        <div class="eyebrow">Faculty of Engineering and Technology</div>
+        <h2 style="font-size:clamp(24px,2.8vw,34px)">Engineering &amp; Technology</h2>
+        <p>Driving technological advancements, engineering solutions, and digital innovation.</p>
+      </div>
+      <div class="lv-grid">
+        <div class="lv-card">
+          <header><div class="badge s1">S1</div><div><span>Bachelor Degree</span><h4>Undergraduate</h4></div></header>
+          <div class="divider"></div>
+          <ul>
+            <li>Introduction to Programming</li>
+            <li>Calculus I</li>
+            <li>Physics for Engineers</li>
+            <li>Data Structures</li>
+          </ul>
+          <footer><a href="#" class="btn btn-brand">Apply Now</a></footer>
+        </div>
+        <div class="lv-card">
+          <header><div class="badge s2">S2</div><div><span>Master Degree</span><h4>Graduate</h4></div></header>
+          <div class="divider"></div>
+          <ul>
+            <li>Artificial Intelligence</li>
+            <li>Advanced Data Analytics</li>
+            <li>Cybersecurity</li>
+            <li>Cloud Computing Architectures</li>
+          </ul>
+          <footer><a href="#" class="btn btn-brand">Apply Now</a></footer>
+        </div>
+        <div class="lv-card">
+          <header><div class="badge s3">S3</div><div><span>Doctoral Degree</span><h4>Ph.D / Doctorate</h4></div></header>
+          <div class="divider"></div>
+          <ul>
+            <li>Advanced Algorithms</li>
+            <li>Research in Systems Engineering</li>
+            <li>Machine Learning Theory</li>
+            <li>Dissertation Research</li>
+          </ul>
+          <footer><a href="#" class="btn btn-brand">Apply Now</a></footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================
+         FACULTY: SOCIAL SCIENCES & HUMANITIES
+         ======================================================== -->
+    <div class="fpanel" id="fac-fsh">
+      <div class="sec-head" style="margin-bottom:36px">
+        <div class="eyebrow">Faculty of Social Sciences and Humanities</div>
+        <h2 style="font-size:clamp(24px,2.8vw,34px)">Social Sciences &amp; Humanities</h2>
+        <p>Understanding human society, culture, and interpersonal dynamics in a changing world.</p>
+      </div>
+      <div class="lv-grid">
+        <div class="lv-card">
+          <header><div class="badge s1">S1</div><div><span>Bachelor Degree</span><h4>Undergraduate</h4></div></header>
+          <div class="divider"></div>
+          <ul>
+            <li>Introduction to Sociology</li>
+            <li>Psychology Basics</li>
+            <li>History of Civilizations</li>
+            <li>Human Geography</li>
+          </ul>
+          <footer><a href="#" class="btn btn-brand">Apply Now</a></footer>
+        </div>
+        <div class="lv-card">
+          <header><div class="badge s2">S2</div><div><span>Master Degree</span><h4>Graduate</h4></div></header>
+          <div class="divider"></div>
+          <ul>
+            <li>Sociological Theory</li>
+            <li>Advanced Research Methods</li>
+            <li>Social Policy Analysis</li>
+            <li>Globalization Studies</li>
+          </ul>
+          <footer><a href="#" class="btn btn-brand">Apply Now</a></footer>
+        </div>
+        <div class="lv-card">
+          <header><div class="badge s3">S3</div><div><span>Doctoral Degree</span><h4>Ph.D / Doctorate</h4></div></header>
+          <div class="divider"></div>
+          <ul>
+            <li>Contemporary Social Theory</li>
+            <li>Advanced Qualitative Research</li>
+            <li>Dissertation Research</li>
+          </ul>
+          <footer><a href="#" class="btn btn-brand">Apply Now</a></footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================
+         FACULTY: LAW
+         ======================================================== -->
+    <div class="fpanel" id="fac-flw">
+      <div class="sec-head" style="margin-bottom:36px">
+        <div class="eyebrow">Faculty of Law</div>
+        <h2 style="font-size:clamp(24px,2.8vw,34px)">Law</h2>
+        <p>Upholding justice, legal frameworks, and international regulatory standards.</p>
+      </div>
+      <div class="lv-grid">
+        <div class="lv-card">
+          <header><div class="badge s1">S1</div><div><span>Bachelor Degree</span><h4>Undergraduate</h4></div></header>
+          <div class="divider"></div>
+          <ul>
+            <li>Introduction to Law</li>
+            <li>Civil Law</li>
+            <li>Criminal Law</li>
+            <li>Constitutional Law</li>
+          </ul>
+          <footer><a href="#" class="btn btn-brand">Apply Now</a></footer>
+        </div>
+        <div class="lv-card">
+          <header><div class="badge s2">S2</div><div><span>Master Degree</span><h4>Graduate</h4></div></header>
+          <div class="divider"></div>
+          <ul>
+            <li>International Business Law</li>
+            <li>Comparative Constitutional Law</li>
+            <li>Human Rights Law</li>
+            <li>Advanced Legal Research</li>
+          </ul>
+          <footer><a href="#" class="btn btn-brand">Apply Now</a></footer>
+        </div>
+        <div class="lv-card">
+          <header><div class="badge s3">S3</div><div><span>Doctoral Degree</span><h4>Ph.D / Doctorate</h4></div></header>
+          <div class="divider"></div>
+          <ul>
+            <li>Philosophy of Law</li>
+            <li>Comparative Legal Systems</li>
+            <li>Advanced Legal Thesis</li>
+          </ul>
+          <footer><a href="#" class="btn btn-brand">Apply Now</a></footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================
+         FACULTY: HUMANIORA
+         ======================================================== -->
+    <div class="fpanel" id="fac-fhu">
+      <div class="sec-head" style="margin-bottom:36px">
+        <div class="eyebrow">Faculty of Humaniora</div>
+        <h2 style="font-size:clamp(24px,2.8vw,34px)">Humaniora</h2>
+        <p>Exploring philosophy, arts, literature, and human history to enrich cultural perspectives.</p>
+      </div>
+      <div class="lv-grid">
+        <div class="lv-card">
+          <header><div class="badge s1">S1</div><div><span>Bachelor Degree</span><h4>Undergraduate</h4></div></header>
+          <div class="divider"></div>
+          <ul>
+            <li>Philosophy of Life</li>
+            <li>Literature and Culture</li>
+            <li>Art History</li>
+            <li>Languages</li>
+          </ul>
+          <footer><a href="#" class="btn btn-brand">Apply Now</a></footer>
+        </div>
+        <div class="lv-card">
+          <header><div class="badge s2">S2</div><div><span>Master Degree</span><h4>Graduate</h4></div></header>
+          <div class="divider"></div>
+          <ul>
+            <li>Comparative Literature</li>
+            <li>Cultural Studies</li>
+            <li>Philosophy of Language</li>
+            <li>Advanced Aesthetics</li>
+          </ul>
+          <footer><a href="#" class="btn btn-brand">Apply Now</a></footer>
+        </div>
+        <div class="lv-card">
+          <header><div class="badge s3">S3</div><div><span>Doctoral Degree</span><h4>Ph.D / Doctorate</h4></div></header>
+          <div class="divider"></div>
+          <ul>
+            <li>Theoretical Frameworks in Humanities</li>
+            <li>Interdisciplinary Research</li>
+            <li>Dissertation Research</li>
+          </ul>
+          <footer><a href="#" class="btn btn-brand">Apply Now</a></footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================
+         FACULTY: HEALTH SCIENCES
+         ======================================================== -->
+    <div class="fpanel" id="fac-fhs">
+      <div class="sec-head" style="margin-bottom:36px">
+        <div class="eyebrow">Faculty of Health Sciences</div>
+        <h2 style="font-size:clamp(24px,2.8vw,34px)">Health Sciences</h2>
+        <p>Advancing public wellness, medical care, and health-related research innovations.</p>
+      </div>
+      <div class="lv-grid">
+        <div class="lv-card">
+          <header><div class="badge s1">S1</div><div><span>Bachelor Degree</span><h4>Undergraduate</h4></div></header>
+          <div class="divider"></div>
+          <ul>
+            <li>Anatomy and Physiology</li>
+            <li>Public Health Basics</li>
+            <li>Nutrition Science</li>
+            <li>Introduction to Healthcare</li>
+          </ul>
+          <footer><a href="#" class="btn btn-brand">Apply Now</a></footer>
+        </div>
+        <div class="lv-card">
+          <header><div class="badge s2">S2</div><div><span>Master Degree</span><h4>Graduate</h4></div></header>
+          <div class="divider"></div>
+          <ul>
+            <li>Epidemiology</li>
+            <li>Healthcare Policy and Management</li>
+            <li>Advanced Nursing Practice</li>
+            <li>Biostatistics</li>
+          </ul>
+          <footer><a href="#" class="btn btn-brand">Apply Now</a></footer>
+        </div>
+        <div class="lv-card">
+          <header><div class="badge s3">S3</div><div><span>Doctoral Degree</span><h4>Ph.D / Doctorate</h4></div></header>
+          <div class="divider"></div>
+          <ul>
+            <li>Clinical Research Methods</li>
+            <li>Advanced Health Sciences Theory</li>
+            <li>Dissertation Research</li>
+          </ul>
+          <footer><a href="#" class="btn btn-brand">Apply Now</a></footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================
+         FACULTY: ISLAMIC STUDIES
+         ======================================================== -->
+    <div class="fpanel" id="fac-fis">
+      <div class="sec-head" style="margin-bottom:36px">
+        <div class="eyebrow">Faculty of Islamic Studies</div>
+        <h2 style="font-size:clamp(24px,2.8vw,34px)">Islamic Studies</h2>
+        <p>Deepening the academic study of Islamic jurisprudence, history, and civilization.</p>
+      </div>
+      <div class="lv-grid">
+        <div class="lv-card">
+          <header><div class="badge s1">S1</div><div><span>Bachelor Degree</span><h4>Undergraduate</h4></div></header>
+          <div class="divider"></div>
+          <ul>
+            <li>Islamic Jurisprudence (Fiqh)</li>
+            <li>Quranic Studies</li>
+            <li>Islamic History</li>
+            <li>Hadith Studies</li>
+          </ul>
+          <footer><a href="#" class="btn btn-brand">Apply Now</a></footer>
+        </div>
+        <div class="lv-card">
+          <header><div class="badge s2">S2</div><div><span>Master Degree</span><h4>Graduate</h4></div></header>
+          <div class="divider"></div>
+          <ul>
+            <li>Contemporary Islamic Finance</li>
+            <li>Islamic Philosophy</li>
+            <li>Advanced Fiqh Studies</li>
+            <li>Islamic Education</li>
+          </ul>
+          <footer><a href="#" class="btn btn-brand">Apply Now</a></footer>
+        </div>
+        <div class="lv-card">
+          <header><div class="badge s3">S3</div><div><span>Doctoral Degree</span><h4>Ph.D / Doctorate</h4></div></header>
+          <div class="divider"></div>
+          <ul>
+            <li>Critical Studies in Islamic Texts</li>
+            <li>Islamic Thought and Modernity</li>
+            <li>Dissertation Research</li>
+          </ul>
+          <footer><a href="#" class="btn btn-brand">Apply Now</a></footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================
+         FACULTY: POLITICS & SOCIAL SCIENCES
+         ======================================================== -->
+    <div class="fpanel" id="fac-fps">
+      <div class="sec-head" style="margin-bottom:36px">
+        <div class="eyebrow">Faculty of Politics and Social Sciences</div>
+        <h2 style="font-size:clamp(24px,2.8vw,34px)">Politics &amp; Social Sciences</h2>
+        <p>Analyzing political systems, governance, public policy, and international relations.</p>
+      </div>
+      <div class="lv-grid">
+        <div class="lv-card">
+          <header><div class="badge s1">S1</div><div><span>Bachelor Degree</span><h4>Undergraduate</h4></div></header>
+          <div class="divider"></div>
+          <ul>
+            <li>Political Science Basics</li>
+            <li>Public Administration</li>
+            <li>International Relations</li>
+            <li>Public Policy</li>
+          </ul>
+          <footer><a href="#" class="btn btn-brand">Apply Now</a></footer>
+        </div>
+        <div class="lv-card">
+          <header><div class="badge s2">S2</div><div><span>Master Degree</span><h4>Graduate</h4></div></header>
+          <div class="divider"></div>
+          <ul>
+            <li>Global Governance</li>
+            <li>Advanced Public Policy</li>
+            <li>Conflict Resolution</li>
+            <li>Political Economy</li>
+          </ul>
+          <footer><a href="#" class="btn btn-brand">Apply Now</a></footer>
+        </div>
+        <div class="lv-card">
+          <header><div class="badge s3">S3</div><div><span>Doctoral Degree</span><h4>Ph.D / Doctorate</h4></div></header>
+          <div class="divider"></div>
+          <ul>
+            <li>International Relations Theory</li>
+            <li>Advanced Policy Analysis</li>
+            <li>Dissertation Research</li>
+          </ul>
+          <footer><a href="#" class="btn btn-brand">Apply Now</a></footer>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     STATS BAND
+     ============================================================ -->
+<section class="stats-band">
+  <div class="wrap">
+    <div class="sband rv"><div class="row"><b><span data-count="3000">0</span></b><span class="sym" data-sym>+</span></div><span>students from<br>5+ countries</span></div>
+    <div class="sband rv"><div class="row"><b><span data-count="8">0</span></b></div><span>academic faculties<br>across 3 levels</span></div>
+    <div class="sband rv"><div class="row"><b><span data-count="20">0</span></b><span class="sym" data-sym>+</span></div><span>research centers<br>worldwide</span></div>
+    <div class="sband rv"><div class="row"><b><span data-count="100">0</span></b><span class="sym" data-sym>+</span></div><span>industry partnerships<br>globally</span></div>
+    <div class="sband rv"><div class="row"><b><span data-count="90">0</span></b><span class="sym" data-sym>%</span></div><span>employability rate<br>within 6 months</span></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="visit">
+  <div class="wrap">
+    <div><h3>Ready to start your journey?</h3><p>Scholarship Available · Study from anywhere in the world · Tuition from MYR 35,000</p></div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap"><a href="#" class="btn btn-brand">Apply now</a><a href="#contact" class="btn btn-ghost">Contact Admissions</a></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="cband" id="contact">
+  <div class="wrap">
+    <div class="cband-grid rv">
+      <div class="cband-item"><div class="ic">✉</div><div><b>Email</b><a href="mailto:admin@aui.university">admin@aui.university</a></div></div>
+      <div class="cband-item"><div class="ic">☎</div><div><b>Phone / WhatsApp</b><a href="tel:+60165680906">+60 165 680 906</a></div></div>
+      <div class="cband-item"><div class="ic">◎</div><div><b>Student Portal</b><a href="#">portal-aui</a></div></div>
+      <div class="cband-item"><div class="ic">⌂</div><div><b>Address</b><span>F-2-23, Jalan BG 3B/1 Bangi Gateway 3B, Seksyen 15, 43650 Bandar Baru Bangi, Selangor, Malaysia</span></div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-main">
+      <div class="ftr-brand">
+        <div class="logo"><img src="https://aui.university/wp-content/uploads/2026/05/logo-title-asean-university-international.webp" alt="AUI logo"></div>
+        <p>Transformative education and multidisciplinary research that nurtures effective global leaders.</p>
+        <div class="soc"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="X">𝕏</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="YouTube">▶</a></div>
+        <form class="newsletter" onsubmit="return false"><input type="email" placeholder="Subscribe…" aria-label="Newsletter"><button type="submit">JOIN</button></form>
+      </div>
+      <div><h4>Quick Links</h4><ul><li><a href="#">Home</a></li><li><a href="#">About</a></li><li><a href="#">Admissions</a></li><li><a href="#">Academic</a></li><li><a href="#">Payment Information</a></li><li><a href="#">Students</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h4>Faculties</h4><ul><li><a href="#catalog">Business &amp; Economics</a></li><li><a href="#catalog">Engineering &amp; Technology</a></li><li><a href="#catalog">Social Sciences &amp; Humanities</a></li><li><a href="#catalog">Law</a></li><li><a href="#catalog">Humaniora</a></li><li><a href="#catalog">Health Sciences</a></li><li><a href="#catalog">Islamic Studies</a></li><li><a href="#catalog">Politics &amp; Social Sciences</a></li></ul></div>
+      <div><h4>Contact Us</h4><ul><li>✉ <a href="mailto:admin@aui.university">admin@aui.university</a></li><li>☎ <a href="tel:+60165680906">+60 165 680 906</a></li><li>◎ <a href="#">portal-aui</a></li><li style="margin-top:8px">F-2-23, Jalan BG 3B/1 Bangi Gateway 3B, Seksyen 15, 43650 Bandar Baru Bangi, Selangor, Malaysia</li></ul></div>
+    </div>
+    <div class="ftr-btm">
+      <span>ASIAN INTERNATIONAL EDUCATION SDN BHD | 2026 © All Rights Reserved.</span>
+      <ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Use</a></li><li><a href="#">Accessibility</a></li></ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* MOBILE MENU */
+document.getElementById('burger').addEventListener('click',()=>{document.getElementById('hdr').classList.toggle('nav-open')});
+
+/* FACULTY TAB SWITCHER */
+(function(){
+  const tabs=document.querySelectorAll('.ftab');
+  const panels=document.querySelectorAll('.fpanel');
+  tabs.forEach(tab=>{
+    tab.addEventListener('click',()=>{
+      tabs.forEach(t=>t.classList.remove('on'));
+      panels.forEach(p=>p.classList.remove('on'));
+      tab.classList.add('on');
+      const target=document.getElementById('fac-'+tab.dataset.fac);
+      if(target){target.classList.add('on');}
+    });
+  });
+})();
+
+/* COUNT UP + SYMBOL */
+function countUp(el,sym){
+  const target=+el.dataset.count,dur=1400,t0=performance.now();
+  (function tick(t){
+    const p=Math.min((t-t0)/dur,1);
+    el.textContent=Math.round(target*(1-Math.pow(1-p,3))).toLocaleString('en-US');
+    if(p<1){requestAnimationFrame(tick);}
+    else if(sym){setTimeout(()=>sym.classList.add('on'),120);}
+  })(performance.now());
+}
+let countObs;
+(function(){
+  countObs=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){const r=e.target.closest('.row')||e.target.parentElement;const s=r?r.querySelector('[data-sym]'):null;countUp(e.target,s);countObs.unobserve(e.target)}
+  }),{threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(e=>countObs.observe(e));
+})();
+
+/* REVEAL */
+let rObs;
+(function(){
+  rObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rObs.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.rv:not(.in)').forEach(e=>rObs.observe(e));
+})();
+</script>
+</body>
+</html>

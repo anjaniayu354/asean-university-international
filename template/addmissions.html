@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admissions — ASEAN University International (AUI)</title>
+<meta name="description" content="AUI Admissions — programme criteria, visa process, and academic requirements for Undergraduate, Master, and Doctoral tracks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brand:#0A2E52;--brand-2:#12467A;--brand-3:#071E38;
+  --gold:#C9962E;--gold-2:#AC7F22;--gold-soft:#F0DFB4;
+  --cream:#FBF8F1;--paper:#FFF;
+  --ink:#152232;--muted:#5C6B7D;
+  --line:rgba(10,46,82,.14);--line-soft:rgba(10,46,82,.08);
+  --radius:6px;--maxw:1240px;
+  --serif:"Fraunces",Georgia,serif;--sans:"Karla",Helvetica,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:0;background:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--gold);display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--gold)}
+.sec{padding:104px 0}
+.sec-head{max-width:720px;margin-bottom:56px}
+.sec-head h2{font-family:var(--serif);font-weight:600;font-size:clamp(30px,3.6vw,44px);line-height:1.12}
+.sec-head p{color:var(--muted);margin-top:16px;font-size:17px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border-radius:var(--radius);transition:.25s}
+.btn-gold{background:var(--gold);color:#fff}.btn-gold:hover{background:var(--gold-2);letter-spacing:.2em}
+.btn-ghost{border:1px solid rgba(255,255,255,.55);color:#fff}.btn-ghost:hover{background:#fff;color:var(--brand)}
+.btn-brand{background:var(--brand);color:#fff}.btn-brand:hover{background:var(--brand-2);letter-spacing:.2em}
+.btn-line{border:1px solid var(--line);color:var(--brand);background:var(--paper)}.btn-line:hover{border-color:var(--gold);color:var(--gold)}
+.link-gold{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:inline-flex;gap:8px;align-items:center;transition:.2s}.link-gold:hover{gap:14px}
+
+/* UTILITY */
+.util{background:var(--brand-3);color:rgba(255,255,255,.75);font-size:12.5px}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;min-height:42px;gap:16px;flex-wrap:wrap;padding-top:6px;padding-bottom:6px}
+.util ul{display:flex;gap:20px;list-style:none;white-space:nowrap}
+.util a:hover{color:var(--gold-soft)}.util .sep{opacity:.35}
+
+/* HEADER */
+.hdr{position:sticky;top:0;z-index:100;background:rgba(251,248,241,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:86px;gap:24px}
+.logo{display:flex;align-items:center}.logo img{height:54px;width:auto}
+.nav{display:flex;gap:28px;list-style:none}
+.nav a{font-size:13.5px;font-weight:600;color:var(--brand);position:relative;padding:6px 0}
+.nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--gold);transition:.25s}
+.nav a:hover::after,.nav a.is-active::after{width:100%}
+.hdr-cta{display:flex;gap:12px;align-items:center}
+.lang{font-size:12px;font-weight:700;color:var(--muted);border-left:1px solid var(--line);padding-left:14px}
+.burger{display:none;flex-direction:column;gap:5px;padding:8px}.burger span{width:22px;height:2px;background:var(--brand)}
+
+/* CRUMB */
+.crumb{font-size:12px;color:var(--muted);padding:22px 0;display:flex;gap:10px;flex-wrap:wrap}
+.crumb a:hover{color:var(--gold)}.crumb span{opacity:.5}
+
+/* PAGE HERO */
+.ahero{background:var(--brand);color:#fff;position:relative;overflow:hidden}
+.ahero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.25}
+.ahero .wrap{position:relative;z-index:2;padding:80px 32px 72px}
+.ahero .eyebrow{color:var(--gold-soft)}
+.ahero h1{font-family:var(--serif);font-weight:400;font-size:clamp(40px,5.2vw,68px);line-height:1.04;margin-bottom:12px}
+.ahero .sub{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--gold-soft);margin-bottom:22px}
+.ahero .lede{font-size:17px;color:rgba(255,255,255,.82);max-width:780px}
+
+/* QUICK STATS STRIP */
+.qstrip{background:var(--paper);border-bottom:1px solid var(--line-soft)}
+.qstrip .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+.qs{padding:30px 24px;text-align:center;border-right:1px solid var(--line-soft)}
+.qs:last-child{border:0}
+.qs b{font-family:var(--serif);font-size:22px;color:var(--brand);display:block;margin-bottom:2px}
+.qs span{font-size:13px;color:var(--muted)}
+
+/* ====== PROGRAM TRACKS ====== */
+.track-grid{display:grid;grid-template-columns:1fr;gap:32px}
+.track{background:#fff;border:1px solid var(--line-soft);overflow:hidden;transition:.3s}
+.track:hover{box-shadow:0 24px 48px -24px rgba(10,46,82,.2)}
+.track-top{display:grid;grid-template-columns:1fr 1fr;min-height:340px}
+.track-info{padding:48px 44px;display:flex;flex-direction:column;justify-content:center}
+.track-info .num{font-family:var(--serif);font-size:14px;font-weight:700;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;margin-bottom:8px}
+.track-info h3{font-family:var(--serif);font-size:28px;font-weight:600;color:var(--brand);margin-bottom:6px}
+.track-info .prog-name{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--gold);margin-bottom:16px}
+.track-info .dur{display:flex;align-items:center;gap:10px;background:var(--cream);border:1px solid var(--line-soft);padding:10px 16px;align-self:flex-start;margin-bottom:20px;font-size:13.5px;font-weight:600;color:var(--brand)}
+.track-info .dur i{font-style:normal;color:var(--gold)}
+.track-visual{position:relative;overflow:hidden;background:var(--brand-2)}
+.track-visual img{width:100%;height:100%;object-fit:cover;opacity:.85}
+.track-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,46,82,.6),transparent)}
+.track-body{padding:40px 44px 48px;border-top:1px solid var(--line-soft)}
+.track-body h4{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--brand);margin-bottom:18px}
+.track-body h4 em{font-style:normal;color:var(--gold);font-size:13px;letter-spacing:.1em;text-transform:uppercase;display:block;margin-top:2px;font-family:var(--sans);font-weight:700}
+.req-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-bottom:28px}
+.req-block h5{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--line-soft)}
+.req-block ul{list-style:none;display:grid;gap:10px}
+.req-block ul li{font-size:14px;color:var(--muted);display:flex;gap:10px;align-items:flex-start}
+.req-block ul li::before{content:"—";color:var(--gold);font-weight:700;flex:none}
+.dossier{background:var(--cream);border:1px solid var(--line-soft);padding:28px 30px}
+.dossier h5{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:16px}
+.dossier ol{list-style:none;display:grid;gap:14px;counter-reset:ds}
+.dossier ol li{display:flex;gap:14px;align-items:flex-start;font-size:14px;color:var(--muted);counter-increment:ds}
+.dossier ol li::before{content:counter(ds,decimal-leading-zero);font-family:var(--serif);font-size:15px;font-weight:700;color:var(--brand);flex:none;min-width:28px}
+.dossier ol li b{color:var(--brand);display:block;font-size:14.5px}
+.dossier ol li span{display:block;margin-top:2px}
+
+/* ====== IDENTITY DOCS ====== */
+.docs-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.doc-card{background:#fff;border:1px solid var(--line-soft);padding:44px 40px;position:relative;transition:.3s}
+.doc-card:hover{box-shadow:0 20px 40px -20px rgba(10,46,82,.2)}
+.doc-card .dnum{font-family:var(--serif);font-size:56px;font-weight:600;color:var(--gold);opacity:.15;position:absolute;right:28px;top:20px;line-height:1}
+.doc-card h3{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--brand);margin-bottom:12px}
+.doc-card p{font-size:14.5px;color:var(--muted);margin-bottom:18px}
+.doc-card ul{list-style:none;display:grid;gap:10px}
+.doc-card ul li{font-size:14px;color:var(--ink);display:flex;gap:10px;align-items:flex-start}
+.doc-card ul li::before{content:"✓";color:var(--gold);font-weight:700;flex:none}
+.doc-card ul li b{color:var(--brand)}
+
+/* ====== VISA PROCESS ====== */
+.visa{background:var(--brand);color:#fff;position:relative;overflow:hidden}
+.visa::before{content:"";position:absolute;right:-140px;bottom:-160px;width:420px;height:420px;border:1px solid rgba(224,191,112,.15);border-radius:50%}
+.visa .wrap{position:relative;z-index:2}
+.visa .eyebrow{color:var(--gold-soft)}
+.visa h2{color:#fff}
+.visa .sec-head p{color:rgba(255,255,255,.75)}
+.phases{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1)}
+.phase{background:var(--brand);padding:36px 28px;position:relative;transition:.3s}
+.phase:hover{background:var(--brand-2)}
+.phase .pnum{font-family:var(--serif);font-size:48px;font-weight:600;color:var(--gold);opacity:.2;line-height:1;margin-bottom:14px}
+.phase h4{font-family:var(--serif);font-size:17px;font-weight:600;color:#fff;margin-bottom:12px;line-height:1.3}
+.phase p{font-size:13px;color:rgba(255,255,255,.7);line-height:1.6}
+
+/* ====== DASHBOARD TABLE ====== */
+.dash{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table.dash-tbl{width:100%;min-width:900px;border-collapse:collapse;background:#fff;font-size:13.5px}
+table.dash-tbl thead th{background:var(--brand);color:#fff;padding:16px 20px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:left;position:sticky;top:0}
+table.dash-tbl thead th:first-child{width:200px}
+table.dash-tbl thead th:nth-child(2){background:var(--brand-2)}
+table.dash-tbl thead th:nth-child(3){background:var(--brand-2)}
+table.dash-tbl thead th:nth-child(4){background:var(--gold);color:#fff}
+table.dash-tbl tbody td{padding:18px 20px;border-bottom:1px solid var(--line-soft);vertical-align:top;color:var(--muted)}
+table.dash-tbl tbody td:first-child{font-weight:700;color:var(--brand);font-size:13px;background:var(--cream)}
+table.dash-tbl tbody tr:hover td{background:rgba(201,150,46,.04)}
+table.dash-tbl tbody tr:hover td:first-child{background:rgba(201,150,46,.08)}
+table.dash-tbl tbody tr:last-child td{border-bottom:0}
+table.dash-tbl ul{list-style:none;display:grid;gap:6px;margin-top:4px}
+table.dash-tbl ul li{font-size:13px;display:flex;gap:6px}
+table.dash-tbl ul li::before{content:"·";color:var(--gold);font-weight:700;flex:none}
+
+/* ====== SOLVENCY NOTE ====== */
+.solvency{background:var(--cream);border:1px solid var(--gold);border-left:4px solid var(--gold);padding:36px 40px;display:flex;gap:20px;align-items:flex-start}
+.solvency .icon{font-size:32px;flex:none;line-height:1}
+.solvency h3{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--brand);margin-bottom:10px}
+.solvency p{font-size:14.5px;color:var(--muted)}
+
+/* ====== CTA ====== */
+.visit{background:var(--gold);color:#fff}
+.visit .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:46px 32px;flex-wrap:wrap}
+.visit h3{font-family:var(--serif);font-size:30px;font-weight:600;margin-bottom:6px}
+.visit p{font-size:14.5px;color:rgba(255,255,255,.92)}
+.visit .btn-brand:hover{background:var(--brand-3)}
+
+/* ====== CONTACT BAND ====== */
+.cband{background:var(--cream);border-top:1px solid var(--line-soft);padding:64px 0}
+.cband-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.cband-item{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line-soft);padding:24px 22px}
+.cband-item .ic{width:40px;height:40px;border:1px solid var(--line);display:grid;place-items:center;color:var(--gold);flex:none;font-size:16px}
+.cband-item b{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.cband-item a,.cband-item span{font-size:14px;font-weight:600;color:var(--brand)}
+.cband-item a:hover{color:var(--gold)}
+
+/* FOOTER */
+.ftr{background:var(--brand-3);color:rgba(255,255,255,.72);font-size:14px}
+.ftr-main{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:44px;padding:72px 0 56px}
+.ftr h4{color:#fff;font-family:var(--serif);font-size:16px;font-weight:600;margin-bottom:20px}
+.ftr ul{list-style:none;display:grid;gap:10px}
+.ftr a:hover{color:var(--gold-soft)}
+.ftr .logo img{height:56px;background:#fff;padding:6px 12px;border-radius:3px}
+.ftr-brand p{margin:20px 0 22px;font-size:13.5px;max-width:300px}
+.soc{display:flex;gap:10px}.soc a{width:36px;height:36px;border:1px solid rgba(255,255,255,.25);display:grid;place-items:center;font-size:13px;transition:.2s}.soc a:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+.newsletter{display:flex;margin-top:18px;border:1px solid rgba(255,255,255,.25)}
+.newsletter input{flex:1;background:transparent;border:0;padding:12px 14px;color:#fff;font-family:var(--sans);font-size:13px;outline:none}
+.newsletter input::placeholder{color:rgba(255,255,255,.45)}
+.newsletter button{background:var(--gold);color:#fff;padding:0 18px;font-size:11px;font-weight:700;letter-spacing:.12em}
+.ftr-btm{border-top:1px solid rgba(255,255,255,.12);padding:22px 0;display:flex;justify-content:space-between;gap:16px;font-size:12.5px;flex-wrap:wrap}
+.ftr-btm ul{display:flex;gap:22px;list-style:none}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+
+/* RESPONSIVE */
+@media(max-width:1080px){
+  .nav,.hdr-cta .btn,.lang{display:none}.burger{display:flex}
+  .track-top{grid-template-columns:1fr}
+  .track-visual{min-height:220px}
+  .req-grid{grid-template-columns:1fr;gap:28px}
+  .docs-grid{grid-template-columns:1fr}
+  .phases{grid-template-columns:repeat(2,1fr)}
+  .phase:last-child{grid-column:span 2}
+  .qstrip .wrap{grid-template-columns:1fr}
+  .qs{border-right:0;border-bottom:1px solid var(--line-soft)}.qs:last-child{border-bottom:0}
+  .cband-grid{grid-template-columns:1fr 1fr}
+  .ftr-main{grid-template-columns:1fr 1fr}
+}
+@media(max-width:760px){
+  .wrap{padding:0 20px}.sec{padding:72px 0}
+  .hdr.nav-open .nav{display:flex;position:absolute;top:86px;left:0;right:0;background:var(--cream);flex-direction:column;padding:26px 24px;gap:18px;border-bottom:1px solid var(--line)}
+  .ahero .wrap{padding:60px 20px 56px}
+  .track-info{padding:32px 26px}
+  .track-body{padding:28px 26px 32px}
+  .phases{grid-template-columns:1fr}
+  .phase:last-child{grid-column:span 1}
+  .cband-grid,.ftr-main{grid-template-columns:1fr}
+  .solvency{flex-direction:column;padding:28px 24px}
+  .doc-card{padding:32px 26px}
+}
+</style>
+</head>
+<body>
+
+<!-- UTILITY -->
+<div class="util">
+  <div class="wrap">
+    <ul><li><a href="mailto:admin@aui.university">✉ admin@aui.university</a></li><li class="sep">|</li><li><a href="tel:+60165680906">☎ +60 165 680 906</a></li><li class="sep">|</li><li><a href="#">Portal AUI (Students)</a></li></ul>
+    <ul><li><a href="#">Payment Information</a></li><li><a href="#contact">Contact</a></li><li><a href="#">EN</a></li></ul>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a href="#" class="logo"><img src="https://aui.university/wp-content/uploads/2026/05/logo-title-asean-university-international.webp" alt="AUI logo"></a>
+    <nav><ul class="nav">
+      <li><a href="#">Home</a></li><li><a href="#">About</a></li>
+      <li><a href="#" class="is-active">Admissions</a></li><li><a href="#">Academic</a></li>
+      <li><a href="#">Payment Information</a></li><li><a href="#">Students</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+    <div class="hdr-cta">
+      <a href="#tracks" class="btn btn-gold">Apply now</a>
+      <span class="lang">EN / 中文</span>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<div class="wrap"><div class="crumb"><a href="#">Home</a><span>/</span><b style="color:var(--brand)">Admissions</b></div></div>
+
+<main>
+
+<!-- HERO -->
+<section class="ahero">
+  <img class="ahero-img" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1800&q=70" alt="AUI admissions">
+  <div class="wrap">
+    <div class="eyebrow">Admissions · Programme Criteria</div>
+    <h1>Programmatic Criteria</h1>
+    <div class="sub">Program-Specific Admission Manual</div>
+    <p class="lede">Granular entry requirements, track-specific benchmarks, and milestones from Undergraduate to Doctorate levels.</p>
+  </div>
+</section>
+
+<!-- QUICK STATS -->
+<div class="qstrip">
+  <div class="wrap">
+    <div class="qs"><b>3 Tracks</b><span>Undergraduate · Master · Doctoral</span></div>
+    <div class="qs"><b>Study From Anywhere</b><span>Online or at your own pace</span></div>
+    <div class="qs"><b>Scholarship Available</b><span>All programme levels</span></div>
+  </div>
+</div>
+
+<!-- ============================================================
+     01 — PROGRAMME TRACKS
+     ============================================================ -->
+<section class="sec" id="tracks">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">01 — Admission Tracks</div>
+      <h2>Programme-specific requirements</h2>
+      <p>Choose your track below to view granular entry requirements, academic benchmarks, and required deliverables.</p>
+    </div>
+
+    <div class="track-grid">
+
+      <!-- ===== UNDERGRADUATE ===== -->
+      <div class="track rv" id="track-ug">
+        <div class="track-top">
+          <div class="track-info">
+            <div class="num">Track 01</div>
+            <h3>Undergraduate Track</h3>
+            <div class="prog-name">International Bachelor Program (S1)</div>
+            <div class="dur"><i>⏱</i> Average Duration: 3.5 – 4 Years</div>
+            <div style="display:flex;gap:12px;flex-wrap:wrap">
+              <a href="#" class="btn btn-gold">Apply Now</a>
+              <a href="#" class="btn btn-line">Tuition — MYR 35,000</a>
+            </div>
+          </div>
+          <div class="track-visual">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=70" alt="Undergraduate students">
+          </div>
+        </div>
+        <div class="track-body">
+          <h4>Academic &amp; Language Benchmarks<em>Entry requirements</em></h4>
+          <div class="req-grid">
+            <div class="req-block">
+              <h5>Academic Requirements</h5>
+              <ul>
+                <li>High School Diploma: National, IB Diploma (min. 32 pts), or A-Levels (min. BBB)</li>
+                <li>GPA Threshold: Minimum equivalent of 3.00/4.00 or an 80% aggregate raw score</li>
+                <li>Standardized Aptitude: SAT (1250+) or ACT (26+) heavily preferred for premium tiers</li>
+              </ul>
+            </div>
+            <div class="req-block">
+              <h5>English Proficiency</h5>
+              <ul>
+                <li>IELTS ≥ 6.0 overall band</li>
+                <li>TOEFL iBT ≥ 80</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dossier">
+            <h5>Required Portfolio Dossier</h5>
+            <ol>
+              <li><div><b>Certified Grade Transcripts</b><span>Officially translated copies covering the final 3 structural school years.</span></div></li>
+              <li><div><b>Personal Statement Essay</b><span>A 500-word statement highlighting leadership experiences, community involvement, and your core motivations for chosen majors.</span></div></li>
+              <li><div><b>Institutional Endorsement</b><span>1 mandatory Recommendation Letter signed by your High School Principal, Academic Counselor, or Core Class Teacher.</span></div></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== GRADUATE ===== -->
+      <div class="track rv" id="track-pg">
+        <div class="track-top">
+          <div class="track-info">
+            <div class="num">Track 02</div>
+            <h3>Graduate Track</h3>
+            <div class="prog-name">International Master Program (S2)</div>
+            <div class="dur"><i>⏱</i> Average Duration: 1.5 – 2 Years</div>
+            <div style="display:flex;gap:12px;flex-wrap:wrap">
+              <a href="#" class="btn btn-gold">Apply Now</a>
+              <a href="#" class="btn btn-line">Tuition — MYR 45,000</a>
+            </div>
+          </div>
+          <div class="track-visual">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=900&q=70" alt="Master students">
+          </div>
+        </div>
+        <div class="track-body">
+          <h4>Academic &amp; Language Benchmarks<em>Entry requirements</em></h4>
+          <div class="req-grid">
+            <div class="req-block">
+              <h5>Academic Requirements</h5>
+              <ul>
+                <li>Academic Credential: Accredited Bachelor's Degree (B.A., B.Sc., B.Eng.) from a recognized global institution</li>
+                <li>GPA Threshold: Minimum cumulative GPA of 3.00 on a 4.00 scale (or equivalent class standing)</li>
+                <li>Graduate Testing: GRE or GMAT scores may be mandated for STEM and Business fields</li>
+              </ul>
+            </div>
+            <div class="req-block">
+              <h5>English Proficiency</h5>
+              <ul>
+                <li>IELTS ≥ 6.5 overall band</li>
+                <li>TOEFL iBT ≥ 85</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dossier">
+            <h5>Required Portfolio Dossier</h5>
+            <ol>
+              <li><div><b>Professional Curriculum Vitae (CV)</b><span>Highlights structural industry practice, past internships, published work, or academic group projects.</span></div></li>
+              <li><div><b>Statement of Purpose (SoP)</b><span>A detailed 750-to-1000 word essay specifying your academic focus, career objectives, and research alignment.</span></div></li>
+              <li><div><b>Academic Testimonials</b><span>2 formal reference letters submitted directly by senior university professors or corporate managers.</span></div></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== POSTGRADUATE RESEARCH ===== -->
+      <div class="track rv" id="track-dr">
+        <div class="track-top">
+          <div class="track-info">
+            <div class="num">Track 03</div>
+            <h3>Postgraduate Research Track</h3>
+            <div class="prog-name">Doctoral / Ph.D. Program (S3)</div>
+            <div class="dur"><i>⏱</i> Average Duration: 3 – 5 Years</div>
+            <div style="display:flex;gap:12px;flex-wrap:wrap">
+              <a href="#" class="btn btn-gold">Apply Now</a>
+              <a href="#" class="btn btn-line">Tuition — MYR 65,000</a>
+            </div>
+          </div>
+          <div class="track-visual">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=900&q=70" alt="Doctoral research">
+          </div>
+        </div>
+        <div class="track-body">
+          <h4>Academic &amp; Language Benchmarks<em>Entry requirements</em></h4>
+          <div class="req-grid">
+            <div class="req-block">
+              <h5>Academic Requirements</h5>
+              <ul>
+                <li>Academic Credential: Validated Master's degree (M.Sc., M.A., or M.Res.) showing high academic alignment</li>
+                <li>GPA Threshold: Top-tier academic standings, typically requiring a minimum Master's GPA of 3.50/4.00</li>
+                <li>Prior Publications: A strong asset, and often mandatory — proof of Scopus-indexed or internationally peer-reviewed publications</li>
+              </ul>
+            </div>
+            <div class="req-block">
+              <h5>English Proficiency</h5>
+              <ul>
+                <li>IELTS Overall Band ≥ 6.5 – 7.0</li>
+                <li>TOEFL iBT ≥ 90 – 100</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dossier">
+            <h5>Required Portfolio Dossier</h5>
+            <ol>
+              <li><div><b>Full Research Proposal</b><span>A 1,500 to 3,000-word methodology mapping — background, research questions, literature review, and proposed scientific contributions.</span></div></li>
+              <li><div><b>Supervisor Invitation Letter</b><span>Formal confirmation from a tenured faculty member or lab head who agrees to oversee your project before official system submission.</span></div></li>
+              <li><div><b>Testimonials</b><span>3 highly credentialed academic evaluations from full professors or your prior S2 research promoters.</span></div></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     02 — IDENTITY DOCUMENTS
+     ============================================================ -->
+<section class="sec" style="background:#fff;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)" id="docs">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">02 — International Programs</div>
+      <h2>Mandatory Identity Documents</h2>
+      <p>Admission criteria, expanded academic prerequisites, and student visa pathways for ASEAN Universities.</p>
+    </div>
+    <div class="docs-grid">
+      <div class="doc-card rv">
+        <div class="dnum">01</div>
+        <h3>National ID Card</h3>
+        <p>Mainly utilized during the initial account creation on university portals to validate nationality and home country background.</p>
+        <ul>
+          <li>High-resolution color scan, fully legible, with zero cropped margins</li>
+          <li>Must be officially translated into English by a Certified Sworn Translator if the original format is non-bilingual</li>
+        </ul>
+      </div>
+      <div class="doc-card rv">
+        <div class="dnum">02</div>
+        <h3>International Passport</h3>
+        <p>The most critical legal document required for issuing the Official Letter of Acceptance (LoA) and processing visa sponsorship.</p>
+        <ul>
+          <li><b>Validity Policy:</b> Minimum of 6 to 18 months remaining validity prior to entry</li>
+          <li>Specific destination authorities (e.g., Malaysia's EMGS) mandate a comprehensive scan of <b>every single page</b>, including blank ones</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     03 — VISA PROCESS
+     ============================================================ -->
+<section class="sec visa" id="visa">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">03 — Visa Pathway</div>
+      <h2>Step-by-Step Student Visa Process</h2>
+      <p>Comprehensive guide to admission and immigration — five phases from offer letter to student pass endorsement.</p>
+    </div>
+    <div class="phases rv">
+      <div class="phase">
+        <div class="pnum">1</div>
+        <h4>Receiving Official LoA &amp; Sponsorship Approval</h4>
+        <p>Upon successfully clearing admissions and securing your first-semester tuition payment, the university dispatches your Unconditional LoA alongside official Visa Approval Letters (VAL) or legal institutional sponsorships.</p>
+      </div>
+      <div class="phase">
+        <div class="pnum">2</div>
+        <h4>Visa Application Submission</h4>
+        <p>Depending on the host country, you either finalize a direct cloud-based digital process (e.g., Singapore's ICA e-Service) or submit physical files to the corresponding Embassy/Consulate General in your home nation to obtain a Single Entry Visa (SEV).</p>
+      </div>
+      <div class="phase">
+        <div class="pnum">3</div>
+        <h4>Compulsory Medical Surveillance</h4>
+        <p>Undergoing rigorous diagnostic tests (blood testing, chest X-rays) at accredited panel clinics pre-departure. Many regions require a secondary post-arrival routing check at the university medical center within 7 days of landing.</p>
+      </div>
+      <div class="phase">
+        <div class="pnum">4</div>
+        <h4>Border Immigration Clearance</h4>
+        <p>Present yourself at designated Special International Student counters at the arrival airport. Ready your physical Passport, LoA, VAL/IPA documents, and return ticket itinerary to secure a temporary entry endorsement stamp.</p>
+      </div>
+      <div class="phase">
+        <div class="pnum">5</div>
+        <h4>Student Pass Conversion &amp; Endorsement</h4>
+        <p>Surrender your passport to the university's International Student Office. They coordinate directly with domestic Immigration Headquarters to secure a multi-entry Student Pass sticker/card, typically valid for 1 year and renewable annually.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     04 — DASHBOARD TABLE
+     ============================================================ -->
+<section class="sec" id="dashboard">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">04 — Requirements Dashboard</div>
+      <h2>Global Admission Criteria &amp; Academic Requirements</h2>
+      <p>Perbandingan komprehensif persyaratan masuk untuk tiga jenjang programme AUI.</p>
+    </div>
+    <div class="dash rv">
+      <table class="dash-tbl">
+        <thead>
+          <tr>
+            <th>Evaluation Metric</th>
+            <th>Bachelor (S1)</th>
+            <th>Master (S2)</th>
+            <th>Doctoral / Ph.D (S3)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Primary Identity Documentation</td>
+            <td colspan="3" style="text-align:center;font-style:italic">Color Scan of National ID Card &amp; Passport Book with a minimum validity threshold of 12 to 18 months out from departure date.</td>
+          </tr>
+          <tr>
+            <td>Strategic Selection Focus</td>
+            <td>Cumulative High School Performance, Core Aptitude Profiles, &amp; Extracurricular Leadership traits.</td>
+            <td>Undergraduate GPA Metrics, Linear Academic Background, &amp; Structural Professional/Field Experience.</td>
+            <td>Peer-Reviewed Novelty of Research, Empirical Feasibility, &amp; Verified Faculty Supervisor Alignment.</td>
+          </tr>
+          <tr>
+            <td>English Language Standards</td>
+            <td><b style="color:var(--brand)">IELTS ≥ 6.0</b> or <b style="color:var(--brand)">TOEFL iBT ≥ 80</b></td>
+            <td><b style="color:var(--brand)">IELTS ≥ 6.5</b> or <b style="color:var(--brand)">TOEFL iBT ≥ 85</b></td>
+            <td><b style="color:var(--brand)">IELTS ≥ 6.5–7.0</b> or <b style="color:var(--brand)">TOEFL iBT ≥ 90–100</b></td>
+          </tr>
+          <tr>
+            <td>Expanded Academic Prerequisites</td>
+            <td>
+              <ul>
+                <li>High School Diploma or Equivalent — Min. 80% or GPA 3.0/4.0</li>
+                <li>IB Diploma (Min. 32–36 pts) or A-Levels (Min. BBB/ABB)</li>
+                <li>SAT score (Min. 1250–1350) if applicable</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Accredited Bachelor's Degree (B.A./B.Sc.)</li>
+                <li>Minimum GPA of 3.00 on a 4.00 Scale</li>
+                <li>Official Subject-Specific Transcripts</li>
+                <li>GMAT/GRE for Business/Engineering</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Validated Master's Degree (M.A./M.Sc./M.Res.)</li>
+                <li>Minimum GPA of 3.50 on a 4.00 Scale</li>
+                <li>Undergraduate + Graduate Comprehensive Transcripts</li>
+                <li>Mandatory matching background in prior major</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Required Deliverables</td>
+            <td>High School Transcripts, Personal Statement Essay, &amp; Extracurricular Portfolio.</td>
+            <td>Comprehensive Academic CV, Statement of Purpose (SoP), &amp; Preliminary Study Essay.</td>
+            <td>Research Proposal (1,500–3,000 words), Scopus/Indexed Peer-Review Publications, &amp; Supervisor Invitation Letter.</td>
+          </tr>
+          <tr>
+            <td>Institutional Endorsements</td>
+            <td>1–2 Letters from High School Principal or Subject Teachers.</td>
+            <td>2 Letters from Undergraduate Professors or Professional Supervisors.</td>
+            <td>2–3 Academic Testimonials from Tenured Professors or S2 Research Promoters.</td>
+          </tr>
+          <tr>
+            <td>Sovereign Visa Demands</td>
+            <td colspan="3" style="text-align:center;font-style:italic">Official Unconditional University LoA + Host Ministry Legal Approval Voucher + Comprehensive Disease-Free Health Examination + Minimum Liquid Funds Bank Statement (Proof of Financial Solvency).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SOLVENCY NOTE
+     ============================================================ -->
+<section style="padding:0 0 104px">
+  <div class="wrap">
+    <div class="solvency rv">
+      <div class="icon">💡</div>
+      <div>
+        <h3>Critical Solvency Note Regarding Visa Clearances</h3>
+        <p>Immigration departments across the ASEAN zone uniformly demand verified proof of liquidity via a formal Bank Statement. This security fund must comfortably cover tuition fees plus cost of living overheads for at least <b style="color:var(--brand)">1 full calendar academic year</b>. Ensure these funds are deposited and matured well before launching formal visa applications.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="visit">
+  <div class="wrap">
+    <div><h3>Ready to apply?</h3><p>Scholarship Available · Study from anywhere in the world · Tuition from MYR 35,000</p></div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap"><a href="#tracks" class="btn btn-brand">Choose Your Track</a><a href="#contact" class="btn btn-ghost">Contact Admissions</a></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="cband" id="contact">
+  <div class="wrap">
+    <div class="cband-grid rv">
+      <div class="cband-item"><div class="ic">✉</div><div><b>Email</b><a href="mailto:admin@aui.university">admin@aui.university</a></div></div>
+      <div class="cband-item"><div class="ic">☎</div><div><b>Phone / WhatsApp</b><a href="tel:+60165680906">+60 165 680 906</a></div></div>
+      <div class="cband-item"><div class="ic">◎</div><div><b>Student Portal</b><a href="#">portal-aui</a></div></div>
+      <div class="cband-item"><div class="ic">⌂</div><div><b>Address</b><span>F-2-23, Jalan BG 3B/1 Bangi Gateway 3B, Seksyen 15, 43650 Bandar Baru Bangi, Selangor, Malaysia</span></div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-main">
+      <div class="ftr-brand">
+        <div class="logo"><img src="https://aui.university/wp-content/uploads/2026/05/logo-title-asean-university-international.webp" alt="AUI logo"></div>
+        <p>Transformative education and multidisciplinary research that nurtures effective global leaders.</p>
+        <div class="soc"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="X">𝕏</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="YouTube">▶</a></div>
+        <form class="newsletter" onsubmit="return false"><input type="email" placeholder="Subscribe…" aria-label="Newsletter"><button type="submit">JOIN</button></form>
+      </div>
+      <div><h4>Quick Links</h4><ul><li><a href="#">Home</a></li><li><a href="#">About</a></li><li><a href="#">Admissions</a></li><li><a href="#">Academic</a></li><li><a href="#">Payment Information</a></li><li><a href="#">Students</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h4>Admissions</h4><ul><li><a href="#track-ug">Undergraduate Track (S1)</a></li><li><a href="#track-pg">Graduate Track (S2)</a></li><li><a href="#track-dr">Doctoral Track (S3)</a></li><li><a href="#docs">Identity Documents</a></li><li><a href="#visa">Visa Process</a></li><li><a href="#dashboard">Requirements Dashboard</a></li></ul></div>
+      <div><h4>Contact Us</h4><ul><li>✉ <a href="mailto:admin@aui.university">admin@aui.university</a></li><li>☎ <a href="tel:+60165680906">+60 165 680 906</a></li><li>◎ <a href="#">portal-aui</a></li><li style="margin-top:8px">F-2-23, Jalan BG 3B/1 Bangi Gateway 3B, Seksyen 15, 43650 Bandar Baru Bangi, Selangor, Malaysia</li></ul></div>
+    </div>
+    <div class="ftr-btm">
+      <span>ASIAN INTERNATIONAL EDUCATION SDN BHD | 2026 © All Rights Reserved.</span>
+      <ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Use</a></li><li><a href="#">Accessibility</a></li></ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('burger').addEventListener('click',()=>{document.getElementById('hdr').classList.toggle('nav-open')});
+let rObs;
+(function(){rObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rObs.unobserve(e.target)}}),{threshold:.1});document.querySelectorAll('.rv:not(.in)').forEach(e=>rObs.observe(e))})();
+</script>
+</body>
+</html>

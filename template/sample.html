@@ -1,0 +1,3475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ASEAN University International (AUI) — Portal Mockup</title>
+    <meta name="description"
+        content="Mockup portal web ASEAN University International: homepage lengkap + halaman detail program, berdasarkan konten aui.university.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Karla:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* ============================================================
+   DESIGN SYSTEM — AUI PORTAL
+   ============================================================ */
+        :root {
+            --brand: #0A2E52;
+            --brand-2: #12467A;
+            --brand-3: #071E38;
+            --gold: #C9962E;
+            --gold-2: #AC7F22;
+            --gold-soft: #F0DFB4;
+            --cream: #FBF8F1;
+            --paper: #FFFFFF;
+            --ink: #152232;
+            --muted: #5C6B7D;
+            --line: rgba(10, 46, 82, .14);
+            --line-soft: rgba(10, 46, 82, .08);
+            --radius: 6px;
+            --maxw: 1240px;
+            --serif: "Fraunces", Georgia, serif;
+            --sans: "Karla", Helvetica, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: var(--sans);
+            color: var(--ink);
+            background: var(--cream);
+            font-size: 16px;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 999;
+            opacity: .04;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")
+        }
+
+        img {
+            display: block;
+            max-width: 100%
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        button {
+            font-family: inherit;
+            cursor: pointer;
+            border: 0;
+            background: none
+        }
+
+        .wrap {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 32px
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 18px
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 26px;
+            height: 1px;
+            background: var(--gold)
+        }
+
+        .sec {
+            padding: 104px 0
+        }
+
+        .sec-head {
+            max-width: 660px;
+            margin-bottom: 56px
+        }
+
+        .sec-head h2 {
+            font-family: var(--serif);
+            font-weight: 600;
+            font-size: clamp(30px, 3.6vw, 44px);
+            line-height: 1.12;
+            letter-spacing: -.01em
+        }
+
+        .sec-head p {
+            color: var(--muted);
+            margin-top: 16px;
+            font-size: 17px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 26px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            border-radius: var(--radius);
+            transition: .25s ease
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: #fff
+        }
+
+        .btn-gold:hover {
+            background: var(--gold-2);
+            letter-spacing: .2em
+        }
+
+        .btn-ghost {
+            border: 1px solid rgba(255, 255, 255, .55);
+            color: #fff
+        }
+
+        .btn-ghost:hover {
+            background: #fff;
+            color: var(--brand)
+        }
+
+        .btn-brand {
+            background: var(--brand);
+            color: #fff
+        }
+
+        .btn-brand:hover {
+            background: var(--brand-2);
+            letter-spacing: .2em
+        }
+
+        .btn-line {
+            border: 1px solid var(--line);
+            color: var(--brand);
+            background: var(--paper)
+        }
+
+        .btn-line:hover {
+            border-color: var(--gold);
+            color: var(--gold)
+        }
+
+        .link-gold {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--gold);
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            transition: .2s
+        }
+
+        .link-gold:hover {
+            gap: 14px
+        }
+
+        /* ============ UTILITY BAR ============ */
+        .util {
+            background: var(--brand-3);
+            color: rgba(255, 255, 255, .75);
+            font-size: 12.5px
+        }
+
+        .util .wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 42px;
+            gap: 16px;
+            flex-wrap: wrap;
+            padding-top: 6px;
+            padding-bottom: 6px
+        }
+
+        .util ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            white-space: nowrap
+        }
+
+        .util a:hover {
+            color: var(--gold-soft)
+        }
+
+        .util .sep {
+            opacity: .35
+        }
+
+        /* ============ HEADER ============ */
+        .hdr {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(251, 248, 241, .95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--line-soft)
+        }
+
+        .hdr .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 86px;
+            gap: 24px
+        }
+
+        .logo {
+            display: flex;
+            align-items: center
+        }
+
+        .logo img {
+            height: 54px;
+            width: auto
+        }
+
+        .nav {
+            display: flex;
+            gap: 28px;
+            list-style: none
+        }
+
+        .nav a {
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--brand);
+            position: relative;
+            padding: 6px 0
+        }
+
+        .nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: .25s
+        }
+
+        .nav a:hover::after,
+        .nav a.is-active::after {
+            width: 100%
+        }
+
+        .hdr-cta {
+            display: flex;
+            gap: 12px;
+            align-items: center
+        }
+
+        .lang {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--muted);
+            border-left: 1px solid var(--line);
+            padding-left: 14px
+        }
+
+        .burger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            padding: 8px
+        }
+
+        .burger span {
+            width: 22px;
+            height: 2px;
+            background: var(--brand);
+            transition: .25s
+        }
+
+        /* ============ HERO ============ */
+        .hero {
+            position: relative;
+            min-height: 660px;
+            display: flex;
+            align-items: flex-end;
+            color: #fff;
+            overflow: hidden;
+            background: var(--brand)
+        }
+
+        .hero-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .85
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(100deg, rgba(7, 30, 56, .93) 0%, rgba(7, 30, 56, .68) 44%, rgba(7, 30, 56, .2) 100%)
+        }
+
+        .hero .wrap {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding-top: 130px;
+            padding-bottom: 120px
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.4fr .6fr;
+            gap: 48px;
+            align-items: end
+        }
+
+        .hero h1 {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: clamp(42px, 5.8vw, 78px);
+            line-height: 1.03;
+            letter-spacing: -.02em;
+            margin-bottom: 24px
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--gold-soft)
+        }
+
+        .hero .lede {
+            font-size: 18px;
+            color: rgba(255, 255, 255, .85);
+            max-width: 580px;
+            margin-bottom: 34px
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap
+        }
+
+        .hero-search {
+            margin-top: 40px;
+            max-width: 440px;
+            display: flex;
+            background: #fff;
+            border-radius: var(--radius);
+            overflow: hidden
+        }
+
+        .hero-search input {
+            flex: 1;
+            border: 0;
+            padding: 15px 18px;
+            font-family: var(--sans);
+            font-size: 14px;
+            outline: none
+        }
+
+        .hero-search button {
+            background: var(--gold);
+            color: #fff;
+            padding: 0 22px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .12em
+        }
+
+        .hero-card {
+            background: rgba(10, 46, 82, .93);
+            border: 1px solid rgba(224, 191, 112, .35);
+            padding: 36px 32px;
+            backdrop-filter: blur(6px)
+        }
+
+        .hero-card h3 {
+            font-family: var(--serif);
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 1.2;
+            margin-bottom: 16px
+        }
+
+        .hero-card dl {
+            display: grid;
+            gap: 14px;
+            font-size: 13.5px;
+            margin-bottom: 22px
+        }
+
+        .hero-card dt {
+            color: var(--gold-soft);
+            font-size: 10.5px;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            font-weight: 700
+        }
+
+        .hero-card dd {
+            color: #fff;
+            font-family: var(--serif);
+            font-size: 18px;
+            font-weight: 600
+        }
+
+        .hero-card dd small {
+            display: block;
+            font-family: var(--sans);
+            font-size: 11.5px;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-top: 2px
+        }
+
+        /* ============ STATS ============ */
+        .stats {
+            position: relative;
+            z-index: 3;
+            background: var(--paper);
+            border-bottom: 1px solid var(--line-soft)
+        }
+
+        .stats .wrap {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px
+        }
+
+        .stat {
+            padding: 34px 20px;
+            text-align: center;
+            border-right: 1px solid var(--line-soft)
+        }
+
+        .stat:last-child {
+            border: 0
+        }
+
+        .stat .row {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 2px
+        }
+
+        .stat b {
+            font-family: var(--serif);
+            font-size: 42px;
+            font-weight: 600;
+            color: var(--brand);
+            line-height: 1.1;
+            letter-spacing: -.01em;
+            display: block
+        }
+
+        .stat .sym {
+            font-family: var(--serif);
+            font-size: 26px;
+            font-weight: 600;
+            color: var(--gold);
+            line-height: 1;
+            display: block;
+            transform: translateY(-2px);
+            opacity: 0;
+            transition: opacity .5s
+        }
+
+        .stat .sym.on {
+            opacity: 1
+        }
+
+        .stat .lbl {
+            display: block;
+            margin-top: 8px;
+            font-size: 12.5px;
+            color: var(--muted);
+            line-height: 1.5
+        }
+
+        /* ============ ANNOUNCEMENT ============ */
+        .ann {
+            background: var(--brand);
+            color: #fff
+        }
+
+        .ann .wrap {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            min-height: 64px
+        }
+
+        .ann-tag {
+            background: var(--gold);
+            color: #fff;
+            font-size: 10.5px;
+            font-weight: 700;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            padding: 7px 14px;
+            white-space: nowrap
+        }
+
+        .ann-body {
+            flex: 1;
+            position: relative;
+            min-height: 24px
+        }
+
+        .ann-item {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity .5s;
+            font-size: 14.5px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            white-space: nowrap;
+            overflow: hidden
+        }
+
+        .ann-item.is-on {
+            opacity: 1
+        }
+
+        .ann-item b {
+            color: var(--gold-soft)
+        }
+
+        .ann-dots {
+            display: flex;
+            gap: 7px
+        }
+
+        .ann-dots button {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .3)
+        }
+
+        .ann-dots button.is-on {
+            background: var(--gold)
+        }
+
+        /* ============ VALUES ============ */
+        .values {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            border: 1px solid var(--line-soft);
+            background: var(--paper)
+        }
+
+        .value {
+            padding: 44px 34px;
+            border-right: 1px solid var(--line-soft)
+        }
+
+        .value:last-child {
+            border: 0
+        }
+
+        .value .ic {
+            width: 54px;
+            height: 54px;
+            border: 1px solid var(--line);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            margin-bottom: 22px;
+            color: var(--gold);
+            font-size: 22px
+        }
+
+        .value h3 {
+            font-family: var(--serif);
+            font-size: 19px;
+            font-weight: 600;
+            margin-bottom: 10px
+        }
+
+        .value p {
+            font-size: 14px;
+            color: var(--muted)
+        }
+
+        .value a {
+            margin-top: 16px;
+            display: inline-block
+        }
+
+        /* ============ SPLIT / ANYWHERE ============ */
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center
+        }
+
+        .split h2 {
+            font-family: var(--serif);
+            font-weight: 600;
+            font-size: clamp(30px, 3.4vw, 42px);
+            line-height: 1.12;
+            margin-bottom: 20px
+        }
+
+        .split p {
+            color: var(--muted);
+            margin-bottom: 16px
+        }
+
+        .modes {
+            display: grid;
+            gap: 12px;
+            margin: 26px 0 30px
+        }
+
+        .mode {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            background: #fff;
+            border: 1px solid var(--line-soft);
+            padding: 18px 20px
+        }
+
+        .mode i {
+            font-style: normal;
+            color: var(--gold);
+            font-size: 18px;
+            line-height: 1.3
+        }
+
+        .mode b {
+            display: block;
+            font-size: 14.5px;
+            color: var(--brand)
+        }
+
+        .mode span {
+            font-size: 13px;
+            color: var(--muted)
+        }
+
+        .split figure {
+            position: relative
+        }
+
+        .split figure img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover
+        }
+
+        .split figure .tagfloat {
+            position: absolute;
+            left: -24px;
+            bottom: 28px;
+            background: var(--gold);
+            color: #fff;
+            padding: 18px 24px;
+            font-family: var(--serif);
+            font-size: 19px;
+            line-height: 1.25;
+            max-width: 250px
+        }
+
+        /* ============ PROGRAMMES (clean cards, no floating badge) ============ */
+        .prog-layout {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 56px;
+            align-items: start
+        }
+
+        .prog-intro {
+            position: sticky;
+            top: 120px
+        }
+
+        .prog-intro h2 {
+            font-family: var(--serif);
+            font-weight: 600;
+            font-size: clamp(30px, 3vw, 42px);
+            line-height: 1.1;
+            margin-bottom: 18px
+        }
+
+        .prog-intro p {
+            color: var(--muted);
+            font-size: 15.5px;
+            margin-bottom: 26px
+        }
+
+        .prog-note {
+            margin-top: 34px;
+            padding: 22px;
+            border-left: 3px solid var(--gold);
+            background: #fff;
+            font-size: 13.5px;
+            color: var(--muted)
+        }
+
+        .prog-note b {
+            color: var(--brand);
+            font-family: var(--serif);
+            font-size: 22px;
+            display: block;
+            margin-bottom: 4px
+        }
+
+        .tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 30px;
+            flex-wrap: wrap
+        }
+
+        .tab {
+            padding: 9px 20px;
+            border: 1px solid var(--line);
+            border-radius: 99px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            background: #fff;
+            transition: .2s
+        }
+
+        .tab.is-on {
+            background: var(--brand);
+            border-color: var(--brand);
+            color: #fff
+        }
+
+        .prog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 26px
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid var(--line-soft);
+            display: flex;
+            flex-direction: column;
+            transition: .3s
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 24px 48px -24px rgba(10, 46, 82, .35)
+        }
+
+        .card figure {
+            position: relative;
+            aspect-ratio: 16/10;
+            overflow: hidden;
+            background: var(--brand-2)
+        }
+
+        .card figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s
+        }
+
+        .card:hover figure img {
+            transform: scale(1.06)
+        }
+
+        .card figure::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 5px;
+            background: var(--gold)
+        }
+
+        .card .body {
+            padding: 28px 26px 28px;
+            display: flex;
+            flex-direction: column;
+            flex: 1
+        }
+
+        .card .lvl {
+            font-size: 11px;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block
+        }
+
+        .card h3 {
+            font-family: var(--serif);
+            font-size: 21px;
+            font-weight: 600;
+            margin-bottom: 10px
+        }
+
+        .card .fee-line {
+            font-family: var(--serif);
+            font-size: 24px;
+            color: var(--brand);
+            font-weight: 600;
+            margin-bottom: 4px
+        }
+
+        .card .sch {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 14px
+        }
+
+        .card p {
+            font-size: 13.5px;
+            color: var(--muted);
+            flex: 1;
+            margin-bottom: 18px
+        }
+
+        /* ============ TUITION ============ */
+        .tuition {
+            background: var(--brand);
+            color: #fff;
+            position: relative;
+            overflow: hidden
+        }
+
+        .tuition::before {
+            content: "";
+            position: absolute;
+            right: -120px;
+            top: -120px;
+            width: 420px;
+            height: 420px;
+            border: 1px solid rgba(224, 191, 112, .22);
+            border-radius: 50%
+        }
+
+        .tuition::after {
+            content: "";
+            position: absolute;
+            right: -40px;
+            bottom: -160px;
+            width: 300px;
+            height: 300px;
+            border: 1px solid rgba(224, 191, 112, .14);
+            border-radius: 50%
+        }
+
+        .tuition .wrap {
+            position: relative;
+            z-index: 2
+        }
+
+        .tuition .sec-head h2 {
+            color: #fff
+        }
+
+        .tuition .sec-head p {
+            color: rgba(255, 255, 255, .75)
+        }
+
+        .fees {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 26px
+        }
+
+        .fee {
+            background: var(--paper);
+            color: var(--ink);
+            padding: 38px 32px;
+            display: flex;
+            flex-direction: column;
+            border-top: 4px solid var(--gold);
+            transition: .3s
+        }
+
+        .fee:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 26px 50px -26px rgba(0, 0, 0, .5)
+        }
+
+        .fee .lvl {
+            font-size: 11px;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700
+        }
+
+        .fee h3 {
+            font-family: var(--serif);
+            font-size: 30px;
+            font-weight: 600;
+            margin: 10px 0 18px
+        }
+
+        .fee .cur {
+            font-size: 12px;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            color: var(--muted);
+            font-weight: 700;
+            display: block;
+            margin-bottom: 6px
+        }
+
+        .fee .price {
+            font-family: var(--serif);
+            font-size: 50px;
+            font-weight: 600;
+            color: var(--brand);
+            line-height: 1;
+            letter-spacing: -.02em
+        }
+
+        .fee .price small {
+            font-size: 22px;
+            vertical-align: super;
+            color: var(--muted)
+        }
+
+        .fee .badge {
+            display: inline-block;
+            margin: 18px 0 22px;
+            background: var(--gold-soft);
+            color: #7A5A12;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            padding: 7px 14px;
+            align-self: flex-start
+        }
+
+        .fee .btn {
+            margin-top: auto;
+            justify-content: center
+        }
+
+        /* ============ NETWORK / IMPACT ============ */
+        .achieve {
+            background: var(--brand-3);
+            color: #fff;
+            position: relative;
+            overflow: hidden
+        }
+
+        .achieve::before {
+            content: "";
+            position: absolute;
+            left: -140px;
+            bottom: -180px;
+            width: 420px;
+            height: 420px;
+            border: 1px solid rgba(224, 191, 112, .18);
+            border-radius: 50%
+        }
+
+        .achieve .wrap {
+            position: relative;
+            z-index: 2
+        }
+
+        .achieve .eyebrow {
+            color: var(--gold-soft)
+        }
+
+        .achieve h2 {
+            color: #fff
+        }
+
+        .achieve .sec-head p {
+            color: rgba(255, 255, 255, .75)
+        }
+
+        .achieve-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: rgba(255, 255, 255, .12);
+            border: 1px solid rgba(255, 255, 255, .12)
+        }
+
+        .ach {
+            background: var(--brand-3);
+            padding: 40px 30px
+        }
+
+        .ach .row {
+            display: flex;
+            align-items: baseline;
+            gap: 2px;
+            margin-bottom: 8px
+        }
+
+        .ach b {
+            font-family: var(--serif);
+            font-size: 46px;
+            font-weight: 600;
+            color: var(--gold-soft);
+            line-height: 1.1;
+            letter-spacing: -.02em;
+            display: block
+        }
+
+        .ach .sym {
+            font-family: var(--serif);
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--gold);
+            line-height: 1;
+            display: block;
+            transform: translateY(-3px);
+            opacity: 0;
+            transition: opacity .5s
+        }
+
+        .ach .sym.on {
+            opacity: 1
+        }
+
+        .ach span {
+            font-size: 13.5px;
+            color: rgba(255, 255, 255, .75);
+            display: block;
+            line-height: 1.5
+        }
+
+        .accred {
+            display: flex;
+            gap: 16px;
+            margin-top: 38px;
+            flex-wrap: wrap
+        }
+
+        .accred div {
+            border: 1px solid rgba(255, 255, 255, .25);
+            padding: 12px 20px;
+            font-size: 12px;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .8)
+        }
+
+        /* ============ ABOUT ============ */
+        .about {
+            display: grid;
+            grid-template-columns: .95fr 1.05fr;
+            gap: 60px;
+            align-items: center
+        }
+
+        .about h2 {
+            font-family: var(--serif);
+            font-weight: 600;
+            font-size: clamp(30px, 3.6vw, 44px);
+            line-height: 1.1;
+            margin-bottom: 8px
+        }
+
+        .about .sub {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 22px;
+            color: var(--gold);
+            margin-bottom: 22px
+        }
+
+        .about p {
+            color: var(--muted);
+            margin-bottom: 16px
+        }
+
+        .about-figure {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px
+        }
+
+        .about-figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            aspect-ratio: 1/1
+        }
+
+        .about-figure img:first-child {
+            grid-row: span 2;
+            aspect-ratio: auto;
+            min-height: 100%
+        }
+
+        /* ============ STUDENTS (redesigned) ============ */
+        .portal {
+            background: var(--paper);
+            border-top: 1px solid var(--line-soft);
+            border-bottom: 1px solid var(--line-soft);
+            padding: 88px 0
+        }
+
+        .portal .sec-head {
+            margin-bottom: 44px
+        }
+
+        .svc-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 36px
+        }
+
+        .svc {
+            background: var(--cream);
+            border: 1px solid var(--line-soft);
+            padding: 36px 32px;
+            display: flex;
+            flex-direction: column;
+            transition: .3s
+        }
+
+        .svc:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -20px rgba(10, 46, 82, .28);
+            border-color: var(--gold)
+        }
+
+        .svc .ic {
+            width: 50px;
+            height: 50px;
+            background: var(--brand);
+            color: #fff;
+            display: grid;
+            place-items: center;
+            font-size: 20px;
+            margin-bottom: 22px
+        }
+
+        .svc h3 {
+            font-family: var(--serif);
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px
+        }
+
+        .svc p {
+            font-size: 14px;
+            color: var(--muted);
+            flex: 1;
+            margin-bottom: 22px
+        }
+
+        .svc .btn {
+            align-self: flex-start
+        }
+
+        .searchbar {
+            display: flex;
+            border: 1px solid var(--line);
+            background: var(--cream)
+        }
+
+        .searchbar input {
+            flex: 1;
+            border: 0;
+            background: transparent;
+            padding: 18px 22px;
+            font-family: var(--sans);
+            font-size: 15px;
+            outline: none;
+            color: var(--ink)
+        }
+
+        .searchbar input::placeholder {
+            color: var(--muted)
+        }
+
+        .searchbar button {
+            background: var(--brand);
+            color: #fff;
+            padding: 0 32px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .14em;
+            transition: .2s
+        }
+
+        .searchbar button:hover {
+            background: var(--brand-2)
+        }
+
+        /* ============ COMMUNITY + UPDATES ============ */
+        .life {
+            display: grid;
+            grid-template-columns: .9fr 2fr;
+            gap: 34px;
+            align-items: stretch
+        }
+
+        .life-panel {
+            background: var(--brand);
+            color: #fff;
+            padding: 46px 38px;
+            display: flex;
+            flex-direction: column
+        }
+
+        .life-panel h2 {
+            font-family: var(--serif);
+            font-weight: 600;
+            font-size: 34px;
+            line-height: 1.12;
+            margin-bottom: 16px
+        }
+
+        .life-panel p {
+            color: rgba(255, 255, 255, .78);
+            font-size: 14.5px;
+            flex: 1
+        }
+
+        .life-panel figure {
+            margin: 28px -38px -46px;
+            aspect-ratio: 16/9;
+            overflow: hidden
+        }
+
+        .life-panel figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+
+        .news {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 26px
+        }
+
+        .news-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 30px;
+            grid-column: 1/-1
+        }
+
+        .news-top h2 {
+            font-family: var(--serif);
+            font-weight: 600;
+            font-size: 30px
+        }
+
+        .ncard figure {
+            aspect-ratio: 16/10;
+            overflow: hidden;
+            background: var(--brand-2)
+        }
+
+        .ncard figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s
+        }
+
+        .ncard:hover figure img {
+            transform: scale(1.05)
+        }
+
+        .ncard .meta {
+            display: flex;
+            gap: 14px;
+            font-size: 11px;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700;
+            margin: 18px 0 10px
+        }
+
+        .ncard h3 {
+            font-family: var(--serif);
+            font-size: 18.5px;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 10px
+        }
+
+        .ncard:hover h3 {
+            text-decoration: underline;
+            text-decoration-color: var(--gold);
+            text-underline-offset: 4px
+        }
+
+        .ncard p {
+            font-size: 13.5px;
+            color: var(--muted);
+            margin-bottom: 14px
+        }
+
+        .events {
+            grid-column: 1/-1;
+            margin-top: 20px;
+            border-top: 1px solid var(--line);
+            padding-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 26px
+        }
+
+        .ev {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start
+        }
+
+        .ev .date {
+            background: #fff;
+            border: 1px solid var(--line);
+            text-align: center;
+            padding: 10px 12px;
+            min-width: 70px
+        }
+
+        .ev .date b {
+            font-family: var(--serif);
+            font-size: 15px;
+            display: block;
+            line-height: 1.2;
+            color: var(--brand);
+            text-transform: uppercase;
+            letter-spacing: .06em
+        }
+
+        .ev .date span {
+            font-size: 10px;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700
+        }
+
+        .ev h4 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 4px
+        }
+
+        .ev p {
+            font-size: 12.5px;
+            color: var(--muted)
+        }
+
+        /* ============ TESTIMONI ============ */
+        .testi {
+            background: #fff;
+            border-top: 1px solid var(--line-soft);
+            border-bottom: 1px solid var(--line-soft)
+        }
+
+        .testi-track {
+            display: flex;
+            gap: 26px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 10px;
+            scrollbar-width: none
+        }
+
+        .testi-track::-webkit-scrollbar {
+            display: none
+        }
+
+        .tcard {
+            min-width: min(420px, 86vw);
+            scroll-snap-align: start;
+            background: var(--cream);
+            border: 1px solid var(--line-soft);
+            padding: 38px 34px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px
+        }
+
+        .tcard blockquote {
+            font-family: var(--serif);
+            font-size: 19px;
+            line-height: 1.45;
+            font-style: italic
+        }
+
+        .tcard .who {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            margin-top: auto
+        }
+
+        .tcard .who img {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: var(--brand-2)
+        }
+
+        .tcard .who b {
+            display: block;
+            font-size: 14px
+        }
+
+        .tcard .who span {
+            font-size: 12.5px;
+            color: var(--muted)
+        }
+
+        .tcard .ph {
+            font-size: 10.5px;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--muted);
+            opacity: .7
+        }
+
+        .testi-nav {
+            display: flex;
+            gap: 10px;
+            margin-top: 26px
+        }
+
+        .testi-nav button {
+            width: 44px;
+            height: 44px;
+            border: 1px solid var(--line);
+            background: #fff;
+            color: var(--brand);
+            font-size: 18px;
+            transition: .2s
+        }
+
+        .testi-nav button:hover {
+            background: var(--brand);
+            color: #fff
+        }
+
+        /* ============ PARTNERS ============ */
+        .partners {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1px;
+            background: var(--line-soft);
+            border: 1px solid var(--line-soft)
+        }
+
+        .partners div {
+            background: #fff;
+            display: grid;
+            place-items: center;
+            padding: 34px 10px;
+            font-family: var(--serif);
+            font-size: 15px;
+            color: var(--muted);
+            letter-spacing: .06em;
+            text-align: center;
+            transition: .25s
+        }
+
+        .partners div:hover {
+            color: var(--brand);
+            background: var(--cream)
+        }
+
+        /* ============ CTA ============ */
+        .visit {
+            background: var(--gold);
+            color: #fff
+        }
+
+        .visit .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 46px 32px;
+            flex-wrap: wrap
+        }
+
+        .visit h3 {
+            font-family: var(--serif);
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 6px
+        }
+
+        .visit p {
+            font-size: 14.5px;
+            color: rgba(255, 255, 255, .92)
+        }
+
+        .visit .btn-brand:hover {
+            background: var(--brand-3)
+        }
+
+        /* ============ CONTACT ============ */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start
+        }
+
+        .cinfo {
+            display: grid;
+            gap: 18px
+        }
+
+        .crow {
+            display: flex;
+            gap: 16px;
+            background: #fff;
+            border: 1px solid var(--line-soft);
+            padding: 22px 24px;
+            align-items: flex-start
+        }
+
+        .crow .ic {
+            width: 42px;
+            height: 42px;
+            border: 1px solid var(--line);
+            display: grid;
+            place-items: center;
+            color: var(--gold);
+            flex: none
+        }
+
+        .crow b {
+            display: block;
+            font-size: 11px;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 4px
+        }
+
+        .crow a,
+        .crow span {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--brand)
+        }
+
+        .crow a:hover {
+            color: var(--gold)
+        }
+
+        form.cform {
+            background: var(--brand);
+            padding: 42px 38px;
+            color: #fff;
+            display: grid;
+            gap: 16px
+        }
+
+        form.cform h3 {
+            font-family: var(--serif);
+            font-size: 26px;
+            font-weight: 600
+        }
+
+        form.cform label {
+            font-size: 11px;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--gold-soft);
+            font-weight: 700;
+            display: block;
+            margin-bottom: 6px
+        }
+
+        form.cform input,
+        form.cform select,
+        form.cform textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .22);
+            padding: 13px 15px;
+            color: #fff;
+            font-family: var(--sans);
+            font-size: 14px;
+            outline: none;
+            border-radius: 3px
+        }
+
+        form.cform input::placeholder,
+        form.cform textarea::placeholder {
+            color: rgba(255, 255, 255, .45)
+        }
+
+        form.cform select option {
+            color: var(--ink)
+        }
+
+        form.cform textarea {
+            min-height: 110px;
+            resize: vertical
+        }
+
+        form.cform .btn {
+            justify-content: center;
+            margin-top: 6px
+        }
+
+        /* ============ FOOTER ============ */
+        .ftr {
+            background: var(--brand-3);
+            color: rgba(255, 255, 255, .72);
+            font-size: 14px
+        }
+
+        .ftr-main {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+            gap: 44px;
+            padding: 72px 0 56px
+        }
+
+        .ftr h4 {
+            color: #fff;
+            font-family: var(--serif);
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 20px
+        }
+
+        .ftr ul {
+            list-style: none;
+            display: grid;
+            gap: 10px
+        }
+
+        .ftr a:hover {
+            color: var(--gold-soft)
+        }
+
+        .ftr .logo img {
+            height: 56px;
+            background: #fff;
+            padding: 6px 12px;
+            border-radius: 3px
+        }
+
+        .ftr-brand p {
+            margin: 20px 0 22px;
+            font-size: 13.5px;
+            max-width: 300px
+        }
+
+        .soc {
+            display: flex;
+            gap: 10px
+        }
+
+        .soc a {
+            width: 36px;
+            height: 36px;
+            border: 1px solid rgba(255, 255, 255, .25);
+            display: grid;
+            place-items: center;
+            font-size: 13px;
+            transition: .2s
+        }
+
+        .soc a:hover {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: #fff
+        }
+
+        .newsletter {
+            display: flex;
+            margin-top: 18px;
+            border: 1px solid rgba(255, 255, 255, .25)
+        }
+
+        .newsletter input {
+            flex: 1;
+            background: transparent;
+            border: 0;
+            padding: 12px 14px;
+            color: #fff;
+            font-family: var(--sans);
+            font-size: 13px;
+            outline: none
+        }
+
+        .newsletter input::placeholder {
+            color: rgba(255, 255, 255, .45)
+        }
+
+        .newsletter button {
+            background: var(--gold);
+            color: #fff;
+            padding: 0 18px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .12em
+        }
+
+        .ftr-btm {
+            border-top: 1px solid rgba(255, 255, 255, .12);
+            padding: 22px 0;
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            font-size: 12.5px;
+            flex-wrap: wrap
+        }
+
+        .ftr-btm ul {
+            display: flex;
+            gap: 22px;
+            list-style: none
+        }
+
+        /* ============================================================
+   VIEW 2 — DETAIL
+   ============================================================ */
+        .view {
+            display: none
+        }
+
+        .view.is-on {
+            display: block
+        }
+
+        .crumb {
+            font-size: 12px;
+            color: var(--muted);
+            padding: 22px 0;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap
+        }
+
+        .crumb a:hover {
+            color: var(--gold)
+        }
+
+        .crumb span {
+            opacity: .5
+        }
+
+        .phero {
+            background: var(--brand);
+            color: #fff;
+            position: relative;
+            overflow: hidden
+        }
+
+        .phero-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .28
+        }
+
+        .phero .wrap {
+            position: relative;
+            z-index: 2;
+            padding: 74px 32px 66px
+        }
+
+        .phero .eyebrow {
+            color: var(--gold-soft)
+        }
+
+        .phero h1 {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: clamp(36px, 4.6vw, 58px);
+            line-height: 1.06;
+            margin-bottom: 18px
+        }
+
+        .phero .sub {
+            display: flex;
+            gap: 26px;
+            flex-wrap: wrap;
+            font-size: 13.5px;
+            color: rgba(255, 255, 255, .85)
+        }
+
+        .phero .sub b {
+            color: var(--gold-soft)
+        }
+
+        .pdetail {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 52px;
+            align-items: start;
+            padding: 70px 0 100px
+        }
+
+        .side {
+            position: sticky;
+            top: 110px;
+            display: grid;
+            gap: 18px
+        }
+
+        .side-\boxed {
+            background: #fff;
+            border: 1px solid var(--line-soft);
+            padding: 30px 28px
+        }
+
+        .side-box h3 {
+            font-family: var(--serif);
+            font-size: 19px;
+            font-weight: 600;
+            margin-bottom: 18px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--line-soft)
+        }
+
+        .side-box dl {
+            display: grid;
+            gap: 14px;
+            font-size: 13.5px
+        }
+
+        .side-box dt {
+            color: var(--muted);
+            font-size: 11px;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            font-weight: 700
+        }
+
+        .side-box dd {
+            font-weight: 700;
+            color: var(--brand)
+        }
+
+        .side-box .price-tag {
+            font-family: var(--serif);
+            font-size: 26px;
+            font-weight: 600;
+            color: var(--brand)
+        }
+
+        .side-box .btn {
+            width: 100%;
+            justify-content: center;
+            margin-top: 8px
+        }
+
+        .pmain>section {
+            padding-bottom: 56px;
+            margin-bottom: 56px;
+            border-bottom: 1px solid var(--line-soft)
+        }
+
+        .pmain>section:last-child {
+            border: 0;
+            margin-bottom: 0;
+            padding-bottom: 0
+        }
+
+        .pmain h2 {
+            font-family: var(--serif);
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 20px
+        }
+
+        .pmain p {
+            color: var(--muted);
+            margin-bottom: 16px
+        }
+
+        .netgrid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--line-soft);
+            border: 1px solid var(--line-soft)
+        }
+
+        .netgrid div {
+            background: var(--cream);
+            padding: 30px 22px;
+            text-align: center
+        }
+
+        .netgrid b {
+            font-family: var(--serif);
+            font-size: 34px;
+            color: var(--brand);
+            display: block
+        }
+
+        .netgrid span {
+            font-size: 12.5px;
+            color: var(--muted)
+        }
+
+        table.kur {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            font-size: 14px
+        }
+
+        table.kur th {
+            text-align: left;
+            font-size: 11px;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            background: var(--brand);
+            color: #fff;
+            padding: 14px 18px
+        }
+
+        table.kur td {
+            padding: 14px 18px;
+            border-bottom: 1px solid var(--line-soft);
+            color: var(--muted)
+        }
+
+        table.kur td:first-child {
+            font-weight: 700;
+            color: var(--brand)
+        }
+
+        table.kur tr:hover td {
+            background: var(--cream)
+        }
+
+        .kpi {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--line-soft);
+            border: 1px solid var(--line-soft);
+            margin: 26px 0
+        }
+
+        .kpi div {
+            background: var(--cream);
+            padding: 26px;
+            text-align: center
+        }
+
+        .kpi .row {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 1px;
+            margin-bottom: 4px
+        }
+
+        .kpi b {
+            font-family: var(--serif);
+            font-size: 32px;
+            color: var(--brand);
+            display: block
+        }
+
+        .kpi .sym {
+            font-family: var(--serif);
+            font-size: 20px;
+            color: var(--gold);
+            display: block;
+            opacity: 0;
+            transition: opacity .5s
+        }
+
+        .kpi .sym.on {
+            opacity: 1
+        }
+
+        .kpi span {
+            font-size: 12px;
+            color: var(--muted);
+            letter-spacing: .06em
+        }
+
+        details.faq {
+            background: #fff;
+            border: 1px solid var(--line-soft);
+            margin-bottom: 10px
+        }
+
+        details.faq summary {
+            padding: 18px 22px;
+            font-weight: 700;
+            font-size: 14.5px;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            color: var(--brand)
+        }
+
+        details.faq summary::-webkit-details-marker {
+            display: none
+        }
+
+        details.faq summary::after {
+            content: "+";
+            color: var(--gold);
+            font-size: 18px
+        }
+
+        details.faq[open] summary::after {
+            content: "–"
+        }
+
+        details.faq p {
+            padding: 0 22px 20px;
+            font-size: 14px;
+            margin: 0
+        }
+
+        .rel {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px
+        }
+
+        .rel .card {
+            padding: 0
+        }
+
+        .rel .card .body {
+            padding: 28px
+        }
+
+        .rel .card .price {
+            font-family: var(--serif);
+            font-size: 26px;
+            color: var(--brand);
+            font-weight: 600;
+            margin: 6px 0 10px
+        }
+
+        .pcta {
+            background: var(--brand);
+            color: #fff;
+            padding: 56px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px
+        }
+
+        .pcta h3 {
+            font-family: var(--serif);
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 8px
+        }
+
+        .pcta p {
+            color: rgba(255, 255, 255, .75);
+            margin: 0
+        }
+
+        /* ============ REVEAL ============ */
+        .rv {
+            opacity: 0;
+            transform: translateY(26px);
+            transition: opacity .7s ease, transform .7s ease
+        }
+
+        .rv.in {
+            opacity: 1;
+            transform: none
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media(max-width:1080px) {
+            .hero-grid {
+                grid-template-columns: 1fr
+            }
+
+            .hero-card {
+                max-width: 480px
+            }
+
+            .stats .wrap {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .stat:nth-child(2) {
+                border-right: 0
+            }
+
+            .values {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .value:nth-child(2) {
+                border-right: 0
+            }
+
+            .split,
+            .about,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px
+            }
+
+            .prog-layout {
+                grid-template-columns: 1fr
+            }
+
+            .prog-intro {
+                position: static
+            }
+
+            .prog-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .fees,
+            .netgrid,
+            .rel {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .achieve-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .life {
+                grid-template-columns: 1fr
+            }
+
+            .news {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .events {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .svc-grid {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .partners {
+                grid-template-columns: repeat(3, 1fr)
+            }
+
+            .ftr-main {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .pdetail {
+                grid-template-columns: 1fr
+            }
+
+            .side {
+                position: static
+            }
+
+            .split figure .tagfloat {
+                left: 16px
+            }
+        }
+
+        @media(max-width:760px) {
+            .wrap {
+                padding: 0 20px
+            }
+
+            .sec {
+                padding: 72px 0
+            }
+
+            .nav,
+            .hdr-cta .btn,
+            .lang {
+                display: none
+            }
+
+            .burger {
+                display: flex
+            }
+
+            .hdr.nav-open .nav {
+                display: flex;
+                position: absolute;
+                top: 86px;
+                left: 0;
+                right: 0;
+                background: var(--cream);
+                flex-direction: column;
+                padding: 26px 24px;
+                gap: 18px;
+                border-bottom: 1px solid var(--line)
+            }
+
+            .hdr.nav-open .hdr-cta .btn {
+                display: inline-flex
+            }
+
+            .stats .wrap,
+            .values,
+            .prog-grid,
+            .news,
+            .events,
+            .achieve-grid,
+            .fees,
+            .netgrid,
+            .kpi,
+            .partners,
+            .rel,
+            .svc-grid {
+                grid-template-columns: 1fr
+            }
+
+            .stat {
+                border-right: 0;
+                border-bottom: 1px solid var(--line-soft)
+            }
+
+            .about-figure {
+                grid-template-columns: 1fr
+            }
+
+            .about-figure img:first-child {
+                grid-row: auto;
+                aspect-ratio: 4/3
+            }
+
+            .hero .wrap {
+                padding-top: 90px;
+                padding-bottom: 80px
+            }
+
+            .pcta {
+                padding: 34px 26px
+            }
+
+            .portal {
+                padding: 60px 0
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============ UTILITY BAR ============ -->
+    <div class="util">
+        <div class="wrap">
+            <ul>
+                <li><a href="mailto:admin@aui.university">✉ admin@aui.university</a></li>
+                <li class="sep">|</li>
+                <li><a href="tel:+60165680906">☎ +60 165 680 906</a></li>
+                <li class="sep">|</li>
+                <li><a href="#students">Portal AUI (Students)</a></li>
+            </ul>
+            <ul>
+                <li><a href="#tuition">Payment Information</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">EN</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ============ HEADER ============ -->
+    <header class="hdr" id="hdr">
+        <div class="wrap">
+            <a href="#" class="logo" data-view="home" aria-label="ASEAN University International — Home">
+                <img src="https://aui.university/wp-content/uploads/2026/05/logo-title-asean-university-international.webp"
+                    alt="logo title asean university international">
+            </a>
+            <nav>
+                <ul class="nav">
+                    <li><a href="#" class="is-active" data-view="home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#tuition">Admissions</a></li>
+                    <li><a href="#" data-view="detail">Academic</a></li>
+                    <li><a href="#tuition">Payment Information</a></li>
+                    <li><a href="#students">Students</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hdr-cta">
+                <a href="#tuition" class="btn btn-gold">Apply now</a>
+                <span class="lang">EN / 中文</span>
+                <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================================
+     VIEW 1 — HOME
+     ============================================================ -->
+    <main class="view is-on" id="view-home">
+
+        <!-- HERO -->
+        <section class="hero">
+            <img class="hero-img"
+                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1800&q=70"
+                alt="ASEAN University International students learning together">
+            <div class="wrap">
+                <div class="hero-grid">
+                    <div>
+                        <div class="eyebrow" style="color:var(--gold-soft)">ASEAN University International · Study From
+                            Anywhere</div>
+                        <h1>Transformative Education,<br><em>Unbelievable Impact</em></h1>
+                        <p class="lede">Learn how our transformative education and multidisciplinary research have
+                            nurtured effective global leaders, impacted society and transformed lives for the better.
+                        </p>
+                        <div class="hero-btns">
+                            <a href="#tuition" class="btn btn-gold">Apply now</a>
+                            <a href="#anywhere" class="btn btn-ghost">Study From Anywhere</a>
+                        </div>
+                        <form class="hero-search" onsubmit="return false">
+                            <input type="search" placeholder="Search programme, scholarship, payment…"
+                                aria-label="Search">
+                            <button type="submit">SEARCH</button>
+                        </form>
+                    </div>
+                    <aside class="hero-card">
+                        <h3>Tuition Fees &amp; Special Offer</h3>
+                        <dl>
+                            <div>
+                                <dt>Bachelor</dt>
+                                <dd>MYR 35,000<small>Scholarship Available</small></dd>
+                            </div>
+                            <div>
+                                <dt>Master</dt>
+                                <dd>MYR 45,000<small>Scholarship Available</small></dd>
+                            </div>
+                            <div>
+                                <dt>Doctor</dt>
+                                <dd>MYR 65,000<small>Scholarship Available</small></dd>
+                            </div>
+                        </dl>
+                        <a href="#tuition" class="link-gold">See all fees →</a>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== STATS (FIXED: angka + simbol rapi) ===== -->
+        <div class="stats">
+            <div class="wrap">
+                <div class="stat">
+                    <div class="row">
+                        <b><span data-count="3000">0</span></b>
+                        <span class="sym" data-sym>+</span>
+                    </div>
+                    <span class="lbl">students enrolled from<br>5+ countries</span>
+                </div>
+                <div class="stat">
+                    <div class="row">
+                        <b><span data-count="5">0</span></b>
+                    </div>
+                    <span class="lbl">academic faculties and<br>20+ research centers</span>
+                </div>
+                <div class="stat">
+                    <div class="row">
+                        <b><span data-count="100">0</span></b>
+                        <span class="sym" data-sym>+</span>
+                    </div>
+                    <span class="lbl">Industry partnerships<br>worldwide</span>
+                </div>
+                <div class="stat">
+                    <div class="row">
+                        <b><span data-count="90">0</span></b>
+                        <span class="sym" data-sym>%</span>
+                    </div>
+                    <span class="lbl">graduate employability rate<br>within 6 months</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PENGUMUMAN -->
+        <div class="ann">
+            <div class="wrap">
+                <span class="ann-tag">Announcement</span>
+                <div class="ann-body" id="annBody">
+                    <div class="ann-item is-on"><b>Scholarship Available</b> — for Bachelor, Master and Doctor
+                        programmes.</div>
+                    <div class="ann-item"><b>Study From Anywhere In The World</b> — online, or at your own pace with or
+                        without attending classes.</div>
+                    <div class="ann-item"><b>Admissions</b> — admin@aui.university · +60 165 680 906 · portal-aui</div>
+                </div>
+                <div class="ann-dots" id="annDots"></div>
+            </div>
+        </div>
+
+        <!-- NILAI UNGGUL -->
+        <section class="sec">
+            <div class="wrap">
+                <div class="sec-head rv">
+                    <div class="eyebrow">01 — Why AUI</div>
+                    <h2>Four pillars behind the AUI learning experience</h2>
+                </div>
+                <div class="values rv">
+                    <div class="value">
+                        <div class="ic">◉</div>
+                        <h3>Study From Anywhere</h3>
+                        <p>Every programme we offer can be studied from anywhere in the world — online, or at your own
+                            pace.</p>
+                        <a href="#anywhere" class="link-gold">Selengkapnya →</a>
+                    </div>
+                    <div class="value">
+                        <div class="ic">✦</div>
+                        <h3>Accredited Quality</h3>
+                        <p>Whichever study method you choose, you'll experience the same high‑quality, accredited
+                            education programme of study.</p>
+                        <a href="#" data-view="detail" class="link-gold">Selengkapnya →</a>
+                    </div>
+                    <div class="value">
+                        <div class="ic">◎</div>
+                        <h3>Global Network</h3>
+                        <p>Nearly 30,000 students and 20,000 alumni — a powerful, connected network right across the
+                            globe.</p>
+                        <a href="#network" class="link-gold">Selengkapnya →</a>
+                    </div>
+                    <div class="value">
+                        <div class="ic">◐</div>
+                        <h3>Career Impact</h3>
+                        <p>90% graduate employability rate within 6 months, supported by 100+ industry partnerships
+                            worldwide.</p>
+                        <a href="#network" class="link-gold">Selengkapnya →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STUDY FROM ANYWHERE -->
+        <section class="sec" id="anywhere" style="padding-top:0">
+            <div class="wrap">
+                <div class="split">
+                    <div class="rv">
+                        <div class="eyebrow">02 — Flexible Learning</div>
+                        <h2>Study From Anywhere In The World.</h2>
+                        <p>Every programme we offer can be studied from anywhere in the world – choose to study online,
+                            or at your own pace with or without attending classes.</p>
+                        <div class="modes">
+                            <div class="mode"><i>◉</i>
+                                <div><b>Online</b><span>Study from anywhere in the world.</span></div>
+                            </div>
+                            <div class="mode"><i>◷</i>
+                                <div><b>At your own pace</b><span>With or without attending classes.</span></div>
+                            </div>
+                            <div class="mode"><i>✦</i>
+                                <div><b>Same accredited quality</b><span>Whichever study method you choose, you'll
+                                        experience the same high‑quality, accredited education programme of
+                                        study.</span></div>
+                            </div>
+                        </div>
+                        <p>With nearly 30,000 students and 20,000 alumni, we offer a part of a powerful, connected
+                            network right across the globe and a learning experience that's both personalised and
+                            flexible.</p>
+                        <a href="#" class="btn btn-line" data-view="detail">Explore Academic Programmes →</a>
+                    </div>
+                    <figure class="rv">
+                        <img loading="lazy"
+                            src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&w=1000&q=70"
+                            alt="Student studying online from anywhere in the world">
+                        <div class="tagfloat">Nearly 30,000 students &amp; 20,000 alumni worldwide</div>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 03 — ACADEMIC (FIXED: kartu bersih, tanpa badge melayang, gambar andal) ===== -->
+        <section class="sec" id="programmes" style="padding-top:0">
+            <div class="wrap">
+                <div class="prog-layout">
+                    <div class="prog-intro rv">
+                        <div class="eyebrow">03 — Academic</div>
+                        <h2>Find Your Path</h2>
+                        <p>Choose your level of study — Bachelor, Master, or Doctor — and the study method that fits
+                            your life. Every AUI programme can be studied from anywhere in the world.</p>
+                        <a href="#" class="btn btn-line" data-view="detail">View All Programmes →</a>
+                        <div class="prog-note">
+                            <b>5 Faculties</b>
+                            20+ research centers · 3 programme levels · online &amp; own‑pace study methods
+                        </div>
+                    </div>
+                    <div>
+                        <div class="tabs" id="progTabs">
+                            <button class="tab is-on" data-filter="all">All</button>
+                            <button class="tab" data-filter="s1">Bachelor</button>
+                            <button class="tab" data-filter="s2">Master</button>
+                            <button class="tab" data-filter="doc">Doctor</button>
+                            <button class="tab" data-filter="mode">Study Mode</button>
+                        </div>
+                        <div class="prog-grid" id="progGrid">
+
+                            <article class="card rv" data-lvl="s1">
+                                <figure>
+                                    <img loading="lazy"
+                                        src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=70"
+                                        alt="Bachelor graduates">
+                                </figure>
+                                <div class="body">
+                                    <span class="lvl">Undergraduate</span>
+                                    <h3><a href="#" data-view="detail">Bachelor</a></h3>
+                                    <div class="fee-line">MYR 35,000</div>
+                                    <div class="sch">Scholarship Available</div>
+                                    <p>Programme sarjana yang dapat dipelajari dari mana saja — online, atau at your own
+                                        pace.</p>
+                                    <a href="#" class="link-gold" data-view="detail">Apply Now →</a>
+                                </div>
+                            </article>
+
+                            <article class="card rv" data-lvl="s2">
+                                <figure>
+                                    <img loading="lazy"
+                                        src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=70"
+                                        alt="Master programme class">
+                                </figure>
+                                <div class="body">
+                                    <span class="lvl">Postgraduate</span>
+                                    <h3><a href="#" data-view="detail">Master</a></h3>
+                                    <div class="fee-line">MYR 45,000</div>
+                                    <div class="sch">Scholarship Available</div>
+                                    <p>Pendidikan pascasarjana bertaraf tinggi dan terakreditasi, diajar oleh
+                                        professionals.</p>
+                                    <a href="#" class="link-gold" data-view="detail">Apply Now →</a>
+                                </div>
+                            </article>
+
+                            <article class="card rv" data-lvl="doc">
+                                <figure>
+                                    <img loading="lazy"
+                                        src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=70"
+                                        alt="Doctoral research">
+                                </figure>
+                                <div class="body">
+                                    <span class="lvl">Doctoral</span>
+                                    <h3><a href="#" data-view="detail">Doctor</a></h3>
+                                    <div class="fee-line">MYR 65,000</div>
+                                    <div class="sch">Scholarship Available</div>
+                                    <p>Program doktoral dengan penekanan pada riset multidisiplin dan dampak nyata.</p>
+                                    <a href="#" class="link-gold" data-view="detail">Apply Now →</a>
+                                </div>
+                            </article>
+
+                            <article class="card rv" data-lvl="mode">
+                                <figure>
+                                    <img loading="lazy"
+                                        src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=70"
+                                        alt="Online study">
+                                </figure>
+                                <div class="body">
+                                    <span class="lvl">Study Mode</span>
+                                    <h3>Online</h3>
+                                    <p>Every programme we offer can be studied from anywhere in the world.</p>
+                                    <a href="#anywhere" class="link-gold">Selengkapnya →</a>
+                                </div>
+                            </article>
+
+                            <article class="card rv" data-lvl="mode">
+                                <figure>
+                                    <img loading="lazy"
+                                        src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=800&q=70"
+                                        alt="Study at your own pace">
+                                </figure>
+                                <div class="body">
+                                    <span class="lvl">Study Mode</span>
+                                    <h3>At Your Own Pace</h3>
+                                    <p>Study online, or at your own pace with or without attending classes.</p>
+                                    <a href="#anywhere" class="link-gold">Selengkapnya →</a>
+                                </div>
+                            </article>
+
+                            <article class="card rv" data-lvl="mode">
+                                <figure>
+                                    <img loading="lazy"
+                                        src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=70"
+                                        alt="Industry partnership">
+                                </figure>
+                                <div class="body">
+                                    <span class="lvl">Research &amp; Industry</span>
+                                    <h3>5 Faculties · 20+ Centers</h3>
+                                    <p>20+ research centers and 100+ industry partnerships worldwide support every
+                                        programme.</p>
+                                    <a href="#network" class="link-gold">Selengkapnya →</a>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TUITION FEES -->
+        <section class="sec tuition" id="tuition">
+            <div class="wrap">
+                <div class="sec-head rv">
+                    <div class="eyebrow" style="color:var(--gold-soft)">04 — Admissions · Payment Information</div>
+                    <h2>Tuition Fees and Special Offer</h2>
+                    <p>Choose your level of study. Every programme comes with scholarship opportunities.</p>
+                </div>
+                <div class="fees">
+                    <article class="fee rv">
+                        <span class="lvl">Undergraduate</span>
+                        <h3>Bachelor</h3>
+                        <span class="cur">Tuition Fee</span>
+                        <div class="price"><small>MYR</small> 35<small>,000</small></div>
+                        <span class="badge">Scholarship Available</span>
+                        <a href="#" class="btn btn-brand" data-view="detail">Apply Now</a>
+                    </article>
+                    <article class="fee rv">
+                        <span class="lvl">Postgraduate</span>
+                        <h3>Master</h3>
+                        <span class="cur">Tuition Fee</span>
+                        <div class="price"><small>MYR</small> 45<small>,000</small></div>
+                        <span class="badge">Scholarship Available</span>
+                        <a href="#" class="btn btn-brand" data-view="detail">Apply Now</a>
+                    </article>
+                    <article class="fee rv">
+                        <span class="lvl">Doctoral</span>
+                        <h3>Doctor</h3>
+                        <span class="cur">Tuition Fee</span>
+                        <div class="price"><small>MYR</small> 65<small>,000</small></div>
+                        <span class="badge">Scholarship Available</span>
+                        <a href="#" class="btn btn-brand" data-view="detail">Apply Now</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 05 — THE AUI NETWORK (FIXED: simbol + dan % muncul setelah count-up) ===== -->
+        <section class="sec achieve" id="network">
+            <div class="wrap">
+                <div class="sec-head rv">
+                    <div class="eyebrow">05 — The AUI Network</div>
+                    <h2>A powerful, connected network across the globe</h2>
+                    <p>Joining ASEAN University opens up great opportunities for your academic and professional
+                        development.</p>
+                </div>
+                <div class="achieve-grid rv">
+                    <div class="ach">
+                        <div class="row">
+                            <b><span data-count="30000">0</span></b>
+                        </div>
+                        <span>students — nearly 30,000 across the globe</span>
+                    </div>
+                    <div class="ach">
+                        <div class="row">
+                            <b><span data-count="20000">0</span></b>
+                        </div>
+                        <span>alumni in the AUI connected network</span>
+                    </div>
+                    <div class="ach">
+                        <div class="row">
+                            <b><span data-count="20">0</span></b>
+                            <span class="sym" data-sym>+</span>
+                        </div>
+                        <span>research centers across 5 academic faculties</span>
+                    </div>
+                    <div class="ach">
+                        <div class="row">
+                            <b><span data-count="100">0</span></b>
+                            <span class="sym" data-sym>+</span>
+                        </div>
+                        <span>industry partnerships worldwide</span>
+                    </div>
+                </div>
+                <div class="accred rv">
+                    <div>High-quality accredited education</div>
+                    <div>Online · At your own pace</div>
+                    <div>Students from 5+ countries</div>
+                    <div>90% employability within 6 months</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT AUI -->
+        <section class="sec" id="about">
+            <div class="wrap">
+                <div class="about">
+                    <div class="rv">
+                        <div class="eyebrow">06 — About</div>
+                        <h2>Asean University International</h2>
+                        <div class="sub">With Unbelievable Impact</div>
+                        <p>At ASEAN University International (AUI), we foster excellent education that is engaging and
+                            enthusiastically presented, with an emphasis on disseminating practical and pertinent
+                            knowledge. Our goal is to provide students with the opportunity to delve into a vast world
+                            of information taught by professionals and graduate with essential skills for the latest
+                            industries.</p>
+                        <p>AUI ensures that you have the resources to succeed in your studies along the way, making an
+                            unbelievably positive impact on your academic and professional growth. Joining ASEAN
+                            University opens up great opportunities for your academic and professional development.</p>
+                        <a href="#" class="link-gold" style="margin-top:10px">More about AUI →</a>
+                    </div>
+                    <div class="about-figure rv">
+                        <img loading="lazy"
+                            src="https://images.unsplash.com/photo-1498243691581-b145c3f2af42?auto=format&fit=crop&w=700&q=70"
+                            alt="AUI institution">
+                        <img loading="lazy"
+                            src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=500&q=70"
+                            alt="Professional lecturer">
+                        <img loading="lazy"
+                            src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=500&q=70"
+                            alt="Students in class">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 07 — STUDENTS (REDESIGNED) ===== -->
+        <section class="portal" id="students">
+            <div class="wrap">
+                <div class="sec-head rv">
+                    <div class="eyebrow">07 — Students</div>
+                    <h2>Everything you need, in one place</h2>
+                    <p>Akses portal mahasiswa, informasi pembayaran, dan bantuan admissions — atau cari langsung di
+                        bawah.</p>
+                </div>
+                <div class="svc-grid rv">
+                    <div class="svc">
+                        <div class="ic">◎</div>
+                        <h3>portal-aui</h3>
+                        <p>Masuk ke student portal untuk mengakses layanan akademik, jadwal, dan informasi pribadi Anda
+                            sebagai mahasiswa AUI.</p>
+                        <a href="#" class="btn btn-brand">Enter Portal</a>
+                    </div>
+                    <div class="svc">
+                        <div class="ic">💳</div>
+                        <h3>Payment Information</h3>
+                        <p>Informasi lengkap mengenai metode pembayaran tuition fee, jadwal pembayaran, dan pertanyaan
+                            umum seputar biaya kuliah.</p>
+                        <a href="#tuition" class="btn btn-line">View Payment Info</a>
+                    </div>
+                    <div class="svc">
+                        <div class="ic">✉</div>
+                        <h3>Contact Support</h3>
+                        <p>Hubungi tim admissions AUI melalui email admin@aui.university atau telepon +60 165 680 906
+                            untuk bantuan lebih lanjut.</p>
+                        <a href="#contact" class="btn btn-line">Contact Us</a>
+                    </div>
+                </div>
+                <form class="searchbar rv" onsubmit="return false">
+                    <input type="search"
+                        placeholder="Students…  search programme, scholarship, payment, or student services"
+                        aria-label="Search for students">
+                    <button type="submit">SEARCH</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- COMMUNITY + UPDATES -->
+        <section class="sec">
+            <div class="wrap">
+                <div class="life">
+                    <div class="life-panel rv">
+                        <div class="eyebrow">08 — Community</div>
+                        <h2>More Than a Programme</h2>
+                        <p>Be part of a powerful, connected network right across the globe — a learning experience
+                            that's both personalised and flexible, from your first enquiry to your career after
+                            graduation.</p>
+                        <p style="margin-top:20px"><a href="#network" class="link-gold">Discover the AUI network →</a>
+                        </p>
+                        <figure>
+                            <img loading="lazy"
+                                src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=70"
+                                alt="AUI global community">
+                        </figure>
+                    </div>
+
+                    <div class="news">
+                        <div class="news-top">
+                            <h2>Updates &amp; Key Information</h2>
+                            <a href="#tuition" class="link-gold">All Admissions Info →</a>
+                        </div>
+                        <article class="ncard rv">
+                            <figure><img loading="lazy"
+                                    src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=70"
+                                    alt="Scholarship opportunities"></figure>
+                            <div class="meta"><span>Scholarship</span><span>Open</span></div>
+                            <h3>Scholarship Available for All Programme Levels</h3>
+                            <p>Scholarship opportunities are available for Bachelor, Master, and Doctor programmes —
+                                contact admissions for the current special offer.</p>
+                            <a href="#contact" class="link-gold">Read more →</a>
+                        </article>
+                        <article class="ncard rv">
+                            <figure><img loading="lazy"
+                                    src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&w=800&q=70"
+                                    alt="Flexible enrolment"></figure>
+                            <div class="meta"><span>Admissions</span><span>Ongoing</span></div>
+                            <h3>Flexible Enrolment — Study From Anywhere</h3>
+                            <p>Every programme can be studied from anywhere in the world: online, or at your own pace
+                                with or without attending classes.</p>
+                            <a href="#anywhere" class="link-gold">Read more →</a>
+                        </article>
+                        <article class="ncard rv">
+                            <figure><img loading="lazy"
+                                    src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=70"
+                                    alt="Admissions support"></figure>
+                            <div class="meta"><span>Support</span><span>Daily</span></div>
+                            <h3>Talk to the AUI Admissions Team</h3>
+                            <p>Reach us at admin@aui.university or +60 165 680 906 for programme, scholarship, and
+                                payment enquiries.</p>
+                            <a href="#contact" class="link-gold">Read more →</a>
+                        </article>
+                        <div class="events rv">
+                            <div class="ev">
+                                <div class="date"><b>Open</b><span>Now</span></div>
+                                <div>
+                                    <h4>Scholarship Enquiry</h4>
+                                    <p>admin@aui.university</p>
+                                </div>
+                            </div>
+                            <div class="ev">
+                                <div class="date"><b>24/7</b><span>Online</span></div>
+                                <div>
+                                    <h4>portal-aui — Student Portal</h4>
+                                    <p>Payment information &amp; student services</p>
+                                </div>
+                            </div>
+                            <div class="ev">
+                                <div class="date"><b>Daily</b><span>MYT</span></div>
+                                <div>
+                                    <h4>Admissions Counselling</h4>
+                                    <p>+60 165 680 906</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONI -->
+        <section class="sec testi">
+            <div class="wrap">
+                <div class="sec-head rv">
+                    <div class="eyebrow">09 — Voices</div>
+                    <h2>Why learners choose AUI</h2>
+                    <p>Kartu di bawah ini adalah contoh tampilan — ganti dengan testimoni mahasiswa, dosen, dan alumni
+                        AUI yang sebenarnya.</p>
+                </div>
+                <div class="testi-track" id="testiTrack">
+                    <div class="tcard rv">
+                        <blockquote>"I can study my Master from my own country, at my own pace, and still receive the
+                            same accredited education."</blockquote>
+                        <div class="who">
+                            <img loading="lazy"
+                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=70"
+                                alt="Sample student">
+                            <div><b>Sample Student</b><span>Master · Online study</span><br><span class="ph">Contoh
+                                    tampilan</span></div>
+                        </div>
+                    </div>
+                    <div class="tcard rv">
+                        <blockquote>"The flexible study method let me keep working while completing my Bachelor — the
+                            learning experience is personalised and flexible."</blockquote>
+                        <div class="who">
+                            <img loading="lazy"
+                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=70"
+                                alt="Sample alumnus">
+                            <div><b>Sample Alumnus</b><span>Bachelor · Own pace</span><br><span class="ph">Contoh
+                                    tampilan</span></div>
+                        </div>
+                    </div>
+                    <div class="tcard rv">
+                        <blockquote>"Practical and pertinent knowledge, taught by professionals — that is exactly what
+                            AUI delivers in every class."</blockquote>
+                        <div class="who">
+                            <img loading="lazy"
+                                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=70"
+                                alt="Sample lecturer">
+                            <div><b>Sample Lecturer</b><span>Faculty · Research center</span><br><span class="ph">Contoh
+                                    tampilan</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-nav">
+                    <button id="tPrev" aria-label="Previous">←</button>
+                    <button id="tNext" aria-label="Next">→</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- MITRA -->
+        <section class="sec" style="padding-top:80px">
+            <div class="wrap">
+                <div class="sec-head rv" style="margin-bottom:36px">
+                    <div class="eyebrow">10 — Partnerships</div>
+                    <h2>100+ industry partnerships worldwide</h2>
+                    <p>Nama logo di bawah ini hanya placeholder — ganti dengan logo partner AUI yang sebenarnya.</p>
+                </div>
+                <div class="partners rv">
+                    <div>Partner 01</div>
+                    <div>Partner 02</div>
+                    <div>Partner 03</div>
+                    <div>Partner 04</div>
+                    <div>Partner 05</div>
+                    <div>Partner 06</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="visit">
+            <div class="wrap">
+                <div>
+                    <h3>Start Your Application Today</h3>
+                    <p>Tuition from MYR 35,000 · Scholarship Available · Study from anywhere in the world.</p>
+                </div>
+                <div style="display:flex;gap:12px;flex-wrap:wrap">
+                    <a href="#" class="btn btn-brand" data-view="detail">Apply now</a>
+                    <a href="#contact" class="btn btn-ghost">Contact Admissions</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="sec" id="contact">
+            <div class="wrap">
+                <div class="sec-head rv">
+                    <div class="eyebrow">11 — Contact</div>
+                    <h2>Talk to the AUI admissions team</h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="cinfo rv">
+                        <div class="crow">
+                            <div class="ic">✉</div>
+                            <div><b>Email</b><a href="mailto:admin@aui.university">admin@aui.university</a></div>
+                        </div>
+                        <div class="crow">
+                            <div class="ic">☎</div>
+                            <div><b>Phone / WhatsApp</b><a href="tel:+60165680906">+60 165 680 906</a></div>
+                        </div>
+                        <div class="crow">
+                            <div class="ic">◎</div>
+                            <div><b>Student Portal</b><a href="#">portal-aui</a></div>
+                        </div>
+                        <div class="crow">
+                            <div class="ic">⌂</div>
+                            <div><b>Address</b><span>F-2-23, Jalan BG 3B/1 Bangi Gateway 3B, Seksyen 15, 43650 Bandar
+                                    Baru Bangi, Selangor, Malaysia</span></div>
+                        </div>
+                    </div>
+                    <form class="cform rv" onsubmit="return false">
+                        <h3>Enquiry Form</h3>
+                        <div><label for="fn">Full name</label><input id="fn" type="text" placeholder="Your name"></div>
+                        <div><label for="em">Email</label><input id="em" type="email" placeholder="you@email.com"></div>
+                        <div><label for="pg">Programme of interest</label>
+                            <select id="pg">
+                                <option>Bachelor — MYR 35,000</option>
+                                <option>Master — MYR 45,000</option>
+                                <option>Doctor — MYR 65,000</option>
+                            </select>
+                        </div>
+                        <div><label for="sm">Preferred study method</label>
+                            <select id="sm">
+                                <option>Online</option>
+                                <option>At my own pace</option>
+                                <option>With attending classes</option>
+                            </select>
+                        </div>
+                        <div><label for="ms">Message</label><textarea id="ms"
+                                placeholder="Tell us about your study plans…"></textarea></div>
+                        <button class="btn btn-gold" type="submit">Send Enquiry</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+     VIEW 2 — DETAIL (MASTER)
+     ============================================================ -->
+    <main class="view" id="view-detail">
+
+        <div class="wrap">
+            <div class="crumb">
+                <a href="#" data-view="home">Home</a><span>/</span>
+                <a href="#programmes">Academic</a><span>/</span>
+                <b style="color:var(--brand)">Master</b>
+            </div>
+        </div>
+
+        <section class="phero">
+            <img class="phero-img"
+                src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1800&q=70"
+                alt="Master programme study">
+            <div class="wrap">
+                <div class="eyebrow">Postgraduate Programme · ASEAN University International</div>
+                <h1>Master</h1>
+                <div class="sub">
+                    <span>Tuition: <b>MYR 45,000</b></span>
+                    <span>Study mode: <b>Online · At your own pace</b></span>
+                    <span>Accredited programme of study</span>
+                    <span>Scholarship: <b>Available</b></span>
+                </div>
+            </div>
+        </section>
+
+        <div class="wrap">
+            <div class="pdetail">
+
+                <aside class="side">
+                    <div class="side-box">
+                        <h3>Quick Info</h3>
+                        <dl>
+                            <div>
+                                <dt>Programme level</dt>
+                                <dd>Master (Postgraduate)</dd>
+                            </div>
+                            <div>
+                                <dt>Tuition fee</dt>
+                                <dd class="price-tag">MYR 45,000</dd>
+                            </div>
+                            <div>
+                                <dt>Scholarship</dt>
+                                <dd>Available</dd>
+                            </div>
+                            <div>
+                                <dt>Study method</dt>
+                                <dd>Online / own pace</dd>
+                            </div>
+                            <div>
+                                <dt>Location</dt>
+                                <dd>Study from anywhere in the world</dd>
+                            </div>
+                            <div>
+                                <dt>Faculties</dt>
+                                <dd>5 academic faculties · 20+ research centers</dd>
+                            </div>
+                            <div>
+                                <dt>Admissions</dt>
+                                <dd>admin@aui.university<br>+60 165 680 906</dd>
+                            </div>
+                        </dl>
+                        <a href="#" class="btn btn-gold">Apply now</a>
+                        <a href="#contact" class="btn btn-line">Ask Admissions</a>
+                        <a href="#tuition" class="btn btn-line">Payment Information</a>
+                    </div>
+                    <div class="side-box" style="background:var(--brand);color:#fff;border:0">
+                        <h3 style="color:#fff;border-color:rgba(255,255,255,.2)">Scholarship Available</h3>
+                        <p style="font-size:13.5px;color:rgba(255,255,255,.8);margin:0">Every AUI programme — Bachelor,
+                            Master, and Doctor — offers scholarship opportunities. Contact admissions for the current
+                            special offer.</p>
+                    </div>
+                </aside>
+
+                <div class="pmain">
+
+                    <section class="rv">
+                        <h2>Programme Overview</h2>
+                        <p>The Master programme at ASEAN University International (AUI) can be studied from anywhere in
+                            the world – choose to study online, or at your own pace with or without attending classes.
+                        </p>
+                        <p>Whichever study method you choose, you'll experience the same high‑quality, accredited
+                            education programme of study. AUI fosters excellent education that is engaging and
+                            enthusiastically presented, with an emphasis on disseminating practical and pertinent
+                            knowledge, taught by professionals — so you graduate with essential skills for the latest
+                            industries.</p>
+                    </section>
+
+                    <section class="rv">
+                        <h2>Programme Snapshot</h2>
+                        <table class="kur">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Detail</th>
+                                    <th>Note</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Level</td>
+                                    <td>Master (Postgraduate)</td>
+                                    <td>Programme level 2 of 3 — Bachelor · Master · Doctor</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuition Fee</td>
+                                    <td>MYR 45,000</td>
+                                    <td>Payment Information available on homepage</td>
+                                </tr>
+                                <tr>
+                                    <td>Scholarship</td>
+                                    <td>Available</td>
+                                    <td>Special offer — contact admissions</td>
+                                </tr>
+                                <tr>
+                                    <td>Study Method</td>
+                                    <td>Online / own pace</td>
+                                    <td>With or without attending classes</td>
+                                </tr>
+                                <tr>
+                                    <td>Accreditation</td>
+                                    <td>High-quality accredited education</td>
+                                    <td>Same quality whichever study method you choose</td>
+                                </tr>
+                                <tr>
+                                    <td>Delivery</td>
+                                    <td>Anywhere in the world</td>
+                                    <td>Personalised and flexible learning experience</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section class="rv">
+                        <h2>Study Methods</h2>
+                        <div class="netgrid">
+                            <div><b>Online</b><span>Every programme can be studied from anywhere in the world.</span>
+                            </div>
+                            <div><b>Own Pace</b><span>Study with or without attending classes.</span></div>
+                            <div><b>Same Quality</b><span>The same high‑quality, accredited education programme of
+                                    study.</span></div>
+                        </div>
+                    </section>
+
+                    <section class="rv">
+                        <h2>The AUI Network</h2>
+                        <p>By joining AUI, you become part of a powerful, connected network right across the globe.</p>
+                        <div class="kpi">
+                            <div>
+                                <div class="row"><b><span data-count="3000">0</span></b><span class="sym"
+                                        data-sym>+</span></div>
+                                <span>students enrolled from 5+ countries</span>
+                            </div>
+                            <div>
+                                <div class="row"><b><span data-count="90">0</span></b><span class="sym"
+                                        data-sym>%</span></div>
+                                <span>graduate employability within 6 months</span>
+                            </div>
+                            <div>
+                                <div class="row"><b><span data-count="100">0</span></b><span class="sym"
+                                        data-sym>+</span></div>
+                                <span>industry partnerships worldwide</span>
+                            </div>
+                        </div>
+                        <p>With nearly 30,000 students and 20,000 alumni, we offer a part of a powerful, connected
+                            network right across the globe. AUI ensures that you have the resources to succeed in your
+                            studies along the way, making an unbelievably positive impact on your academic and
+                            professional growth.</p>
+                    </section>
+
+                    <section class="rv">
+                        <h2>Tuition Fees &amp; Special Offer</h2>
+                        <div class="rel">
+                            <article class="card">
+                                <div class="body">
+                                    <span class="lvl">Undergraduate</span>
+                                    <h3>Bachelor</h3>
+                                    <div class="price">MYR 35,000</div>
+                                    <div class="sch">Scholarship Available</div>
+                                    <a href="#" class="link-gold">Apply Now →</a>
+                                </div>
+                            </article>
+                            <article class="card" style="border-color:var(--gold)">
+                                <div class="body">
+                                    <span class="lvl">Postgraduate · You are here</span>
+                                    <h3>Master</h3>
+                                    <div class="price">MYR 45,000</div>
+                                    <div class="sch">Scholarship Available</div>
+                                    <a href="#" class="link-gold">Apply Now →</a>
+                                </div>
+                            </article>
+                            <article class="card">
+                                <div class="body">
+                                    <span class="lvl">Doctoral</span>
+                                    <h3>Doctor</h3>
+                                    <div class="price">MYR 65,000</div>
+                                    <div class="sch">Scholarship Available</div>
+                                    <a href="#" class="link-gold">Apply Now →</a>
+                                </div>
+                            </article>
+                        </div>
+                        <p style="margin-top:20px">For payment methods and instalment information, visit <a
+                                href="#tuition" style="color:var(--gold);font-weight:700">Payment Information</a>.</p>
+                    </section>
+
+                    <section class="rv">
+                        <h2>Frequently Asked Questions</h2>
+                        <details class="faq">
+                            <summary>Can I study the Master programme from my own country?</summary>
+                            <p>Yes. Every programme AUI offers can be studied from anywhere in the world — choose to
+                                study online, or at your own pace with or without attending classes.</p>
+                        </details>
+                        <details class="faq">
+                            <summary>Is the education accredited if I study online?</summary>
+                            <p>Whichever study method you choose, you'll experience the same high‑quality, accredited
+                                education programme of study.</p>
+                        </details>
+                        <details class="faq">
+                            <summary>Are scholarships available for the Master programme?</summary>
+                            <p>Yes. Scholarship is available for the Master programme (and also for Bachelor and
+                                Doctor). Contact admissions at admin@aui.university for the current special offer.</p>
+                        </details>
+                        <details class="faq">
+                            <summary>How large is the AUI student community?</summary>
+                            <p>AUI has nearly 30,000 students and 20,000 alumni, with 3,000+ students enrolled from 5+
+                                countries, 5 academic faculties, 20+ research centers, and 100+ industry partnerships
+                                worldwide.</p>
+                        </details>
+                        <details class="faq">
+                            <summary>How do I contact admissions?</summary>
+                            <p>Email admin@aui.university, call +60 165 680 906, or use the student portal (portal-aui).
+                                Our office is at F-2-23, Jalan BG 3B/1 Bangi Gateway 3B, Seksyen 15, 43650 Bandar Baru
+                                Bangi, Selangor, Malaysia.</p>
+                        </details>
+                    </section>
+
+                    <section class="rv">
+                        <div class="pcta">
+                            <div>
+                                <h3>Ready to start your Master programme?</h3>
+                                <p>Tuition MYR 45,000 · Scholarship Available · Study from anywhere in the world.</p>
+                            </div>
+                            <div style="display:flex;gap:12px;flex-wrap:wrap">
+                                <a href="#" class="btn btn-gold">Apply now</a>
+                                <a href="#" class="btn btn-ghost" data-view="home">← Back to Home</a>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="ftr">
+        <div class="wrap">
+            <div class="ftr-main">
+                <div class="ftr-brand">
+                    <div class="logo">
+                        <img src="https://aui.university/wp-content/uploads/2026/05/logo-title-asean-university-international.webp"
+                            alt="logo title asean university international">
+                    </div>
+                    <p>Transformative education and multidisciplinary research that nurtures effective global leaders,
+                        impacted society and transformed lives for the better.</p>
+                    <div class="soc">
+                        <a href="#" aria-label="Facebook">f</a><a href="#" aria-label="X">𝕏</a>
+                        <a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="YouTube">▶</a>
+                    </div>
+                    <form class="newsletter" onsubmit="return false">
+                        <input type="email" placeholder="Subscribe for admissions updates…"
+                            aria-label="Newsletter email">
+                        <button type="submit">JOIN</button>
+                    </form>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#" data-view="home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#tuition">Admissions</a></li>
+                        <li><a href="#" data-view="detail">Academic</a></li>
+                        <li><a href="#tuition">Payment Information</a></li>
+                        <li><a href="#students">Students</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Programmes</h4>
+                    <ul>
+                        <li><a href="#tuition">Bachelor — MYR 35,000</a></li>
+                        <li><a href="#" data-view="detail">Master — MYR 45,000</a></li>
+                        <li><a href="#tuition">Doctor — MYR 65,000</a></li>
+                        <li><a href="#tuition">Scholarship Available</a></li>
+                        <li><a href="#anywhere">Study From Anywhere</a></li>
+                        <li><a href="#students">portal-aui</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>✉ <a href="mailto:admin@aui.university">admin@aui.university</a></li>
+                        <li>☎ <a href="tel:+60165680906">+60 165 680 906</a></li>
+                        <li>◎ <a href="#students">portal-aui</a></li>
+                        <li style="margin-top:8px">F-2-23, Jalan BG 3B/1 Bangi Gateway 3B, Seksyen 15, 43650 Bandar Baru
+                            Bangi, Selangor, Malaysia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ftr-btm">
+                <span>ASIAN INTERNATIONAL EDUCATION SDN BHD | 2026 © All Rights Reserved.</span>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /* ---------- VIEW SWITCH ---------- */
+        function showView(name) {
+            document.querySelectorAll('.view').forEach(v => v.classList.toggle('is-on', v.id === 'view-' + name));
+            document.querySelectorAll('.nav a').forEach(a => a.classList.toggle('is-active', a.dataset.view === name));
+            document.getElementById('hdr').classList.remove('nav-open');
+            window.scrollTo({ top: 0, behavior: 'instant' });
+            initReveal(); initCounts();
+        }
+        document.addEventListener('click', e => {
+            const t = e.target.closest('[data-view]');
+            if (t) { e.preventDefault(); showView(t.dataset.view); }
+        });
+
+        /* ---------- MOBILE MENU ---------- */
+        document.getElementById('burger').addEventListener('click', () => {
+            document.getElementById('hdr').classList.toggle('nav-open');
+        });
+
+        /* ---------- COUNT UP + SYMBOL FADE ---------- */
+        function countUp(el, sym) {
+            const target = +el.dataset.count, dur = 1400, t0 = performance.now();
+            (function tick(t) {
+                const p = Math.min((t - t0) / dur, 1);
+                el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))).toLocaleString('en-US');
+                if (p < 1) { requestAnimationFrame(tick); }
+                else if (sym) { setTimeout(() => sym.classList.add('on'), 120); }
+            })(performance.now());
+        }
+        let countObs;
+        function initCounts() {
+            if (countObs) countObs.disconnect();
+            countObs = new IntersectionObserver(es => {
+                es.forEach(en => {
+                    if (en.isIntersecting) {
+                        const row = en.target.closest('.row') || en.target.parentElement;
+                        const sym = row ? row.querySelector('[data-sym]') : null;
+                        countUp(en.target, sym);
+                        countObs.unobserve(en.target);
+                    }
+                });
+            }, { threshold: .5 });
+            document.querySelectorAll('.view.is-on [data-count]').forEach(el => countObs.observe(el));
+        }
+        initCounts();
+
+        /* ---------- REVEAL ---------- */
+        let revealObs;
+        function initReveal() {
+            if (revealObs) revealObs.disconnect();
+            revealObs = new IntersectionObserver(es => {
+                es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); revealObs.unobserve(en.target); } });
+            }, { threshold: .12 });
+            document.querySelectorAll('.view.is-on .rv:not(.in)').forEach(el => revealObs.observe(el));
+        }
+        initReveal();
+
+        /* ---------- ANNOUNCEMENT TICKER ---------- */
+        (function () {
+            const items = [...document.querySelectorAll('#annBody .ann-item')];
+            const dots = document.getElementById('annDots');
+            let i = 0;
+            items.forEach((_, n) => {
+                const b = document.createElement('button');
+                b.setAttribute('aria-label', 'Announcement ' + (n + 1));
+                if (n === 0) b.classList.add('is-on');
+                b.addEventListener('click', () => go(n));
+                dots.appendChild(b);
+            });
+            function go(n) {
+                items[i].classList.remove('is-on'); dots.children[i].classList.remove('is-on');
+                i = n;
+                items[i].classList.add('is-on'); dots.children[i].classList.add('is-on');
+            }
+            setInterval(() => go((i + 1) % items.length), 4500);
+        })();
+
+        /* ---------- TAB FILTER ---------- */
+        document.getElementById('progTabs').addEventListener('click', e => {
+            const btn = e.target.closest('.tab'); if (!btn) return;
+            document.querySelectorAll('#progTabs .tab').forEach(t => t.classList.remove('is-on'));
+            btn.classList.add('is-on');
+            const f = btn.dataset.filter;
+            document.querySelectorAll('#progGrid .card').forEach(c => {
+                c.style.display = (f === 'all' || c.dataset.lvl.includes(f)) ? '' : 'none';
+            });
+        });
+
+        /* ---------- TESTIMONIAL SLIDER ---------- */
+        (function () {
+            const tr = document.getElementById('testiTrack');
+            const step = () => Math.min(tr.clientWidth * 0.85, 446);
+            document.getElementById('tNext').addEventListener('click', () => tr.scrollBy({ left: step(), behavior: 'smooth' }));
+            document.getElementById('tPrev').addEventListener('click', () => tr.scrollBy({ left: -step(), behavior: 'smooth' }));
+        })();
+    </script>
+</body>
+
+</html>

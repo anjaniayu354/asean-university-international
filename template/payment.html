@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Payment Information — ASEAN University International (AUI)</title>
+    <meta name="description" content="AUI Payment Information — bank transfer details for CIMB, BNI, and Mandiri.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Karla:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --brand: #0A2E52;
+            --brand-2: #12467A;
+            --brand-3: #071E38;
+            --gold: #C9962E;
+            --gold-2: #AC7F22;
+            --gold-soft: #F0DFB4;
+            --cream: #FBF8F1;
+            --paper: #FFF;
+            --ink: #152232;
+            --muted: #5C6B7D;
+            --line: rgba(10, 46, 82, .14);
+            --line-soft: rgba(10, 46, 82, .08);
+            --radius: 6px;
+            --maxw: 1240px;
+            --serif: "Fraunces", Georgia, serif;
+            --sans: "Karla", Helvetica, sans-serif;
+            --mono: "JetBrains Mono", monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: var(--sans);
+            color: var(--ink);
+            background: var(--cream);
+            font-size: 16px;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased
+        }
+
+        img {
+            display: block;
+            max-width: 100%
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        button {
+            font-family: inherit;
+            cursor: pointer;
+            border: 0;
+            background: none
+        }
+
+        .wrap {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 32px
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 18px
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 26px;
+            height: 1px;
+            background: var(--gold)
+        }
+
+        .sec {
+            padding: 104px 0
+        }
+
+        .sec-head {
+            max-width: 720px;
+            margin-bottom: 56px
+        }
+
+        .sec-head h2 {
+            font-family: var(--serif);
+            font-weight: 600;
+            font-size: clamp(30px, 3.6vw, 44px);
+            line-height: 1.12
+        }
+
+        .sec-head p {
+            color: var(--muted);
+            margin-top: 16px;
+            font-size: 17px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 26px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            border-radius: var(--radius);
+            transition: .25s
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: #fff
+        }
+
+        .btn-gold:hover {
+            background: var(--gold-2);
+            letter-spacing: .2em
+        }
+
+        .btn-ghost {
+            border: 1px solid rgba(255, 255, 255, .55);
+            color: #fff
+        }
+
+        .btn-ghost:hover {
+            background: #fff;
+            color: var(--brand)
+        }
+
+        .btn-brand {
+            background: var(--brand);
+            color: #fff
+        }
+
+        .btn-brand:hover {
+            background: var(--brand-2);
+            letter-spacing: .2em
+        }
+
+        .btn-line {
+            border: 1px solid var(--line);
+            color: var(--brand);
+            background: var(--paper)
+        }
+
+        .btn-line:hover {
+            border-color: var(--gold);
+            color: var(--gold)
+        }
+
+        .link-gold {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--gold);
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            transition: .2s
+        }
+
+        .link-gold:hover {
+            gap: 14px
+        }
+
+        /* UTILITY */
+        .util {
+            background: var(--brand-3);
+            color: rgba(255, 255, 255, .75);
+            font-size: 12.5px
+        }
+
+        .util .wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 42px;
+            gap: 16px;
+            flex-wrap: wrap;
+            padding-top: 6px;
+            padding-bottom: 6px
+        }
+
+        .util ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            white-space: nowrap
+        }
+
+        .util a:hover {
+            color: var(--gold-soft)
+        }
+
+        .util .sep {
+            opacity: .35
+        }
+
+        /* HEADER */
+        .hdr {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(251, 248, 241, .95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--line-soft)
+        }
+
+        .hdr .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 86px;
+            gap: 24px
+        }
+
+        .logo {
+            display: flex;
+            align-items: center
+        }
+
+        .logo img {
+            height: 54px;
+            width: auto
+        }
+
+        .nav {
+            display: flex;
+            gap: 28px;
+            list-style: none
+        }
+
+        .nav a {
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--brand);
+            position: relative;
+            padding: 6px 0
+        }
+
+        .nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: .25s
+        }
+
+        .nav a:hover::after,
+        .nav a.is-active::after {
+            width: 100%
+        }
+
+        .hdr-cta {
+            display: flex;
+            gap: 12px;
+            align-items: center
+        }
+
+        .lang {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--muted);
+            border-left: 1px solid var(--line);
+            padding-left: 14px
+        }
+
+        .burger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            padding: 8px
+        }
+
+        .burger span {
+            width: 22px;
+            height: 2px;
+            background: var(--brand)
+        }
+
+        /* CRUMB */
+        .crumb {
+            font-size: 12px;
+            color: var(--muted);
+            padding: 22px 0;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap
+        }
+
+        .crumb a:hover {
+            color: var(--gold)
+        }
+
+        .crumb span {
+            opacity: .5
+        }
+
+        /* HERO */
+        .ahero {
+            background: var(--brand);
+            color: #fff;
+            position: relative;
+            overflow: hidden
+        }
+
+        .ahero-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .22
+        }
+
+        .ahero .wrap {
+            position: relative;
+            z-index: 2;
+            padding: 80px 32px 72px
+        }
+
+        .ahero .eyebrow {
+            color: var(--gold-soft)
+        }
+
+        .ahero h1 {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: clamp(38px, 5vw, 64px);
+            line-height: 1.04;
+            margin-bottom: 14px
+        }
+
+        .ahero .sub {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 20px;
+            color: var(--gold-soft);
+            margin-bottom: 20px
+        }
+
+        .ahero .lede {
+            font-size: 17px;
+            color: rgba(255, 255, 255, .82);
+            max-width: 680px
+        }
+
+        /* QUICK INFO */
+        .qinfo {
+            background: var(--paper);
+            border-bottom: 1px solid var(--line-soft)
+        }
+
+        .qinfo .wrap {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr)
+        }
+
+        .qi {
+            padding: 28px 22px;
+            text-align: center;
+            border-right: 1px solid var(--line-soft)
+        }
+
+        .qi:last-child {
+            border: 0
+        }
+
+        .qi b {
+            font-family: var(--serif);
+            font-size: 19px;
+            color: var(--brand);
+            display: block;
+            margin-bottom: 2px
+        }
+
+        .qi span {
+            font-size: 12.5px;
+            color: var(--muted)
+        }
+
+        /* ============================================================
+   BANK CARDS
+   ============================================================ */
+        .banks {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 28px
+        }
+
+        .bank {
+            background: #fff;
+            border: 1px solid var(--line-soft);
+            overflow: hidden;
+            transition: .3s;
+            position: relative;
+        }
+
+        .bank:hover {
+            box-shadow: 0 24px 48px -24px rgba(10, 46, 82, .25)
+        }
+
+        /* accent bar top */
+        .bank::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px
+        }
+
+        .bank.cimb::before {
+            background: linear-gradient(90deg, #E31837, #002B7F)
+        }
+
+        .bank.bni::before {
+            background: linear-gradient(90deg, #F26522, #00529C)
+        }
+
+        .bank.mandiri::before {
+            background: linear-gradient(90deg, #003D7C, #FFD700)
+        }
+
+        .bank-inner {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            min-height: 200px
+        }
+
+        /* left: bank brand */
+        .bank-brand {
+            padding: 40px 36px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 14px
+        }
+
+        .bank-brand .icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 16px;
+            display: grid;
+            place-items: center;
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+            font-family: var(--serif);
+        }
+
+        .bank.cimb .bank-brand .icon {
+            background: linear-gradient(135deg, #E31837, #002B7F)
+        }
+
+        .bank.bni .bank-brand .icon {
+            background: linear-gradient(135deg, #F26522, #00529C)
+        }
+
+        .bank.mandiri .bank-brand .icon {
+            background: linear-gradient(135deg, #003D7C, #FFD700)
+        }
+
+        .bank-brand h3 {
+            font-family: var(--serif);
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--brand)
+        }
+
+        .bank-brand .region {
+            font-size: 10.5px;
+            font-weight: 700;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            color: var(--gold);
+            background: rgba(201, 150, 46, .08);
+            padding: 4px 12px;
+            border-radius: 3px;
+        }
+
+        /* right: details */
+        .bank-details {
+            padding: 40px 44px;
+            border-left: 1px solid var(--line-soft);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 22px
+        }
+
+        .bank-details .field {}
+
+        .bank-details .label {
+            font-size: 10.5px;
+            font-weight: 700;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .bank-details .value {
+            font-family: var(--mono);
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--brand);
+            letter-spacing: .04em;
+        }
+
+        .bank-details .value.acct {
+            font-size: 26px;
+            letter-spacing: .1em;
+            padding: 10px 18px;
+            background: var(--cream);
+            border: 1px dashed var(--line);
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .bank-details .holder {
+            font-family: var(--sans);
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--ink)
+        }
+
+        /* copy button */
+        .copy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 22px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            color: var(--brand);
+            background: var(--paper);
+            transition: .2s;
+            cursor: pointer;
+            align-self: flex-start;
+        }
+
+        .copy-btn:hover {
+            background: var(--brand);
+            border-color: var(--brand);
+            color: #fff
+        }
+
+        .copy-btn.copied {
+            background: #16a34a;
+            border-color: #16a34a;
+            color: #fff
+        }
+
+        .copy-btn .ic {
+            font-size: 14px
+        }
+
+        /* fields grid inside details */
+        .fields {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px 36px;
+            align-items: end
+        }
+
+        /* ============================================================
+   STEPS
+   ============================================================ */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px
+        }
+
+        .step {
+            background: #fff;
+            border: 1px solid var(--line-soft);
+            padding: 36px 30px;
+            position: relative;
+            transition: .3s;
+        }
+
+        .step:hover {
+            box-shadow: 0 16px 36px -16px rgba(10, 46, 82, .2)
+        }
+
+        .step .n {
+            font-family: var(--serif);
+            font-size: 48px;
+            font-weight: 600;
+            color: var(--gold);
+            opacity: .18;
+            line-height: 1;
+            margin-bottom: 14px;
+        }
+
+        .step h4 {
+            font-family: var(--serif);
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--brand);
+            margin-bottom: 8px
+        }
+
+        .step p {
+            font-size: 13.5px;
+            color: var(--muted)
+        }
+
+        /* ============================================================
+   NOTES
+   ============================================================ */
+        .notes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px
+        }
+
+        .note {
+            background: var(--cream);
+            border: 1px solid var(--line-soft);
+            padding: 32px 34px;
+            position: relative
+        }
+
+        .note.gold {
+            border-left: 4px solid var(--gold)
+        }
+
+        .note.blue {
+            border-left: 4px solid var(--brand)
+        }
+
+        .note .icon {
+            font-size: 28px;
+            margin-bottom: 14px
+        }
+
+        .note h4 {
+            font-family: var(--serif);
+            font-size: 19px;
+            font-weight: 600;
+            color: var(--brand);
+            margin-bottom: 10px
+        }
+
+        .note p {
+            font-size: 14px;
+            color: var(--muted)
+        }
+
+        .note ul {
+            list-style: none;
+            display: grid;
+            gap: 8px;
+            margin-top: 10px
+        }
+
+        .note ul li {
+            font-size: 13.5px;
+            color: var(--muted);
+            display: flex;
+            gap: 8px
+        }
+
+        .note ul li::before {
+            content: "—";
+            color: var(--gold);
+            font-weight: 700;
+            flex: none
+        }
+
+        /* ============================================================
+   TUITION SUMMARY
+   ============================================================ */
+        .fees {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px
+        }
+
+        .fee {
+            background: #fff;
+            border: 1px solid var(--line-soft);
+            padding: 36px 32px;
+            text-align: center;
+            border-top: 4px solid var(--gold);
+            transition: .3s;
+        }
+
+        .fee:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -20px rgba(10, 46, 82, .25)
+        }
+
+        .fee .lvl {
+            font-size: 11px;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700
+        }
+
+        .fee h3 {
+            font-family: var(--serif);
+            font-size: 28px;
+            font-weight: 600;
+            margin: 10px 0 16px;
+            color: var(--brand)
+        }
+
+        .fee .cur {
+            font-size: 11px;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            color: var(--muted);
+            font-weight: 700;
+            display: block;
+            margin-bottom: 4px
+        }
+
+        .fee .price {
+            font-family: var(--serif);
+            font-size: 44px;
+            font-weight: 600;
+            color: var(--brand);
+            line-height: 1;
+            letter-spacing: -.02em
+        }
+
+        .fee .price small {
+            font-size: 18px;
+            vertical-align: super;
+            color: var(--muted)
+        }
+
+        .fee .badge {
+            display: inline-block;
+            margin-top: 16px;
+            background: var(--gold-soft);
+            color: #7A5A12;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 3px
+        }
+
+        /* CTA */
+        .visit {
+            background: var(--gold);
+            color: #fff
+        }
+
+        .visit .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 46px 32px;
+            flex-wrap: wrap
+        }
+
+        .visit h3 {
+            font-family: var(--serif);
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 6px
+        }
+
+        .visit p {
+            font-size: 14.5px;
+            color: rgba(255, 255, 255, .92)
+        }
+
+        .visit .btn-brand:hover {
+            background: var(--brand-3)
+        }
+
+        /* CONTACT */
+        .cband {
+            background: var(--cream);
+            border-top: 1px solid var(--line-soft);
+            padding: 64px 0
+        }
+
+        .cband-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px
+        }
+
+        .cband-item {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            background: #fff;
+            border: 1px solid var(--line-soft);
+            padding: 24px 22px
+        }
+
+        .cband-item .ic {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--line);
+            display: grid;
+            place-items: center;
+            color: var(--gold);
+            flex: none;
+            font-size: 16px
+        }
+
+        .cband-item b {
+            display: block;
+            font-size: 10.5px;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 3px
+        }
+
+        .cband-item a,
+        .cband-item span {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--brand)
+        }
+
+        .cband-item a:hover {
+            color: var(--gold)
+        }
+
+        /* FOOTER */
+        .ftr {
+            background: var(--brand-3);
+            color: rgba(255, 255, 255, .72);
+            font-size: 14px
+        }
+
+        .ftr-main {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+            gap: 44px;
+            padding: 72px 0 56px
+        }
+
+        .ftr h4 {
+            color: #fff;
+            font-family: var(--serif);
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 20px
+        }
+
+        .ftr ul {
+            list-style: none;
+            display: grid;
+            gap: 10px
+        }
+
+        .ftr a:hover {
+            color: var(--gold-soft)
+        }
+
+        .ftr .logo img {
+            height: 56px;
+            background: #fff;
+            padding: 6px 12px;
+            border-radius: 3px
+        }
+
+        .ftr-brand p {
+            margin: 20px 0 22px;
+            font-size: 13.5px;
+            max-width: 300px
+        }
+
+        .soc {
+            display: flex;
+            gap: 10px
+        }
+
+        .soc a {
+            width: 36px;
+            height: 36px;
+            border: 1px solid rgba(255, 255, 255, .25);
+            display: grid;
+            place-items: center;
+            font-size: 13px;
+            transition: .2s
+        }
+
+        .soc a:hover {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: #fff
+        }
+
+        .newsletter {
+            display: flex;
+            margin-top: 18px;
+            border: 1px solid rgba(255, 255, 255, .25)
+        }
+
+        .newsletter input {
+            flex: 1;
+            background: transparent;
+            border: 0;
+            padding: 12px 14px;
+            color: #fff;
+            font-family: var(--sans);
+            font-size: 13px;
+            outline: none
+        }
+
+        .newsletter input::placeholder {
+            color: rgba(255, 255, 255, .45)
+        }
+
+        .newsletter button {
+            background: var(--gold);
+            color: #fff;
+            padding: 0 18px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .12em
+        }
+
+        .ftr-btm {
+            border-top: 1px solid rgba(255, 255, 255, .12);
+            padding: 22px 0;
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            font-size: 12.5px;
+            flex-wrap: wrap
+        }
+
+        .ftr-btm ul {
+            display: flex;
+            gap: 22px;
+            list-style: none
+        }
+
+        /* REVEAL */
+        .rv {
+            opacity: 0;
+            transform: translateY(26px);
+            transition: opacity .7s ease, transform .7s ease
+        }
+
+        .rv.in {
+            opacity: 1;
+            transform: none
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:1080px) {
+
+            .nav,
+            .hdr-cta .btn,
+            .lang {
+                display: none
+            }
+
+            .burger {
+                display: flex
+            }
+
+            .bank-inner {
+                grid-template-columns: 1fr
+            }
+
+            .bank-brand {
+                padding: 32px 28px;
+                border-bottom: 1px solid var(--line-soft);
+                flex-direction: row;
+                text-align: left;
+                gap: 18px
+            }
+
+            .bank-details {
+                padding: 28px 28px;
+                border-left: 0
+            }
+
+            .steps {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .notes {
+                grid-template-columns: 1fr
+            }
+
+            .fees {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .fields {
+                grid-template-columns: 1fr
+            }
+
+            .qinfo .wrap {
+                grid-template-columns: 1fr
+            }
+
+            .qi {
+                border-right: 0;
+                border-bottom: 1px solid var(--line-soft)
+            }
+
+            .qi:last-child {
+                border-bottom: 0
+            }
+
+            .cband-grid {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .ftr-main {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        @media(max-width:760px) {
+            .wrap {
+                padding: 0 20px
+            }
+
+            .sec {
+                padding: 72px 0
+            }
+
+            .hdr.nav-open .nav {
+                display: flex;
+                position: absolute;
+                top: 86px;
+                left: 0;
+                right: 0;
+                background: var(--cream);
+                flex-direction: column;
+                padding: 26px 24px;
+                gap: 18px;
+                border-bottom: 1px solid var(--line)
+            }
+
+            .ahero .wrap {
+                padding: 60px 20px 56px
+            }
+
+            .steps,
+            .fees,
+            .cband-grid,
+            .ftr-main {
+                grid-template-columns: 1fr
+            }
+
+            .bank-brand {
+                flex-direction: column;
+                text-align: center
+            }
+
+            .bank-details .value.acct {
+                font-size: 20px;
+                letter-spacing: .06em
+            }
+
+            .bank-details {
+                padding: 24px 20px
+            }
+
+            .note {
+                padding: 26px 22px
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- UTILITY -->
+    <div class="util">
+        <div class="wrap">
+            <ul>
+                <li><a href="mailto:admin@aui.university">✉ admin@aui.university</a></li>
+                <li class="sep">|</li>
+                <li><a href="tel:+60165680906">☎ +60 165 680 906</a></li>
+                <li class="sep">|</li>
+                <li><a href="#">Portal AUI (Students)</a></li>
+            </ul>
+            <ul>
+                <li><a href="#banks">Bank Transfer</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">EN</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="hdr" id="hdr">
+        <div class="wrap">
+            <a href="#" class="logo"><img
+                    src="https://aui.university/wp-content/uploads/2026/05/logo-title-asean-university-international.webp"
+                    alt="AUI logo"></a>
+            <nav>
+                <ul class="nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Admissions</a></li>
+                    <li><a href="#">Academic</a></li>
+                    <li><a href="#" class="is-active">Payment Information</a></li>
+                    <li><a href="#">Students</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hdr-cta">
+                <a href="#banks" class="btn btn-gold">Pay Now</a>
+                <span class="lang">EN / 中文</span>
+                <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <div class="wrap">
+        <div class="crumb"><a href="#">Home</a><span>/</span><b style="color:var(--brand)">Payment Information</b></div>
+    </div>
+
+    <main>
+
+        <!-- ============================================================
+     HERO
+     ============================================================ -->
+        <section class="ahero">
+            <img class="ahero-img"
+                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1800&q=70"
+                alt="Payment information">
+            <div class="wrap">
+                <div class="eyebrow">Payment Information · Bank Transfer</div>
+                <h1>Payment Information</h1>
+                <p class="lede">Please use the following bank details to complete your transaction.</p>
+            </div>
+        </section>
+
+        <!-- QUICK INFO -->
+        <div class="qinfo">
+            <div class="wrap">
+                <div class="qi"><b>3 Bank Options</b><span>CIMB · BNI · Mandiri</span></div>
+                <div class="qi"><b>MYR · IDR</b><span>Malaysia &amp; Indonesia accounts</span></div>
+                <div class="qi"><b>One-Click Copy</b><span>Salin nomor rekening dengan mudah</span></div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+     01 — BANK ACCOUNTS
+     ============================================================ -->
+        <section class="sec" id="banks">
+            <div class="wrap">
+                <div class="sec-head rv">
+                    <div class="eyebrow">01 — Bank Transfer</div>
+                    <h2>Rekening Tujuan Pembayaran</h2>
+                    <p>Silakan gunakan salah satu rekening di bawah ini untuk menyelesaikan transaksi pembayaran tuition
+                        fee AUI.</p>
+                </div>
+
+                <div class="banks">
+
+                    <!-- CIMB -->
+                    <div class="bank cimb rv">
+                        <div class="bank-inner">
+                            <div class="bank-brand">
+                                <div class="icon">C</div>
+                                <div>
+                                    <h3>CIMB</h3>
+                                    <span class="region">Malaysia</span>
+                                </div>
+                            </div>
+                            <div class="bank-details">
+                                <div class="fields">
+                                    <div class="field">
+                                        <span class="label">Bank Name</span>
+                                        <span class="value"
+                                            style="font-family:var(--sans);font-size:16px;font-weight:600">CIMB Bank
+                                            (Malaysia)</span>
+                                    </div>
+                                    <div class="field">
+                                        <span class="label">Account Holder</span>
+                                        <span class="holder">Asian International Education SDN BHD</span>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <span class="label">Account Number</span>
+                                    <span class="value acct" id="acct-cimb">8605260456</span>
+                                </div>
+                                <button class="copy-btn" onclick="copyAcct('acct-cimb',this)">
+                                    <span class="ic">⧉</span> Copy Account Number
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BNI -->
+                    <div class="bank bni rv">
+                        <div class="bank-inner">
+                            <div class="bank-brand">
+                                <div class="icon">B</div>
+                                <div>
+                                    <h3>BNI</h3>
+                                    <span class="region">Indonesia</span>
+                                </div>
+                            </div>
+                            <div class="bank-details">
+                                <div class="fields">
+                                    <div class="field">
+                                        <span class="label">Bank Name</span>
+                                        <span class="value"
+                                            style="font-family:var(--sans);font-size:16px;font-weight:600">BNI Bank
+                                            (Indonesia)</span>
+                                    </div>
+                                    <div class="field">
+                                        <span class="label">Account Holder</span>
+                                        <span class="holder">Asian University International</span>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <span class="label">Account Number</span>
+                                    <span class="value acct" id="acct-bni">8899-6644-04</span>
+                                </div>
+                                <button class="copy-btn" onclick="copyAcct('acct-bni',this)">
+                                    <span class="ic">⧉</span> Copy Account Number
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MANDIRI -->
+                    <div class="bank mandiri rv">
+                        <div class="bank-inner">
+                            <div class="bank-brand">
+                                <div class="icon">M</div>
+                                <div>
+                                    <h3>Mandiri</h3>
+                                    <span class="region">Indonesia</span>
+                                </div>
+                            </div>
+                            <div class="bank-details">
+                                <div class="fields">
+                                    <div class="field">
+                                        <span class="label">Bank Name</span>
+                                        <span class="value"
+                                            style="font-family:var(--sans);font-size:16px;font-weight:600">Bank
+                                            Mandiri</span>
+                                    </div>
+                                    <div class="field">
+                                        <span class="label">Account Holder</span>
+                                        <span class="holder">Asian University International</span>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <span class="label">Account Number</span>
+                                    <span class="value acct" id="acct-mandiri">133-00-20248480</span>
+                                </div>
+                                <button class="copy-btn" onclick="copyAcct('acct-mandiri',this)">
+                                    <span class="ic">⧉</span> Copy Account Number
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+     02 — TUITION FEES
+     ============================================================ -->
+        <section class="sec"
+            style="background:#fff;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)"
+            id="tuition">
+            <div class="wrap">
+                <div class="sec-head rv">
+                    <div class="eyebrow">02 — Tuition Fees</div>
+                    <h2>Tuition Fees and Special Offer</h2>
+                    <p>Transfer jumlah sesuai programme yang Anda pilih ke salah satu rekening di atas. Scholarship
+                        Available for all levels.</p>
+                </div>
+                <div class="fees">
+                    <div class="fee rv">
+                        <span class="lvl">Undergraduate</span>
+                        <h3>Bachelor</h3>
+                        <span class="cur">Tuition Fee</span>
+                        <div class="price"><small>MYR</small> 35<small>,000</small></div>
+                        <span class="badge">Scholarship Available</span>
+                    </div>
+                    <div class="fee rv">
+                        <span class="lvl">Postgraduate</span>
+                        <h3>Master</h3>
+                        <span class="cur">Tuition Fee</span>
+                        <div class="price"><small>MYR</small> 45<small>,000</small></div>
+                        <span class="badge">Scholarship Available</span>
+                    </div>
+                    <div class="fee rv">
+                        <span class="lvl">Doctoral</span>
+                        <h3>Doctor</h3>
+                        <span class="cur">Tuition Fee</span>
+                        <div class="price"><small>MYR</small> 65<small>,000</small></div>
+                        <span class="badge">Scholarship Available</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+     03 — PAYMENT STEPS
+     ============================================================ -->
+        <section class="sec" id="steps">
+            <div class="wrap">
+                <div class="sec-head rv">
+                    <div class="eyebrow">03 — How to Pay</div>
+                    <h2>Langkah-langkah pembayaran</h2>
+                    <p>Ikuti empat langkah sederhana untuk menyelesaikan pembayaran tuition fee AUI.</p>
+                </div>
+                <div class="steps">
+                    <div class="step rv">
+                        <div class="n">01</div>
+                        <h4>Pilih Rekening</h4>
+                        <p>Pilih salah satu dari tiga rekening bank yang tersedia (CIMB, BNI, atau Mandiri) sesuai
+                            preferensi dan kemudahan transfer Anda.</p>
+                    </div>
+                    <div class="step rv">
+                        <div class="n">02</div>
+                        <h4>Salin Nomor Rekening</h4>
+                        <p>Klik tombol "Copy" pada kartu rekening yang dipilih untuk menyalin nomor rekening tujuan
+                            secara otomatis dan akurat.</p>
+                    </div>
+                    <div class="step rv">
+                        <div class="n">03</div>
+                        <h4>Transfer Sesuai Jumlah</h4>
+                        <p>Transfer jumlah sesuai tuition fee programme yang Anda pilih (Bachelor MYR 35,000 · Master
+                            MYR 45,000 · Doctor MYR 65,000).</p>
+                    </div>
+                    <div class="step rv">
+                        <div class="n">04</div>
+                        <h4>Kirim Bukti Transfer</h4>
+                        <p>Kirim bukti transfer ke admin@aui.university atau melalui WhatsApp +60 165 680 906 untuk
+                            verifikasi pembayaran.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+     NOTES
+     ============================================================ -->
+        <section style="padding:0 0 104px">
+            <div class="wrap">
+                <div class="notes">
+                    <div class="note gold rv">
+                        <div class="icon">💡</div>
+                        <h4>Catatan Penting</h4>
+                        <p>Pastikan Anda mentransfer ke rekening resmi yang tertera di halaman ini. AUI tidak
+                            bertanggung jawab atas transfer ke rekening lain.</p>
+                        <ul>
+                            <li>Selalu verifikasi nomor rekening sebelum transfer</li>
+                            <li>Simpan bukti transfer sampai pembayaran dikonfirmasi</li>
+                            <li>Hubungi admissions jika transfer gagal atau ada kesalahan</li>
+                        </ul>
+                    </div>
+                    <div class="note blue rv">
+                        <div class="icon">🛡</div>
+                        <h4>Financial Solvency for Visa</h4>
+                        <p>Immigration departments across the ASEAN zone uniformly demand verified proof of liquidity
+                            via a formal Bank Statement. This security fund must comfortably cover tuition fees plus
+                            cost of living overheads for at least <b>1 full calendar academic year</b>.</p>
+                        <ul>
+                            <li>Dana harus sudah deposit dan mature sebelum visa application</li>
+                            <li>Bank statement harus menunjukkan saldo yang memadai</li>
+                            <li>Pastikan dana tersedia minimal 1 tahun akademik penuh</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="visit">
+            <div class="wrap">
+                <div>
+                    <h3>Need help with payment?</h3>
+                    <p>Hubungi tim admissions AUI untuk bantuan lebih lanjut seputar pembayaran.</p>
+                </div>
+                <div style="display:flex;gap:12px;flex-wrap:wrap"><a href="#contact" class="btn btn-brand">Contact
+                        Admissions</a><a href="#" class="btn btn-ghost">Apply now</a></div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="cband" id="contact">
+            <div class="wrap">
+                <div class="cband-grid rv">
+                    <div class="cband-item">
+                        <div class="ic">✉</div>
+                        <div><b>Email</b><a href="mailto:admin@aui.university">admin@aui.university</a></div>
+                    </div>
+                    <div class="cband-item">
+                        <div class="ic">☎</div>
+                        <div><b>Phone / WhatsApp</b><a href="tel:+60165680906">+60 165 680 906</a></div>
+                    </div>
+                    <div class="cband-item">
+                        <div class="ic">◎</div>
+                        <div><b>Student Portal</b><a href="#">portal-aui</a></div>
+                    </div>
+                    <div class="cband-item">
+                        <div class="ic">⌂</div>
+                        <div><b>Address</b><span>F-2-23, Jalan BG 3B/1 Bangi Gateway 3B, Seksyen 15, 43650 Bandar Baru
+                                Bangi, Selangor, Malaysia</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="ftr">
+        <div class="wrap">
+            <div class="ftr-main">
+                <div class="ftr-brand">
+                    <div class="logo"><img
+                            src="https://aui.university/wp-content/uploads/2026/05/logo-title-asean-university-international.webp"
+                            alt="AUI logo"></div>
+                    <p>Transformative education and multidisciplinary research that nurtures effective global leaders.
+                    </p>
+                    <div class="soc"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="X">𝕏</a><a href="#"
+                            aria-label="Instagram">◎</a><a href="#" aria-label="LinkedIn">in</a><a href="#"
+                            aria-label="YouTube">▶</a></div>
+                    <form class="newsletter" onsubmit="return false"><input type="email" placeholder="Subscribe…"
+                            aria-label="Newsletter"><button type="submit">JOIN</button></form>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Admissions</a></li>
+                        <li><a href="#">Academic</a></li>
+                        <li><a href="#">Payment Information</a></li>
+                        <li><a href="#">Students</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Payment</h4>
+                    <ul>
+                        <li><a href="#banks">CIMB Bank (Malaysia)</a></li>
+                        <li><a href="#banks">BNI Bank (Indonesia)</a></li>
+                        <li><a href="#banks">Bank Mandiri (Indonesia)</a></li>
+                        <li><a href="#tuition">Tuition Fees</a></li>
+                        <li><a href="#steps">How to Pay</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>✉ <a href="mailto:admin@aui.university">admin@aui.university</a></li>
+                        <li>☎ <a href="tel:+60165680906">+60 165 680 906</a></li>
+                        <li>◎ <a href="#">portal-aui</a></li>
+                        <li style="margin-top:8px">F-2-23, Jalan BG 3B/1 Bangi Gateway 3B, Seksyen 15, 43650 Bandar Baru
+                            Bangi, Selangor, Malaysia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ftr-btm">
+                <span>ASIAN INTERNATIONAL EDUCATION SDN BHD | 2026 © All Rights Reserved.</span>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /* MOBILE MENU */
+        document.getElementById('burger').addEventListener('click', () => { document.getElementById('hdr').classList.toggle('nav-open') });
+
+        /* COPY TO CLIPBOARD */
+        function copyAcct(id, btn) {
+            const el = document.getElementById(id);
+            const text = el.textContent.trim();
+            const clean = text.replace(/[-\s]/g, '');
+            navigator.clipboard.writeText(clean).then(() => {
+                const orig = btn.innerHTML;
+                btn.innerHTML = '<span class="ic">✓</span> Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied') }, 2000);
+            }).catch(() => {
+                /* fallback */
+                const ta = document.createElement('textarea');
+                ta.value = clean; document.body.appendChild(ta); ta.select(); document.execCommand('copy');
+                document.body.removeChild(ta);
+                const orig = btn.innerHTML;
+                btn.innerHTML = '<span class="ic">✓</span> Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied') }, 2000);
+            });
+        }
+
+        /* REVEAL */
+        let rObs;
+        (function () {
+            rObs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); rObs.unobserve(e.target) } }), { threshold: .12 });
+            document.querySelectorAll('.rv:not(.in)').forEach(e => rObs.observe(e));
+        })();
+    </script>
+</body>
+
+</html>

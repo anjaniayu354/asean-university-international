@@ -1,0 +1,1982 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About — ASEAN University International (AUI)</title>
+    <meta name="description"
+        content="About AUI — history from Yales Board of Education (2001) to a global university network.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Karla:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* ============================================================
+   DESIGN SYSTEM
+   ============================================================ */
+        :root {
+            --brand: #0A2E52;
+            --brand-2: #12467A;
+            --brand-3: #071E38;
+            --gold: #C9962E;
+            --gold-2: #AC7F22;
+            --gold-soft: #F0DFB4;
+            --cream: #FBF8F1;
+            --paper: #FFF;
+            --ink: #152232;
+            --muted: #5C6B7D;
+            --line: rgba(10, 46, 82, .14);
+            --line-soft: rgba(10, 46, 82, .08);
+            --radius: 6px;
+            --maxw: 1240px;
+            --serif: "Fraunces", Georgia, serif;
+            --sans: "Karla", Helvetica, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: var(--sans);
+            color: var(--ink);
+            background: var(--cream);
+            font-size: 16px;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased
+        }
+
+        img {
+            display: block;
+            max-width: 100%
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        button {
+            font-family: inherit;
+            cursor: pointer;
+            border: 0;
+            background: none
+        }
+
+        .wrap {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 32px
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 18px
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 26px;
+            height: 1px;
+            background: var(--gold)
+        }
+
+        .sec {
+            padding: 104px 0
+        }
+
+        .sec-head {
+            max-width: 680px;
+            margin-bottom: 56px
+        }
+
+        .sec-head h2 {
+            font-family: var(--serif);
+            font-weight: 600;
+            font-size: clamp(30px, 3.6vw, 44px);
+            line-height: 1.12;
+            letter-spacing: -.01em
+        }
+
+        .sec-head p {
+            color: var(--muted);
+            margin-top: 16px;
+            font-size: 17px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 26px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            border-radius: var(--radius);
+            transition: .25s
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: #fff
+        }
+
+        .btn-gold:hover {
+            background: var(--gold-2);
+            letter-spacing: .2em
+        }
+
+        .btn-ghost {
+            border: 1px solid rgba(255, 255, 255, .55);
+            color: #fff
+        }
+
+        .btn-ghost:hover {
+            background: #fff;
+            color: var(--brand)
+        }
+
+        .btn-brand {
+            background: var(--brand);
+            color: #fff
+        }
+
+        .btn-brand:hover {
+            background: var(--brand-2);
+            letter-spacing: .2em
+        }
+
+        .btn-line {
+            border: 1px solid var(--line);
+            color: var(--brand);
+            background: var(--paper)
+        }
+
+        .btn-line:hover {
+            border-color: var(--gold);
+            color: var(--gold)
+        }
+
+        .link-gold {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--gold);
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            transition: .2s
+        }
+
+        .link-gold:hover {
+            gap: 14px
+        }
+
+        /* UTILITY BAR */
+        .util {
+            background: var(--brand-3);
+            color: rgba(255, 255, 255, .75);
+            font-size: 12.5px
+        }
+
+        .util .wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 42px;
+            gap: 16px;
+            flex-wrap: wrap;
+            padding-top: 6px;
+            padding-bottom: 6px
+        }
+
+        .util ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            white-space: nowrap
+        }
+
+        .util a:hover {
+            color: var(--gold-soft)
+        }
+
+        .util .sep {
+            opacity: .35
+        }
+
+        /* HEADER */
+        .hdr {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(251, 248, 241, .95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--line-soft)
+        }
+
+        .hdr .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 86px;
+            gap: 24px
+        }
+
+        .logo {
+            display: flex;
+            align-items: center
+        }
+
+        .logo img {
+            height: 54px;
+            width: auto
+        }
+
+        .nav {
+            display: flex;
+            gap: 28px;
+            list-style: none
+        }
+
+        .nav a {
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--brand);
+            position: relative;
+            padding: 6px 0
+        }
+
+        .nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: .25s
+        }
+
+        .nav a:hover::after,
+        .nav a.is-active::after {
+            width: 100%
+        }
+
+        .hdr-cta {
+            display: flex;
+            gap: 12px;
+            align-items: center
+        }
+
+        .lang {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--muted);
+            border-left: 1px solid var(--line);
+            padding-left: 14px
+        }
+
+        .burger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            padding: 8px
+        }
+
+        .burger span {
+            width: 22px;
+            height: 2px;
+            background: var(--brand);
+            transition: .25s
+        }
+
+        /* BREADCRUMB */
+        .crumb {
+            font-size: 12px;
+            color: var(--muted);
+            padding: 22px 0;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap
+        }
+
+        .crumb a:hover {
+            color: var(--gold)
+        }
+
+        .crumb span {
+            opacity: .5
+        }
+
+        /* PAGE HERO */
+        .ahero {
+            background: var(--brand);
+            color: #fff;
+            position: relative;
+            overflow: hidden
+        }
+
+        .ahero-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .28
+        }
+
+        .ahero .wrap {
+            position: relative;
+            z-index: 2;
+            padding: 80px 32px 72px
+        }
+
+        .ahero .eyebrow {
+            color: var(--gold-soft)
+        }
+
+        .ahero h1 {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: clamp(40px, 5.2vw, 68px);
+            line-height: 1.04;
+            margin-bottom: 12px
+        }
+
+        .ahero .sub {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 22px;
+            color: var(--gold-soft);
+            margin-bottom: 22px
+        }
+
+        .ahero .lede {
+            font-size: 17px;
+            color: rgba(255, 255, 255, .82);
+            max-width: 720px
+        }
+
+        .ahero-stats {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            padding-top: 36px;
+            border-top: 1px solid rgba(255, 255, 255, .15)
+        }
+
+        .ahero-stats .s {}
+
+        .ahero-stats b {
+            font-family: var(--serif);
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--gold-soft);
+            display: block;
+            line-height: 1.1
+        }
+
+        .ahero-stats span {
+            font-size: 12px;
+            color: rgba(255, 255, 255, .65);
+            display: block;
+            margin-top: 4px;
+            letter-spacing: .06em
+        }
+
+        /* MISSION VISION */
+        .mv-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px
+        }
+
+        .mv-card {
+            background: #fff;
+            border: 1px solid var(--line-soft);
+            padding: 48px 44px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden
+        }
+
+        .mv-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gold)
+        }
+
+        .mv-card .num {
+            font-family: var(--serif);
+            font-size: 64px;
+            font-weight: 600;
+            color: var(--gold);
+            opacity: .18;
+            position: absolute;
+            right: 28px;
+            top: 20px;
+            line-height: 1
+        }
+
+        .mv-card h3 {
+            font-family: var(--serif);
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--brand)
+        }
+
+        .mv-card p {
+            color: var(--muted);
+            font-size: 15px;
+            margin-bottom: 14px
+        }
+
+        .mv-card ul {
+            list-style: none;
+            margin-top: 12px;
+            display: grid;
+            gap: 10px
+        }
+
+        .mv-card ul li {
+            font-size: 14px;
+            color: var(--ink);
+            display: flex;
+            gap: 10px;
+            align-items: flex-start
+        }
+
+        .mv-card ul li::before {
+            content: "→";
+            color: var(--gold);
+            font-weight: 700;
+            flex: none
+        }
+
+        /* STATS BAND */
+        .stats-band {
+            background: var(--brand-3);
+            color: #fff;
+            position: relative;
+            overflow: hidden
+        }
+
+        .stats-band::before {
+            content: "";
+            position: absolute;
+            right: -120px;
+            top: -80px;
+            width: 340px;
+            height: 340px;
+            border: 1px solid rgba(224, 191, 112, .18);
+            border-radius: 50%
+        }
+
+        .stats-band .wrap {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1px;
+            background: rgba(255, 255, 255, .12);
+            border: 1px solid rgba(255, 255, 255, .12)
+        }
+
+        .sband {
+            background: var(--brand-3);
+            padding: 38px 24px;
+            text-align: center
+        }
+
+        .sband .row {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 1px;
+            margin-bottom: 6px
+        }
+
+        .sband b {
+            font-family: var(--serif);
+            font-size: 40px;
+            font-weight: 600;
+            color: var(--gold-soft);
+            display: block;
+            line-height: 1.1
+        }
+
+        .sband .sym {
+            font-family: var(--serif);
+            font-size: 22px;
+            color: var(--gold);
+            display: block;
+            transform: translateY(-2px);
+            opacity: 0;
+            transition: opacity .5s
+        }
+
+        .sband .sym.on {
+            opacity: 1
+        }
+
+        .sband span {
+            font-size: 12px;
+            color: rgba(255, 255, 255, .65);
+            display: block;
+            line-height: 1.5
+        }
+
+        /* ============================================================
+   TIMELINE — CLEAN ALTERNATING DESIGN
+   ============================================================ */
+        .hist {
+            background: #fff;
+            border-top: 1px solid var(--line-soft);
+            border-bottom: 1px solid var(--line-soft)
+        }
+
+        .hist-intro {
+            max-width: 680px;
+            margin: 0 auto 72px;
+            text-align: center
+        }
+
+        .hist-intro .eyebrow {
+            justify-content: center
+        }
+
+        .hist-intro .eyebrow::before {
+            display: none
+        }
+
+        .hist-intro h2 {
+            font-family: var(--serif);
+            font-weight: 600;
+            font-size: clamp(30px, 3.6vw, 44px);
+            line-height: 1.12;
+            margin-bottom: 16px
+        }
+
+        .hist-intro p {
+            color: var(--muted);
+            font-size: 17px
+        }
+
+        /* the line + container */
+        .tl {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto
+        }
+
+        /* vertical center line */
+        .tl::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--gold);
+            transform: translateX(-50%);
+        }
+
+        /* each row */
+        .tl-row {
+            display: grid;
+            grid-template-columns: 1fr 60px 1fr;
+            align-items: start;
+            margin-bottom: 0;
+        }
+
+        .tl-row:last-child {
+            margin-bottom: 0
+        }
+
+        /* dot in the center column */
+        .tl-dot {
+            display: flex;
+            justify-content: center;
+            padding-top: 28px;
+        }
+
+        .tl-dot i {
+            display: block;
+            width: 16px;
+            height: 16px;
+            background: var(--gold);
+            border: 4px solid #fff;
+            border-radius: 50%;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 0 0 2px var(--gold);
+            transition: transform .3s, box-shadow .3s;
+        }
+
+        .tl-row:hover .tl-dot i {
+            transform: scale(1.4);
+            box-shadow: 0 0 0 4px var(--gold-soft)
+        }
+
+        /* card */
+        .tl-card {
+            background: var(--cream);
+            border: 1px solid var(--line-soft);
+            padding: 32px 34px;
+            transition: .3s;
+        }
+
+        .tl-card:hover {
+            box-shadow: 0 16px 40px -16px rgba(10, 46, 82, .22)
+        }
+
+        .tl-card .yr {
+            font-family: var(--serif);
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 8px;
+            line-height: 1.1;
+        }
+
+        .tl-card .tag {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 12px;
+            background: rgba(201, 150, 46, .1);
+            padding: 4px 10px;
+            border-radius: 3px;
+        }
+
+        .tl-card h4 {
+            font-family: var(--serif);
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--brand);
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .tl-card p {
+            font-size: 14.5px;
+            color: var(--muted)
+        }
+
+        /* LEFT side cards: content on left, empty right */
+        .tl-row.left .tl-card {
+            grid-column: 1;
+            text-align: right
+        }
+
+        .tl-row.left .tl-card .tag {
+            display: inline-block
+        }
+
+        /* arrow pointing right toward the line */
+        .tl-row.left .tl-card::after {
+            content: "";
+            position: absolute;
+            right: -9px;
+            top: 32px;
+            border-left: 9px solid var(--cream);
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+        }
+
+        .tl-row.left .tl-card {
+            position: relative
+        }
+
+        .tl-row.left .tl-empty {
+            grid-column: 3
+        }
+
+        /* RIGHT side cards: empty left, content on right */
+        .tl-row.right .tl-empty {
+            grid-column: 1
+        }
+
+        .tl-row.right .tl-card {
+            grid-column: 3;
+            position: relative
+        }
+
+        /* arrow pointing left toward the line */
+        .tl-row.right .tl-card::before {
+            content: "";
+            position: absolute;
+            left: -9px;
+            top: 32px;
+            border-right: 9px solid var(--cream);
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+        }
+
+        /* HIGHLIGHT — 2011 founding */
+        .tl-row.hl .tl-card {
+            background: var(--brand);
+            border-color: var(--brand)
+        }
+
+        .tl-row.hl .tl-card::after {
+            border-left-color: var(--brand)
+        }
+
+        .tl-row.hl .tl-card::before {
+            border-right-color: var(--brand)
+        }
+
+        .tl-row.hl .tl-card h4 {
+            color: #fff
+        }
+
+        .tl-row.hl .tl-card p {
+            color: rgba(255, 255, 255, .78)
+        }
+
+        .tl-row.hl .tl-card .tag {
+            color: var(--gold-soft);
+            background: rgba(240, 223, 180, .15)
+        }
+
+        .tl-row.hl .tl-card .yr {
+            color: var(--gold-soft)
+        }
+
+        .tl-row.hl .tl-dot i {
+            background: var(--brand);
+            box-shadow: 0 0 0 2px var(--brand)
+        }
+
+        /* CURRENT — 2019 present */
+        .tl-row.now .tl-card {
+            border: 2px solid var(--gold)
+        }
+
+        .tl-row.now .tl-dot i {
+            background: var(--gold);
+            box-shadow: 0 0 0 3px var(--gold)
+        }
+
+        /* ============================================================
+   CORE VALUES
+   ============================================================ */
+        .val-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            border: 1px solid var(--line-soft);
+            background: #fff
+        }
+
+        .vcard {
+            padding: 44px 34px;
+            border-right: 1px solid var(--line-soft);
+            display: flex;
+            flex-direction: column
+        }
+
+        .vcard:last-child {
+            border: 0
+        }
+
+        .vcard .ic {
+            width: 54px;
+            height: 54px;
+            border: 1px solid var(--line);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            margin-bottom: 22px;
+            color: var(--gold);
+            font-size: 22px
+        }
+
+        .vcard h3 {
+            font-family: var(--serif);
+            font-size: 19px;
+            font-weight: 600;
+            margin-bottom: 10px
+        }
+
+        .vcard p {
+            font-size: 14px;
+            color: var(--muted)
+        }
+
+        /* FACULTIES */
+        .fac-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px
+        }
+
+        .fac {
+            background: #fff;
+            border: 1px solid var(--line-soft);
+            display: flex;
+            flex-direction: column;
+            transition: .3s
+        }
+
+        .fac:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 24px 48px -24px rgba(10, 46, 82, .35)
+        }
+
+        .fac figure {
+            aspect-ratio: 16/10;
+            overflow: hidden;
+            background: var(--brand-2)
+        }
+
+        .fac figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s
+        }
+
+        .fac:hover figure img {
+            transform: scale(1.05)
+        }
+
+        .fac figure::after {
+            content: "";
+            display: block;
+            height: 4px;
+            background: var(--gold)
+        }
+
+        .fac .body {
+            padding: 28px 26px;
+            display: flex;
+            flex-direction: column;
+            flex: 1
+        }
+
+        .fac h3 {
+            font-family: var(--serif);
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--brand)
+        }
+
+        .fac p {
+            font-size: 13.5px;
+            color: var(--muted);
+            flex: 1;
+            margin-bottom: 18px
+        }
+
+        .fac .cnt {
+            font-size: 11px;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 12px
+        }
+
+        /* LEADERSHIP */
+        .lead-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px
+        }
+
+        .lead {
+            background: #fff;
+            border: 1px solid var(--line-soft);
+            padding: 32px 26px;
+            text-align: center;
+            transition: .3s
+        }
+
+        .lead:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 36px -18px rgba(10, 46, 82, .3)
+        }
+
+        .lead img {
+            width: 84px;
+            height: 84px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 16px;
+            background: var(--brand-2)
+        }
+
+        .lead b {
+            font-family: var(--serif);
+            font-size: 16px;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 4px
+        }
+
+        .lead span {
+            font-size: 12.5px;
+            color: var(--muted);
+            display: block
+        }
+
+        .lead em {
+            font-style: normal;
+            font-size: 11px;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700;
+            display: block;
+            margin-top: 8px
+        }
+
+        /* QUOTE */
+        .quote-band {
+            background: var(--brand);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden
+        }
+
+        .quote-band::before {
+            content: "";
+            position: absolute;
+            left: -100px;
+            bottom: -120px;
+            width: 300px;
+            height: 300px;
+            border: 1px solid rgba(224, 191, 112, .18);
+            border-radius: 50%
+        }
+
+        .quote-band .wrap {
+            position: relative;
+            z-index: 2;
+            max-width: 800px
+        }
+
+        .quote-band blockquote {
+            font-family: var(--serif);
+            font-size: clamp(22px, 3vw, 32px);
+            font-style: italic;
+            line-height: 1.45;
+            margin-bottom: 24px;
+            color: var(--gold-soft)
+        }
+
+        .quote-band cite {
+            font-style: normal;
+            font-size: 13px;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .65)
+        }
+
+        /* CAMPUS LIFE */
+        .life-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            align-items: center
+        }
+
+        .life-split h2 {
+            font-family: var(--serif);
+            font-weight: 600;
+            font-size: clamp(28px, 3.2vw, 40px);
+            line-height: 1.12;
+            margin-bottom: 20px
+        }
+
+        .life-split p {
+            color: var(--muted);
+            margin-bottom: 16px
+        }
+
+        .life-mosaic {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px
+        }
+
+        .life-mosaic img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover
+        }
+
+        .life-mosaic img:first-child {
+            grid-row: span 2;
+            aspect-ratio: auto;
+            min-height: 100%
+        }
+
+        /* PARTNERS */
+        .partners {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1px;
+            background: var(--line-soft);
+            border: 1px solid var(--line-soft)
+        }
+
+        .partners div {
+            background: #fff;
+            display: grid;
+            place-items: center;
+            padding: 34px 10px;
+            font-family: var(--serif);
+            font-size: 15px;
+            color: var(--muted);
+            letter-spacing: .06em;
+            text-align: center;
+            transition: .25s
+        }
+
+        .partners div:hover {
+            color: var(--brand);
+            background: var(--cream)
+        }
+
+        /* CTA */
+        .visit {
+            background: var(--gold);
+            color: #fff
+        }
+
+        .visit .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 46px 32px;
+            flex-wrap: wrap
+        }
+
+        .visit h3 {
+            font-family: var(--serif);
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 6px
+        }
+
+        .visit p {
+            font-size: 14.5px;
+            color: rgba(255, 255, 255, .92)
+        }
+
+        .visit .btn-brand:hover {
+            background: var(--brand-3)
+        }
+
+        /* CONTACT BAND */
+        .cband {
+            background: var(--cream);
+            border-top: 1px solid var(--line-soft);
+            padding: 64px 0
+        }
+
+        .cband-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px
+        }
+
+        .cband-item {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            background: #fff;
+            border: 1px solid var(--line-soft);
+            padding: 24px 22px
+        }
+
+        .cband-item .ic {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--line);
+            display: grid;
+            place-items: center;
+            color: var(--gold);
+            flex: none;
+            font-size: 16px
+        }
+
+        .cband-item b {
+            display: block;
+            font-size: 10.5px;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 3px
+        }
+
+        .cband-item a,
+        .cband-item span {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--brand)
+        }
+
+        .cband-item a:hover {
+            color: var(--gold)
+        }
+
+        /* FOOTER */
+        .ftr {
+            background: var(--brand-3);
+            color: rgba(255, 255, 255, .72);
+            font-size: 14px
+        }
+
+        .ftr-main {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+            gap: 44px;
+            padding: 72px 0 56px
+        }
+
+        .ftr h4 {
+            color: #fff;
+            font-family: var(--serif);
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 20px
+        }
+
+        .ftr ul {
+            list-style: none;
+            display: grid;
+            gap: 10px
+        }
+
+        .ftr a:hover {
+            color: var(--gold-soft)
+        }
+
+        .ftr .logo img {
+            height: 56px;
+            background: #fff;
+            padding: 6px 12px;
+            border-radius: 3px
+        }
+
+        .ftr-brand p {
+            margin: 20px 0 22px;
+            font-size: 13.5px;
+            max-width: 300px
+        }
+
+        .soc {
+            display: flex;
+            gap: 10px
+        }
+
+        .soc a {
+            width: 36px;
+            height: 36px;
+            border: 1px solid rgba(255, 255, 255, .25);
+            display: grid;
+            place-items: center;
+            font-size: 13px;
+            transition: .2s
+        }
+
+        .soc a:hover {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: #fff
+        }
+
+        .newsletter {
+            display: flex;
+            margin-top: 18px;
+            border: 1px solid rgba(255, 255, 255, .25)
+        }
+
+        .newsletter input {
+            flex: 1;
+            background: transparent;
+            border: 0;
+            padding: 12px 14px;
+            color: #fff;
+            font-family: var(--sans);
+            font-size: 13px;
+            outline: none
+        }
+
+        .newsletter input::placeholder {
+            color: rgba(255, 255, 255, .45)
+        }
+
+        .newsletter button {
+            background: var(--gold);
+            color: #fff;
+            padding: 0 18px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .12em
+        }
+
+        .ftr-btm {
+            border-top: 1px solid rgba(255, 255, 255, .12);
+            padding: 22px 0;
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            font-size: 12.5px;
+            flex-wrap: wrap
+        }
+
+        .ftr-btm ul {
+            display: flex;
+            gap: 22px;
+            list-style: none
+        }
+
+        /* REVEAL */
+        .rv {
+            opacity: 0;
+            transform: translateY(26px);
+            transition: opacity .7s ease, transform .7s ease
+        }
+
+        .rv.in {
+            opacity: 1;
+            transform: none
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:1080px) {
+
+            .nav,
+            .hdr-cta .btn,
+            .lang {
+                display: none
+            }
+
+            .burger {
+                display: flex
+            }
+
+            .mv-grid,
+            .life-split {
+                grid-template-columns: 1fr;
+                gap: 36px
+            }
+
+            .stats-band .wrap {
+                grid-template-columns: repeat(3, 1fr)
+            }
+
+            .fac-grid,
+            .lead-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .val-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .vcard:nth-child(2) {
+                border-right: 0
+            }
+
+            .cband-grid {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .partners {
+                grid-template-columns: repeat(3, 1fr)
+            }
+
+            .ftr-main {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .ahero-stats {
+                gap: 28px
+            }
+
+            /* timeline → single column on tablet */
+            .tl::before {
+                left: 20px
+            }
+
+            .tl-row {
+                grid-template-columns: 40px 1fr;
+                gap: 0
+            }
+
+            .tl-row .tl-dot {
+                grid-column: 1;
+                justify-content: flex-start;
+                padding-top: 28px
+            }
+
+            .tl-row .tl-card {
+                grid-column: 2 !important;
+                text-align: left !important;
+                margin-left: 16px
+            }
+
+            .tl-row .tl-empty {
+                display: none
+            }
+
+            .tl-row .tl-card::before,
+            .tl-row .tl-card::after {
+                display: none !important
+            }
+        }
+
+        @media(max-width:760px) {
+            .wrap {
+                padding: 0 20px
+            }
+
+            .sec {
+                padding: 72px 0
+            }
+
+            .hdr.nav-open .nav {
+                display: flex;
+                position: absolute;
+                top: 86px;
+                left: 0;
+                right: 0;
+                background: var(--cream);
+                flex-direction: column;
+                padding: 26px 24px;
+                gap: 18px;
+                border-bottom: 1px solid var(--line)
+            }
+
+            .stats-band .wrap,
+            .fac-grid,
+            .lead-grid,
+            .val-grid,
+            .cband-grid,
+            .partners,
+            .life-mosaic {
+                grid-template-columns: 1fr
+            }
+
+            .life-mosaic img:first-child {
+                grid-row: auto;
+                aspect-ratio: 4/3
+            }
+
+            .ahero .wrap {
+                padding: 60px 20px 56px
+            }
+
+            .ahero-stats {
+                flex-direction: column;
+                gap: 20px
+            }
+
+            .mv-card {
+                padding: 36px 28px
+            }
+
+            .quote-band {
+                padding: 60px 0
+            }
+
+            .tl-row {
+                grid-template-columns: 32px 1fr
+            }
+
+            .tl::before {
+                left: 14px
+            }
+
+            .tl-row .tl-dot {
+                padding-top: 24px
+            }
+
+            .tl-row .tl-dot i {
+                width: 12px;
+                height: 12px;
+                border-width: 3px
+            }
+
+            .tl-row .tl-card {
+                padding: 24px 20px;
+                margin-left: 12px
+            }
+
+            .tl-card .yr {
+                font-size: 22px
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- UTILITY BAR -->
+    <div class="util">
+        <div class="wrap">
+            <ul>
+                <li><a href="mailto:admin@aui.university">✉ admin@aui.university</a></li>
+                <li class="sep">|</li>
+                <li><a href="tel:+60165680906">☎ +60 165 680 906</a></li>
+                <li class="sep">|</li>
+                <li><a href="#">Portal AUI (Students)</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Payment Information</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">EN</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="hdr" id="hdr">
+        <div class="wrap">
+            <a href="#" class="logo"><img
+                    src="https://aui.university/wp-content/uploads/2026/05/logo-title-asean-university-international.webp"
+                    alt="AUI logo"></a>
+            <nav>
+                <ul class="nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#" class="is-active">About</a></li>
+                    <li><a href="#">Admissions</a></li>
+                    <li><a href="#">Academic</a></li>
+                    <li><a href="#">Payment Information</a></li>
+                    <li><a href="#">Students</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hdr-cta">
+                <a href="#" class="btn btn-gold">Apply now</a>
+                <span class="lang">EN / 中文</span>
+                <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <div class="wrap">
+        <div class="crumb"><a href="#">Home</a><span>/</span><b style="color:var(--brand)">About</b></div>
+    </div>
+
+    <main>
+
+        <!-- PAGE HERO -->
+        <section class="ahero">
+            <img class="ahero-img"
+                src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1800&q=70"
+                alt="AUI campus">
+            <div class="wrap">
+                <div class="eyebrow">About ASEAN University International</div>
+                <h1>Asean University International</h1>
+                <div class="sub">With Unbelievable Impact</div>
+                <p class="lede">At ASEAN University International (AUI), we foster excellent education that is engaging
+                    and enthusiastically presented, with an emphasis on disseminating practical and pertinent knowledge.
+                </p>
+                <div class="ahero-stats">
+                    <div class="s"><b><span data-count="3000">0</span>+</b><span>Students · 5+ Countries</span></div>
+                    <div class="s"><b><span data-count="5">0</span></b><span>Academic Faculties</span></div>
+                    <div class="s"><b><span data-count="20">0</span>+</b><span>Research Centers</span></div>
+                    <div class="s"><b><span data-count="100">0</span>+</b><span>Industry Partnerships</span></div>
+                    <div class="s"><b><span data-count="90">0</span>%</b><span>Employability ≤ 6 Months</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MISSION & VISION -->
+        <section class="sec">
+            <div class="wrap">
+                <div class="sec-head rv">
+                    <div class="eyebrow">01 — Our Purpose</div>
+                    <h2>Mission &amp; Vision</h2>
+                </div>
+                <div class="mv-grid">
+                    <div class="mv-card rv">
+                        <div class="num">01</div>
+                        <h3>Mission</h3>
+                        <p>Our goal is to provide students with the opportunity to delve into a vast world of
+                            information taught by professionals and graduate with essential skills for the latest
+                            industries.</p>
+                        <ul>
+                            <li>Deliver engaging and enthusiastically presented education</li>
+                            <li>Disseminate practical and pertinent knowledge across all programmes</li>
+                            <li>Ensure students have the resources to succeed in their studies</li>
+                            <li>Make an unbelievably positive impact on academic and professional growth</li>
+                        </ul>
+                    </div>
+                    <div class="mv-card rv">
+                        <div class="num">02</div>
+                        <h3>Vision</h3>
+                        <p>To be a global university that opens up great opportunities for academic and professional
+                            development, nurturing effective global leaders through transformative education and
+                            multidisciplinary research.</p>
+                        <ul>
+                            <li>Nurture effective global leaders</li>
+                            <li>Impact society through multidisciplinary research</li>
+                            <li>Transform lives for the better</li>
+                            <li>Build a powerful, connected network across the globe</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS BAND -->
+        <section class="stats-band">
+            <div class="wrap">
+                <div class="sband rv">
+                    <div class="row"><b><span data-count="30000">0</span></b></div><span>students — nearly
+                        30,000<br>across the globe</span>
+                </div>
+                <div class="sband rv">
+                    <div class="row"><b><span data-count="20000">0</span></b></div><span>alumni in the AUI<br>connected
+                        network</span>
+                </div>
+                <div class="sband rv">
+                    <div class="row"><b><span data-count="20">0</span></b><span class="sym" data-sym>+</span></div>
+                    <span>research centers across<br>5 academic faculties</span>
+                </div>
+                <div class="sband rv">
+                    <div class="row"><b><span data-count="100">0</span></b><span class="sym" data-sym>+</span></div>
+                    <span>industry partnerships<br>worldwide</span>
+                </div>
+                <div class="sband rv">
+                    <div class="row"><b><span data-count="90">0</span></b><span class="sym" data-sym>%</span></div>
+                    <span>graduate employability<br>rate within 6 months</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+     02 — OUR JOURNEY (TIMELINE BARU)
+     ============================================================ -->
+        <section class="sec hist" id="journey">
+            <div class="wrap">
+                <div class="hist-intro rv">
+                    <div class="eyebrow">02 — Our Journey</div>
+                    <h2>From Yales to ASEAN University International</h2>
+                    <p>Perjalanan lebih dari dua dekade — dari lembaga pendidikan kecil hingga universitas internasional
+                        dengan jaringan global.</p>
+                </div>
+
+                <div class="tl">
+
+                    <!-- 2001–2002 : LEFT -->
+                    <div class="tl-row left rv">
+                        <div class="tl-card">
+                            <div class="yr">2001 – 2002</div>
+                            <span class="tag">Foundation</span>
+                            <h4>Yales, Board of Education Management</h4>
+                            <p>Yales, Board of Education Management was established, running a few courses such as
+                                Management, Business Law, and TOEFL under the supervision of Dr. Suhendar.</p>
+                        </div>
+                        <div class="tl-dot"><i></i></div>
+                        <div class="tl-empty"></div>
+                    </div>
+
+                    <!-- 2003–2004 : RIGHT -->
+                    <div class="tl-row right rv">
+                        <div class="tl-empty"></div>
+                        <div class="tl-dot"><i></i></div>
+                        <div class="tl-card">
+                            <div class="yr">2003 – 2004</div>
+                            <span class="tag">Collaboration</span>
+                            <h4>Expanded Collaboration with Singapore</h4>
+                            <p>Expanded collaboration with Explomo Technical Services (Singapore), promoting Corporate
+                                Law and International Hospitality with "Akademi Perhotelan Kartika".</p>
+                        </div>
+                    </div>
+
+                    <!-- 2005–2010 : LEFT -->
+                    <div class="tl-row left rv">
+                        <div class="tl-card">
+                            <div class="yr">2005 – 2010</div>
+                            <span class="tag">Growth</span>
+                            <h4>Akademi Yayasan Taruma Negara</h4>
+                            <p>Yales Foundation expanded into "Akademi Yayasan Taruma Negara", offering Executive
+                                Diplomas in Management and Secretarial studies.</p>
+                        </div>
+                        <div class="tl-dot"><i></i></div>
+                        <div class="tl-empty"></div>
+                    </div>
+
+                    <!-- 2011 : RIGHT (HIGHLIGHT) -->
+                    <div class="tl-row right hl rv">
+                        <div class="tl-empty"></div>
+                        <div class="tl-dot"><i></i></div>
+                        <div class="tl-card">
+                            <div class="yr">2011</div>
+                            <span class="tag">Milestone</span>
+                            <h4>ASEAN University Officially Founded</h4>
+                            <p>ASEAN University was officially founded in Labuan, Malaysia, as a significant milestone
+                                in regional education standards.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2019–Present : LEFT (CURRENT) -->
+                    <div class="tl-row left now rv">
+                        <div class="tl-card">
+                            <div class="yr">2019 – Present</div>
+                            <span class="tag">Global Expansion</span>
+                            <h4>Rebranded as ASEAN University International</h4>
+                            <p>Rebranded as ASEAN University International in Kuala Lumpur. Partnering with global
+                                institutions like Al-Khalifa Business School and ALFA University College.</p>
+                        </div>
+                        <div class="tl-dot"><i></i></div>
+                        <div class="tl-empty"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 — CORE VALUES -->
+        <section class="sec" id="values">
+            <div class="wrap">
+                <div class="sec-head rv">
+                    <div class="eyebrow">03 — Core Values</div>
+                    <h2>Empat pilar yang membentuk AUI</h2>
+                </div>
+                <div class="val-grid rv">
+                    <div class="vcard">
+                        <div class="ic">◉</div>
+                        <h3>Accessibility</h3>
+                        <p>Every programme can be studied from anywhere in the world — online, or at your own pace.</p>
+                    </div>
+                    <div class="vcard">
+                        <div class="ic">✦</div>
+                        <h3>Quality</h3>
+                        <p>Whichever study method you choose, you'll experience the same high‑quality, accredited
+                            education programme of study.</p>
+                    </div>
+                    <div class="vcard">
+                        <div class="ic">◎</div>
+                        <h3>Community</h3>
+                        <p>A powerful, connected network right across the globe — nearly 30,000 students and 20,000
+                            alumni.</p>
+                    </div>
+                    <div class="vcard">
+                        <div class="ic">◐</div>
+                        <h3>Impact</h3>
+                        <p>Making an unbelievably positive impact on academic and professional growth — 90%
+                            employability within 6 months.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 — FACULTIES -->
+        <section class="sec"
+            style="background:#fff;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)">
+            <div class="wrap">
+                <div class="sec-head rv">
+                    <div class="eyebrow">04 — Academic Faculties</div>
+                    <h2>5 Faculties · 20+ Research Centers</h2>
+                    <p>Lima fakultas akademik yang menaungi seluruh programme AUI, didukung oleh lebih dari 20 pusat
+                        riset dan 100+ kemitraan industri.</p>
+                </div>
+                <div class="fac-grid">
+                    <article class="fac rv">
+                        <figure><img loading="lazy"
+                                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=70"
+                                alt="Business"></figure>
+                        <div class="body">
+                            <div class="cnt">Faculty 01</div>
+                            <h3>Business &amp; Management</h3>
+                            <p>Programme bisnis dengan penekanan pada leadership, global mindset, dan kesiapan industri
+                                terkini.</p><a href="#" class="link-gold">Explore →</a>
+                        </div>
+                    </article>
+                    <article class="fac rv">
+                        <figure><img loading="lazy"
+                                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=70"
+                                alt="Technology"></figure>
+                        <div class="body">
+                            <div class="cnt">Faculty 02</div>
+                            <h3>Technology &amp; Computing</h3>
+                            <p>Komputasi, rekayasa perangkat lunak, dan kecerdasan buatan untuk menghadapi tantangan
+                                digital global.</p><a href="#" class="link-gold">Explore →</a>
+                        </div>
+                    </article>
+                    <article class="fac rv">
+                        <figure><img loading="lazy"
+                                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=70"
+                                alt="Health"></figure>
+                        <div class="body">
+                            <div class="cnt">Faculty 03</div>
+                            <h3>Health Sciences</h3>
+                            <p>Pendidikan kesehatan berbasis praktik dan empati, mempersiapkan lulusan untuk industri
+                                kesehatan masa kini.</p><a href="#" class="link-gold">Explore →</a>
+                        </div>
+                    </article>
+                    <article class="fac rv">
+                        <figure><img loading="lazy"
+                                src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&q=70"
+                                alt="Arts"></figure>
+                        <div class="body">
+                            <div class="cnt">Faculty 04</div>
+                            <h3>Arts &amp; Humanities</h3>
+                            <p>Kreativitas, budaya, dan ekspresi lintas zaman — membangun pemahaman mendalam tentang
+                                manusia dan masyarakat.</p><a href="#" class="link-gold">Explore →</a>
+                        </div>
+                    </article>
+                    <article class="fac rv">
+                        <figure><img loading="lazy"
+                                src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=70"
+                                alt="Environment"></figure>
+                        <div class="body">
+                            <div class="cnt">Faculty 05</div>
+                            <h3>Environmental Studies</h3>
+                            <p>Memahami dan mengatasi tantangan lingkungan menuju masa depan yang berkelanjutan.</p><a
+                                href="#" class="link-gold">Explore →</a>
+                        </div>
+                    </article>
+                    <article class="fac rv"
+                        style="background:var(--brand);color:#fff;border:0;display:flex;flex-direction:column;justify-content:center;padding:48px 36px">
+                        <h3 style="color:#fff;font-size:24px;margin-bottom:12px">20+ Research Centers</h3>
+                        <p style="color:rgba(255,255,255,.78);font-size:14px;flex:1;margin-bottom:24px">Setiap fakultas
+                            didukung oleh pusat riset yang menjembatani akademik dan industri.</p><a href="#"
+                            class="btn btn-gold" style="align-self:flex-start">Learn More →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 05 — LEADERSHIP -->
+        <section class="sec" id="leadership">
+            <div class="wrap">
+                <div class="sec-head rv">
+                    <div class="eyebrow">05 — Leadership</div>
+                    <h2>Dipimpin oleh professionals</h2>
+                    <p>Tim pimpinan AUI yang berpengalaman dalam pendidikan tinggi, riset, dan kemitraan industri
+                        global.</p>
+                </div>
+                <div class="lead-grid">
+                    <div class="lead rv"><img loading="lazy"
+                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=70"
+                            alt="Chancellor"><b>Sample Chancellor</b><span>Chancellor</span><em>Global Education
+                            Strategy</em></div>
+                    <div class="lead rv"><img loading="lazy"
+                            src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=70"
+                            alt="VC"><b>Sample Vice-Chancellor</b><span>Vice-Chancellor</span><em>Academic &amp;
+                            Research</em></div>
+                    <div class="lead rv"><img loading="lazy"
+                            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=70"
+                            alt="Dean"><b>Sample Dean</b><span>Dean of Faculties</span><em>Programme Quality</em></div>
+                    <div class="lead rv"><img loading="lazy"
+                            src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=70"
+                            alt="Director"><b>Sample Director</b><span>Director of Admissions</span><em>Student
+                            Recruitment</em></div>
+                </div>
+                <p style="margin-top:20px;font-size:13px;color:var(--muted)" class="rv">* Contoh tampilan — ganti dengan
+                    data pimpinan AUI yang sebenarnya.</p>
+            </div>
+        </section>
+
+        <!-- QUOTE -->
+        <section class="quote-band">
+            <div class="wrap">
+                <blockquote>"AUI ensures that you have the resources to succeed in your studies along the way, making an
+                    unbelievably positive impact on your academic and professional growth."</blockquote>
+                <cite>— ASEAN University International</cite>
+            </div>
+        </section>
+
+        <!-- 06 — LIFE AT AUI -->
+        <section class="sec">
+            <div class="wrap">
+                <div class="life-split">
+                    <div class="rv">
+                        <div class="eyebrow">06 — Life at AUI</div>
+                        <h2>More Than a Programme</h2>
+                        <p>Be part of a powerful, connected network right across the globe — a learning experience
+                            that's both personalised and flexible, from your first enquiry to your career after
+                            graduation.</p>
+                        <p>With nearly 30,000 students and 20,000 alumni, we offer a part of a powerful, connected
+                            network right across the globe.</p><a href="#" class="btn btn-line">Discover Campus Life
+                            →</a>
+                    </div>
+                    <div class="life-mosaic rv">
+                        <img loading="lazy"
+                            src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=700&q=70"
+                            alt="Students">
+                        <img loading="lazy"
+                            src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=500&q=70"
+                            alt="Community">
+                        <img loading="lazy"
+                            src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=500&q=70"
+                            alt="Networking">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 07 — PARTNERS -->
+        <section class="sec" style="padding-top:0">
+            <div class="wrap">
+                <div class="sec-head rv" style="margin-bottom:36px">
+                    <div class="eyebrow">07 — Partnerships</div>
+                    <h2>100+ industry partnerships worldwide</h2>
+                    <p>Partner institusi global AUI.</p>
+                </div>
+                <div class="partners rv">
+                    <div>Al-Khalifa Business School</div>
+                    <div>ALFA University College</div>
+                    <div>Partner 03</div>
+                    <div>Partner 04</div>
+                    <div>Partner 05</div>
+                    <div>Partner 06</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="visit">
+            <div class="wrap">
+                <div>
+                    <h3>Ready to join AUI?</h3>
+                    <p>Tuition from MYR 35,000 · Scholarship Available · Study from anywhere in the world.</p>
+                </div>
+                <div style="display:flex;gap:12px;flex-wrap:wrap"><a href="#" class="btn btn-brand">Apply now</a><a
+                        href="#contact" class="btn btn-ghost">Contact Admissions</a></div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="cband" id="contact">
+            <div class="wrap">
+                <div class="cband-grid rv">
+                    <div class="cband-item">
+                        <div class="ic">✉</div>
+                        <div><b>Email</b><a href="mailto:admin@aui.university">admin@aui.university</a></div>
+                    </div>
+                    <div class="cband-item">
+                        <div class="ic">☎</div>
+                        <div><b>Phone / WhatsApp</b><a href="tel:+60165680906">+60 165 680 906</a></div>
+                    </div>
+                    <div class="cband-item">
+                        <div class="ic">◎</div>
+                        <div><b>Student Portal</b><a href="#">portal-aui</a></div>
+                    </div>
+                    <div class="cband-item">
+                        <div class="ic">⌂</div>
+                        <div><b>Address</b><span>F-2-23, Jalan BG 3B/1 Bangi Gateway 3B, Seksyen 15, 43650 Bandar Baru
+                                Bangi, Selangor, Malaysia</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="ftr">
+        <div class="wrap">
+            <div class="ftr-main">
+                <div class="ftr-brand">
+                    <div class="logo"><img
+                            src="https://aui.university/wp-content/uploads/2026/05/logo-title-asean-university-international.webp"
+                            alt="AUI logo"></div>
+                    <p>Transformative education and multidisciplinary research that nurtures effective global leaders.
+                    </p>
+                    <div class="soc"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="X">𝕏</a><a href="#"
+                            aria-label="Instagram">◎</a><a href="#" aria-label="LinkedIn">in</a><a href="#"
+                            aria-label="YouTube">▶</a></div>
+                    <form class="newsletter" onsubmit="return false"><input type="email" placeholder="Subscribe…"
+                            aria-label="Newsletter"><button type="submit">JOIN</button></form>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Admissions</a></li>
+                        <li><a href="#">Academic</a></li>
+                        <li><a href="#">Payment Information</a></li>
+                        <li><a href="#">Students</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Programmes</h4>
+                    <ul>
+                        <li><a href="#">Bachelor — MYR 35,000</a></li>
+                        <li><a href="#">Master — MYR 45,000</a></li>
+                        <li><a href="#">Doctor — MYR 65,000</a></li>
+                        <li><a href="#">Scholarship Available</a></li>
+                        <li><a href="#">Study From Anywhere</a></li>
+                        <li><a href="#">portal-aui</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>✉ <a href="mailto:admin@aui.university">admin@aui.university</a></li>
+                        <li>☎ <a href="tel:+60165680906">+60 165 680 906</a></li>
+                        <li>◎ <a href="#">portal-aui</a></li>
+                        <li style="margin-top:8px">F-2-23, Jalan BG 3B/1 Bangi Gateway 3B, Seksyen 15, 43650 Bandar Baru
+                            Bangi, Selangor, Malaysia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ftr-btm">
+                <span>ASIAN INTERNATIONAL EDUCATION SDN BHD | 2026 © All Rights Reserved.</span>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('burger').addEventListener('click', () => { document.getElementById('hdr').classList.toggle('nav-open') });
+        function countUp(el, sym) { const t = +el.dataset.count, d = 1400, s = performance.now(); (function f(n) { const p = Math.min((n - s) / d, 1); el.textContent = Math.round(t * (1 - Math.pow(1 - p, 3))).toLocaleString('en-US'); if (p < 1) requestAnimationFrame(f); else if (sym) setTimeout(() => sym.classList.add('on'), 120) })(performance.now()) }
+        let cObs;
+        (function init() { if (cObs) cObs.disconnect(); cObs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { const r = e.target.closest('.row') || e.target.parentElement; const s = r ? r.querySelector('[data-sym]') : null; countUp(e.target, s); cObs.unobserve(e.target) } }), { threshold: .5 }); document.querySelectorAll('[data-count]').forEach(e => cObs.observe(e)) })();
+        let rObs;
+        (function () { rObs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); rObs.unobserve(e.target) } }), { threshold: .12 }); document.querySelectorAll('.rv:not(.in)').forEach(e => rObs.observe(e)) })();
+    </script>
+</body>
+
+</html>
