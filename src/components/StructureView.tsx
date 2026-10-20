@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import Link from 'next/link';
 import {
   STRUCTURE_MEMBERS,
   STRUCTURE_TIERS,
@@ -21,7 +20,7 @@ interface StructureViewProps {
   ) => void;
 }
 
-export default function StructureView({ onNavigate }: StructureViewProps) {
+export default function StructureView({ onNavigate: _onNavigate }: StructureViewProps) {
   const [activeTab, setActiveTab] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedLeader, setSelectedLeader] = useState<LeaderMember | null>(null);
@@ -49,24 +48,6 @@ export default function StructureView({ onNavigate }: StructureViewProps) {
     return c;
   }, []);
 
-  const handleLink = (
-    e: React.MouseEvent,
-    view:
-      | 'home'
-      | 'detail'
-      | 'about'
-      | 'structure'
-      | 'admissions'
-      | 'academic'
-      | 'accreditation'
-  ) => {
-    if (onNavigate) {
-      e.preventDefault();
-      onNavigate(view);
-      window.scrollTo({ top: 0, behavior: 'instant' });
-    }
-  };
-
   return (
     <main className="view is-on" id="view-structure">
       {/* Skip to Content Anchor */}
@@ -75,18 +56,6 @@ export default function StructureView({ onNavigate }: StructureViewProps) {
       {/* 1. PAGE HERO */}
       <section className="struct-hero">
         <div className="wrap">
-          <div className="struct-crumb">
-            <Link href="/" onClick={(e) => handleLink(e, 'home')}>
-              Home
-            </Link>
-            <span>/</span>
-            <Link href="/about" onClick={(e) => handleLink(e, 'about')}>
-              About
-            </Link>
-            <span>/</span>
-            <strong className="active">Structure</strong>
-          </div>
-
           <div className="eyebrow">ASEAN UNIVERSITY INTERNATIONAL</div>
           <h1>University Leadership &amp; Governance Structure</h1>
           <p className="struct-lede">
