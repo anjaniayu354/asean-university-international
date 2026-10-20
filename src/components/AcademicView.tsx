@@ -391,17 +391,6 @@ export default function AcademicView({ onNavigate }: AcademicViewProps) {
       {/* Skip to Content Anchor */}
       <div id="content" tabIndex={-1} style={{ outline: 'none' }} />
 
-      {/* BREADCRUMB */}
-      <div className="wrap">
-        <div className="crumb">
-          <Link href="/" onClick={(e) => handleLink(e, 'home')}>
-            Home
-          </Link>
-          <span>/</span>
-          <b style={{ color: 'var(--brand)' }}>Academic</b>
-        </div>
-      </div>
-
       {/* ============================================================
            HERO
            ============================================================ */}

@@ -10,14 +10,6 @@ interface AcademicDetailViewProps {
 export default function AcademicDetailView({ onNavigate }: AcademicDetailViewProps) {
   return (
     <main className="view is-on" id="view-detail">
-<div className="wrap">
-            <div className="crumb">
-                <a href="#" onClick={(e) => { if (onNavigate) { e.preventDefault(); onNavigate("home"); window.scrollTo({top:0, behavior: "instant"}); } }}>Home</a><span>/</span>
-                <a href="#programmes">Academic</a><span>/</span>
-                <b style={{ color: "var(--brand)" }}>Master</b>
-            </div>
-        </div>
-
         <section className="phero">
             <img className="phero-img"
                 src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1800&q=70"

@@ -66,17 +66,6 @@ export default function AdmissionsView({ onNavigate }: AdmissionsViewProps) {
       {/* Skip to Content Anchor */}
       <div id="content" tabIndex={-1} style={{ outline: 'none' }} />
 
-      {/* BREADCRUMB */}
-      <div className="wrap">
-        <div className="crumb">
-          <Link href="/" onClick={(e) => handleLink(e, 'home')}>
-            Home
-          </Link>
-          <span>/</span>
-          <b style={{ color: 'var(--brand)' }}>Admissions</b>
-        </div>
-      </div>
-
       {/* HERO */}
       <section className="ahero">
         <img
