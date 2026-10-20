@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function UtilityBar() {
   return (
@@ -19,7 +20,7 @@ export default function UtilityBar() {
         </ul>
         <ul>
           <li>
-            <a href="#tuition">Payment Information</a>
+            <Link href="/payment-information">Payment Information</Link>
           </li>
           <li>
             <a href="#contact">Contact</a>

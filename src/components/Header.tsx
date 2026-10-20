@@ -11,7 +11,8 @@ interface HeaderProps {
     | 'structure'
     | 'admissions'
     | 'academic'
-    | 'accreditation';
+    | 'accreditation'
+    | 'payment';
   onNavigate?: (
     view:
       | 'home'
@@ -21,6 +22,7 @@ interface HeaderProps {
       | 'admissions'
       | 'academic'
       | 'accreditation'
+      | 'payment'
   ) => void;
 }
 
@@ -60,6 +62,7 @@ export default function Header({ currentView = 'home', onNavigate }: HeaderProps
       | 'admissions'
       | 'academic'
       | 'accreditation'
+      | 'payment'
   ) => {
     if (onNavigate) {
       e.preventDefault();
@@ -159,20 +162,22 @@ export default function Header({ currentView = 'home', onNavigate }: HeaderProps
       }, 100);
     } else if (
       query.includes('fee') ||
-      query.includes('tuition') ||
-      query.includes('biaya') ||
-      query.includes('scholarship') ||
-      query.includes('beasiswa') ||
       query.includes('payment') ||
-      query.includes('bayar')
+      query.includes('bayar') ||
+      query.includes('rekening') ||
+      query.includes('bank') ||
+      query.includes('cimb') ||
+      query.includes('bni') ||
+      query.includes('mandiri') ||
+      query.includes('tuition') ||
+      query.includes('biaya')
     ) {
-      if (currentView !== 'home' && onNavigate) {
-        onNavigate('home');
+      if (onNavigate) {
+        onNavigate('payment');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else {
+        window.location.href = '/payment-information';
       }
-      setTimeout(() => {
-        const el = document.getElementById('tuition');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
     } else {
       if (onNavigate) {
         onNavigate('academic');
@@ -221,14 +226,13 @@ export default function Header({ currentView = 'home', onNavigate }: HeaderProps
         const el = document.getElementById('news');
         if (el) el.scrollIntoView({ behavior: 'smooth' });
       }, 100);
-    } else if (query.includes('tuition') || query.includes('payment')) {
-      if (currentView !== 'home' && onNavigate) {
-        onNavigate('home');
+    } else if (query.includes('tuition') || query.includes('payment') || query.includes('bank')) {
+      if (onNavigate) {
+        onNavigate('payment');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else {
+        window.location.href = '/payment-information';
       }
-      setTimeout(() => {
-        const el = document.getElementById('tuition');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
     } else {
       if (onNavigate) {
         onNavigate('academic');

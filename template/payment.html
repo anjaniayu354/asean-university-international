@@ -1133,18 +1133,18 @@
     <!-- HEADER -->
     <header class="hdr" id="hdr">
         <div class="wrap">
-            <a href="#" class="logo"><img
-                    src="https://aui.university/wp-content/uploads/2026/05/logo-title-asean-university-international.webp"
-                    alt="AUI logo"></a>
+            <a href="sample.html" class="logo"><img
+                    src="../public/img/logo.png"
+                    alt="ASEAN University International logo"></a>
             <nav>
                 <ul class="nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Admissions</a></li>
-                    <li><a href="#">Academic</a></li>
-                    <li><a href="#" class="is-active">Payment Information</a></li>
-                    <li><a href="#">Students</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="sample.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="/structure">Structure</a></li>
+                    <li><a href="addmissions.html">Admissions</a></li>
+                    <li><a href="accademic.html">Academic</a></li>
+                    <li><a href="/accreditation">Accreditation</a></li>
+                    <li><a href="#students">Students</a></li>
                 </ul>
             </nav>
             <div class="hdr-cta">
@@ -1461,8 +1461,8 @@
             <div class="ftr-main">
                 <div class="ftr-brand">
                     <div class="logo"><img
-                            src="https://aui.university/wp-content/uploads/2026/05/logo-title-asean-university-international.webp"
-                            alt="AUI logo"></div>
+                            src="../public/img/logo-footer.png"
+                            alt="ASEAN University International logo"></div>
                     <p>Transformative education and multidisciplinary research that nurtures effective global leaders.
                     </p>
                     <div class="soc"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="X">𝕏</a><a href="#"
@@ -1474,12 +1474,14 @@
                 <div>
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Admissions</a></li>
-                        <li><a href="#">Academic</a></li>
-                        <li><a href="#">Payment Information</a></li>
-                        <li><a href="#">Students</a></li>
+                        <li><a href="sample.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="/structure">Structure</a></li>
+                        <li><a href="addmissions.html">Admissions</a></li>
+                        <li><a href="accademic.html">Academic</a></li>
+                        <li><a href="/accreditation">Accreditation</a></li>
+                        <li><a href="payment.html">Payment Information</a></li>
+                        <li><a href="#students">Students</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -1524,21 +1526,35 @@
             const el = document.getElementById(id);
             const text = el.textContent.trim();
             const clean = text.replace(/[-\s]/g, '');
-            navigator.clipboard.writeText(clean).then(() => {
+            const showSuccess = () => {
                 const orig = btn.innerHTML;
                 btn.innerHTML = '<span class="ic">✓</span> Copied!';
                 btn.classList.add('copied');
-                setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied') }, 2000);
-            }).catch(() => {
-                /* fallback */
-                const ta = document.createElement('textarea');
-                ta.value = clean; document.body.appendChild(ta); ta.select(); document.execCommand('copy');
-                document.body.removeChild(ta);
-                const orig = btn.innerHTML;
-                btn.innerHTML = '<span class="ic">✓</span> Copied!';
-                btn.classList.add('copied');
-                setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied') }, 2000);
-            });
+                setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied'); }, 2000);
+            };
+
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(clean).then(showSuccess).catch(() => fallbackCopy(clean, showSuccess));
+            } else {
+                fallbackCopy(clean, showSuccess);
+            }
+        }
+
+        function fallbackCopy(text, callback) {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.left = '-9999px';
+            document.body.appendChild(ta);
+            ta.focus();
+            ta.select();
+            try {
+                document.execCommand('copy');
+                callback();
+            } catch (err) {
+                console.error('Copy fallback failed', err);
+            }
+            document.body.removeChild(ta);
         }
 
         /* REVEAL */

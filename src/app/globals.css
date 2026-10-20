@@ -6320,5 +6320,431 @@
     }
 }
 
+/* ==========================================================================
+   PAYMENT INFORMATION MODULE (.banks, .bank, .fees, .steps, .notes)
+   ========================================================================== */
+
+#view-payment {
+    background-color: var(--cream);
+    min-height: 100vh;
+}
+
+/* Quick Info */
+.qinfo {
+    background: #ffffff;
+    border-bottom: 1px solid var(--line-soft);
+    box-shadow: 0 4px 16px rgba(11, 25, 44, 0.04);
+}
+
+.qinfo .wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.qi {
+    padding: 28px 22px;
+    text-align: center;
+    border-right: 1px solid var(--line-soft);
+}
+
+.qi:last-child {
+    border-right: 0;
+}
+
+.qi b {
+    font-family: var(--serif);
+    font-size: 19px;
+    color: var(--brand);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.qi span {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* Bank Cards */
+.banks {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+.bank {
+    background: #ffffff;
+    border: 1px solid rgba(11, 25, 44, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(11, 25, 44, 0.04);
+}
+
+.bank:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(11, 25, 44, 0.1);
+}
+
+.bank::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+}
+
+.bank.cimb::before {
+    background: linear-gradient(90deg, #E31837, #002B7F);
+}
+
+.bank.bni::before {
+    background: linear-gradient(90deg, #F26522, #00529C);
+}
+
+.bank.mandiri::before {
+    background: linear-gradient(90deg, #003D7C, #FFD700);
+}
+
+.bank-inner {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    min-height: 220px;
+}
+
+.bank-brand {
+    padding: 40px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+    background: #fbfbfb;
+    border-right: 1px solid var(--line-soft);
+}
+
+.bank-brand .icon {
+    width: 76px;
+    height: 76px;
+    border-radius: 18px;
+    display: grid;
+    place-items: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: var(--serif);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.bank.cimb .bank-brand .icon {
+    background: linear-gradient(135deg, #E31837, #800A1A);
+}
+
+.bank.bni .bank-brand .icon {
+    background: linear-gradient(135deg, #F26522, #B3440E);
+}
+
+.bank.mandiri .bank-brand .icon {
+    background: linear-gradient(135deg, #003D7C, #002347);
+}
+
+.bank-brand h3 {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--brand);
+    margin: 0;
+}
+
+.bank-brand .region {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: rgba(201, 150, 46, .1);
+    padding: 4px 14px;
+    border-radius: 20px;
+}
+
+.bank-details {
+    padding: 36px 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bank-details .fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 36px;
+    align-items: end;
+}
+
+.bank-details .label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+    display: block;
+}
+
+.bank-details .value.bank-name-text {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--brand);
+    line-height: 1.4;
+}
+
+.bank-details .holder {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    display: block;
+}
+
+.bank-details .value.acct {
+    font-family: "JetBrains Mono", monospace, monospace;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    padding: 12px 22px;
+    background: #fdfaf3;
+    border: 1px dashed rgba(201, 150, 46, 0.45);
+    border-radius: 6px;
+    display: inline-block;
+    color: var(--brand);
+}
+
+.bank-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.copy-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 24px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    border: 1px solid var(--brand);
+    border-radius: 6px;
+    color: var(--brand);
+    background: #ffffff;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.copy-btn:hover {
+    background: var(--brand);
+    color: #ffffff;
+}
+
+.copy-btn.copied {
+    background: #16a34a;
+    border-color: #16a34a;
+    color: #ffffff;
+}
+
+.copy-btn .ic {
+    font-size: 15px;
+}
+
+.currency-pill {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #64748b;
+}
+
+/* Tuition Section */
+.tuition-sec {
+    background: #ffffff;
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+}
+
+.fee-actions {
+    margin-top: 24px;
+}
+
+.fee-actions .btn {
+    width: 100%;
+    justify-content: center;
+}
+
+/* Steps */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.step {
+    background: #ffffff;
+    border: 1px solid var(--line-soft);
+    border-radius: 8px;
+    padding: 36px 28px;
+    position: relative;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.step:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(11, 25, 44, 0.08);
+}
+
+.step .n {
+    font-family: var(--serif);
+    font-size: 46px;
+    font-weight: 600;
+    color: var(--gold);
+    opacity: .28;
+    line-height: 1;
+    margin-bottom: 14px;
+}
+
+.step h4 {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--brand);
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Notes */
+.notes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+
+.note {
+    background: #ffffff;
+    border: 1px solid var(--line-soft);
+    border-radius: 8px;
+    padding: 34px 36px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+}
+
+.note.gold {
+    border-left: 5px solid var(--gold);
+}
+
+.note.blue {
+    border-left: 5px solid var(--brand);
+}
+
+.note .icon {
+    font-size: 32px;
+    margin-bottom: 14px;
+}
+
+.note h4 {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--brand);
+    margin-bottom: 12px;
+}
+
+.note p {
+    font-size: 14.5px;
+    color: #475569;
+    line-height: 1.65;
+    margin-bottom: 14px;
+}
+
+.note ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.note ul li {
+    font-size: 13.5px;
+    color: #475569;
+    display: flex;
+    gap: 10px;
+    line-height: 1.5;
+}
+
+.note ul li::before {
+    content: "—";
+    color: var(--gold);
+    font-weight: 700;
+    flex: none;
+}
+
+@media (max-width: 1024px) {
+    .bank-inner {
+        grid-template-columns: 1fr;
+    }
+    .bank-brand {
+        padding: 32px 24px;
+        border-right: 0;
+        border-bottom: 1px solid var(--line-soft);
+        flex-direction: row;
+        text-align: left;
+    }
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .notes {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 760px) {
+    .bank-brand {
+        flex-direction: column;
+        text-align: center;
+    }
+    .bank-details {
+        padding: 24px 20px;
+    }
+    .bank-details .fields {
+        grid-template-columns: 1fr;
+    }
+    .bank-details .value.acct {
+        font-size: 20px;
+        letter-spacing: .06em;
+    }
+    .steps {
+        grid-template-columns: 1fr;
+    }
+    .qinfo .wrap {
+        grid-template-columns: 1fr;
+    }
+    .qi {
+        border-right: 0;
+        border-bottom: 1px solid var(--line-soft);
+    }
+    .qi:last-child {
+        border-bottom: 0;
+    }
+}
+
+
 
 

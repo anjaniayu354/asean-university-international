@@ -13,6 +13,7 @@ interface FooterProps {
       | 'admissions'
       | 'academic'
       | 'accreditation'
+      | 'payment'
   ) => void;
 }
 
@@ -27,6 +28,7 @@ export default function Footer({ onNavigate }: FooterProps) {
       | 'admissions'
       | 'academic'
       | 'accreditation'
+      | 'payment'
   ) => {
     if (onNavigate) {
       e.preventDefault();
@@ -97,7 +99,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <li><Link href="/academic" onClick={(e) => handleView(e, 'academic')}>Academic</Link></li>
               <li><Link href="/accreditation" onClick={(e) => handleView(e, 'accreditation')}>Accreditation</Link></li>
               <li><a href="#news">News &amp; Articles</a></li>
-              <li><a href="#tuition">Admissions &amp; Fees</a></li>
+              <li><Link href="/payment-information" onClick={(e) => handleView(e, 'payment')}>Payment &amp; Bank Details</Link></li>
               <li><a href="#network">AUI Network</a></li>
               <li><a href="#tuition">Scholarship Available</a></li>
               <li><a href="#anywhere">Study From Anywhere</a></li>

@@ -19,6 +19,7 @@ export default function AcademicPage() {
       | 'admissions'
       | 'academic'
       | 'accreditation'
+      | 'payment'
   ) => {
     if (view === 'home') {
       router.push('/');
@@ -30,6 +31,8 @@ export default function AcademicPage() {
       router.push('/admissions');
     } else if (view === 'accreditation') {
       router.push('/accreditation');
+    } else if (view === 'payment') {
+      router.push('/payment-information');
     } else if (view === 'academic' || view === 'detail') {
       window.scrollTo({ top: 0, behavior: 'instant' });
     }

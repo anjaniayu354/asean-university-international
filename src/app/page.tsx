@@ -10,6 +10,7 @@ import AboutView from '@/components/AboutView';
 import StructureView from '@/components/StructureView';
 import AdmissionsView from '@/components/AdmissionsView';
 import AccreditationView from '@/components/AccreditationView';
+import PaymentView from '@/components/PaymentView';
 
 export default function HomePage() {
   const [currentView, setCurrentView] = useState<
@@ -20,6 +21,7 @@ export default function HomePage() {
     | 'admissions'
     | 'academic'
     | 'accreditation'
+    | 'payment'
   >('home');
 
   return (
@@ -34,6 +36,7 @@ export default function HomePage() {
       {currentView === 'structure' && <StructureView onNavigate={setCurrentView} />}
       {currentView === 'admissions' && <AdmissionsView onNavigate={setCurrentView} />}
       {currentView === 'accreditation' && <AccreditationView onNavigate={setCurrentView} />}
+      {currentView === 'payment' && <PaymentView onNavigate={setCurrentView} />}
       <Footer onNavigate={setCurrentView} />
     </>
   );
