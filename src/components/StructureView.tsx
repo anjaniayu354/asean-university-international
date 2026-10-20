@@ -55,11 +55,6 @@ export default function StructureView({ onNavigate: _onNavigate }: StructureView
 
       {/* 1. PAGE HERO */}
       <section className="struct-hero">
-        <img
-          src="/img/bawah-asean-university-international.webp"
-          alt="ASEAN University International Campus & Leadership Background"
-          className="struct-hero-bg"
-        />
         <div className="wrap">
           <div className="eyebrow">ASEAN UNIVERSITY INTERNATIONAL</div>
           <h1>University Leadership &amp; Governance Structure</h1>
@@ -230,6 +225,35 @@ export default function StructureView({ onNavigate: _onNavigate }: StructureView
               </div>
             </div>
           )}
+        </div>
+      </section>
+
+      {/* 3.5 INSTITUTIONAL CAMPUS & HEADQUARTERS CARD */}
+      <section className="sec" style={{ background: '#fbf9f4', paddingTop: '40px', paddingBottom: '60px' }}>
+        <div className="wrap">
+          <div className="struct-campus-card">
+            <div className="struct-campus-img-wrap">
+              <img
+                src="/img/bawah-asean-university-international.webp"
+                alt="ASEAN University International Academic Facilities and Administration"
+                className="struct-campus-img"
+                loading="lazy"
+              />
+            </div>
+            <div className="struct-campus-info">
+              <div className="eyebrow" style={{ color: 'var(--gold)' }}>University Administration</div>
+              <h3 style={{ fontFamily: 'var(--serif)', fontSize: '24px', color: 'var(--brand)', marginBottom: '12px' }}>
+                ASEAN International Education SDN. BHD.
+              </h3>
+              <p style={{ color: 'var(--muted)', fontSize: '15px', lineHeight: '1.6', marginBottom: '18px' }}>
+                Pusat tata kelola institusi, koordinasi dekan fakultas, dan sekretariat internasional ASEAN University International beroperasi di bawah naungan ASEAN International Education SDN BHD di Bangi Gateway, Selangor, Malaysia.
+              </p>
+              <div className="struct-campus-meta" style={{ display: 'grid', gap: '8px', fontSize: '13.5px', color: 'var(--brand)', fontWeight: 600 }}>
+                <span>📍 F-2-23, Bangi Gateway 3B, Seksyen 15, 43650 Bandar Baru Bangi, Selangor, Malaysia</span>
+                <span>✉ admin@aui.university • ☎ +60 165 680 906</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

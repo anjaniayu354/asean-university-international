@@ -348,8 +348,8 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
                     </div>
                     <figure className="rv">
                         <img loading="lazy"
-                            src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&w=1000&q=70"
-                            alt="Student studying online from anywhere in the world" />
+                            src="/img/depan-asen-university-international.webp"
+                            alt="Gedung Kampus Utama ASEAN University International - Study from anywhere" />
                         <div className="tagfloat">Nearly 30,000 students &amp; 20,000 alumni worldwide</div>
                     </figure>
                 </div>

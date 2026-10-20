@@ -7595,3 +7595,47 @@
         min-height: 320px;
     }
 }
+
+/* Structure Campus Card */
+.struct-campus-card {
+    background: #fff;
+    border: 1px solid var(--line-soft);
+    border-radius: 12px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    box-shadow: 0 10px 30px rgba(10, 46, 82, .06);
+}
+
+.struct-campus-img-wrap {
+    height: 100%;
+    min-height: 260px;
+    background: #f0f3f6;
+}
+
+.struct-campus-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.struct-campus-info {
+    padding: 36px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+    .struct-campus-card {
+        grid-template-columns: 1fr;
+    }
+    .struct-campus-img-wrap {
+        min-height: 220px;
+    }
+    .struct-campus-info {
+        padding: 24px;
+    }
+}
+

@@ -4,21 +4,6 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 
 export const HERO_IMAGES = [
   {
-    src: '/img/depan-asen-university-international.webp',
-    alt: 'Gedung Kampus Utama ASEAN University International - Front Campus View',
-    label: 'Gedung Utama AUI',
-  },
-  {
-    src: '/img/89376r98172e09812r.jpeg',
-    alt: 'Graduation Achievement - ASEAN University International Convocation Celebration',
-    label: 'Graduation Achievement',
-  },
-  {
-    src: '/img/bawah-asean-university-international.webp',
-    alt: 'Fasilitas & Kompleks Akademik ASEAN University International',
-    label: 'Kompleks Akademik',
-  },
-  {
     src: '/img/Perayaan%20Wisuda%20di%20Bawah%20Menara%20Kota.png',
     alt: 'Perayaan Wisuda di Bawah Menara Kota - ASEAN University International',
     label: 'Perayaan Wisuda',
