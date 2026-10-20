@@ -674,53 +674,75 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             </div>
         </section>
 
-        {/*  08.5 — GRADUATION ACHIEVEMENT & CONVOCATION SHOWCASE  */}
-        <section className="achievement-sec" id="graduation-achievement">
+        {/*  08.5 — ACADEMIC MILESTONE & STUDENT SUCCESS  */}
+        <section className="sec milestone-sec" id="graduation-achievement">
             <div className="wrap">
-                <div className="achievement-grid rv">
-                    <div className="achievement-img-wrap">
-                        <img
-                            src="/img/89376r98172e09812r.jpeg"
-                            alt="ASEAN University International Graduation Achievement & Convocation"
-                            className="achievement-img"
-                            loading="lazy"
-                        />
-                        <div className="achievement-badge-floating">
-                            <div className="achievement-badge-icon">🎓</div>
-                            <div className="achievement-badge-text">
-                                <strong>Official Convocation &amp; Graduation Milestone</strong>
-                                <span>ASEAN University International Global Alumni Celebration</span>
+                {/* Section Header */}
+                <div className="milestone-head rv">
+                    <div className="eyebrow">Academic Milestone &amp; Student Success</div>
+                    <h2>Graduation Achievement: Empowering Tomorrow&apos;s Leaders</h2>
+                    <p>
+                        Setiap upacara wisuda di ASEAN University International menandai keberhasilan transformatif mahasiswa dari berbagai negara ASEAN dan dunia. Lulusan kami dibekali kompetensi kepemimpinan praktis, wawasan global, dan gelar terakreditasi internasional yang diakui dunia industri.
+                    </p>
+                </div>
+
+                {/* 2-Column Split: Visual & Pillars */}
+                <div className="milestone-split rv">
+                    {/* Left Column: Authentic Graduation Photo Card */}
+                    <div className="milestone-photo-card">
+                        <div className="milestone-img-wrap">
+                            <img
+                                src="/img/89376r98172e09812r.jpeg"
+                                alt="ASEAN University International Graduation Achievement & Convocation"
+                                className="milestone-img"
+                                loading="lazy"
+                            />
+                            <div className="milestone-photo-tag">
+                                <span className="dot"></span>
+                                Official Convocation Milestone
+                            </div>
+                        </div>
+                        <div className="milestone-photo-caption">
+                            <div className="caption-icon">🎓</div>
+                            <div className="caption-text">
+                                <strong>Global Alumni &amp; Convocation Celebration</strong>
+                                <span>Mencetak generasi pemimpin inovatif, profesional unggul, dan cendekiawan berintegritas tinggi</span>
                             </div>
                         </div>
                     </div>
 
-                    <div className="achievement-content">
-                        <div className="eyebrow">Academic Milestone &amp; Student Success</div>
-                        <h2>Graduation Achievement: Empowering Tomorrow&apos;s Leaders</h2>
-                        <p className="lead">
-                            Setiap upacara wisuda di ASEAN University International menandai keberhasilan transformatif mahasiswa dari berbagai negara ASEAN dan dunia. Lulusan kami dibekali kompetensi kepemimpinan praktis, wawasan global, dan gelar terakreditasi internasional yang diakui dunia industri.
+                    {/* Right Column: Narrative, Pillars & CTA */}
+                    <div className="milestone-story">
+                        <h3>Mempersiapkan Pemimpin Masa Depan dengan Wawasan Global</h3>
+                        <p className="lead-p">
+                            Kurikulum terapan AUI dirancang komprehensif untuk memastikan setiap mahasiswa memperoleh keahlian praktis yang langsung relevan dengan dinamika industri global, didukung dosen pakar internasional dan keleluasaan belajar kelas dunia.
                         </p>
 
-                        <div className="achievement-stats-row">
-                            <div className="astat-box">
-                                <div className="astat-num">90%+</div>
-                                <div className="astat-lbl">Employability &le; 6 Months</div>
+                        <div className="milestone-pillars">
+                            <div className="milestone-pillar-item">
+                                <div className="pillar-bullet">✦</div>
+                                <div>
+                                    <strong>Internationally Accredited Degrees</strong>
+                                    <span>Gelar akademik terakreditasi internasional yang diakui dunia industri dan kualifikasi global.</span>
+                                </div>
                             </div>
-                            <div className="astat-box">
-                                <div className="astat-num">3,000+</div>
-                                <div className="astat-lbl">Graduates Worldwide</div>
+                            <div className="milestone-pillar-item">
+                                <div className="pillar-bullet">✦</div>
+                                <div>
+                                    <strong>Accelerated Career Readiness</strong>
+                                    <span>Program mentoring intensif, proyek praktikum riil, dan persiapan kompetensi profesional terdepan.</span>
+                                </div>
                             </div>
-                            <div className="astat-box">
-                                <div className="astat-num">5+</div>
-                                <div className="astat-lbl">Member Countries</div>
-                            </div>
-                            <div className="astat-box">
-                                <div className="astat-num">100+</div>
-                                <div className="astat-lbl">Global Industry Partners</div>
+                            <div className="milestone-pillar-item">
+                                <div className="pillar-bullet">✦</div>
+                                <div>
+                                    <strong>Connected Regional Alumni Network</strong>
+                                    <span>Akses langsung ke jaringan alumni di lebih dari 5 negara ASEAN serta kemitraan korporasi multinasional.</span>
+                                </div>
                             </div>
                         </div>
 
-                        <div className="achievement-actions">
+                        <div className="milestone-actions">
                             <Link
                                 href="/admissions"
                                 onClick={(e) => {
@@ -744,11 +766,34 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
                                     }
                                 }}
                                 className="btn btn-line"
-                                style={{ background: 'rgba(255,255,255,.12)', color: '#fff', borderColor: 'rgba(255,255,255,.3)' }}
                             >
-                                Explore Programmes
+                                Explore Programmes &rarr;
                             </Link>
                         </div>
+                    </div>
+                </div>
+
+                {/* 4-Column Balanced Key Metrics */}
+                <div className="milestone-stats-grid rv">
+                    <div className="mstat-card">
+                        <div className="mstat-num">90%+</div>
+                        <div className="mstat-title">Employability Rate</div>
+                        <div className="mstat-desc">Lulusan terserap kerja &le; 6 bulan atau studi lanjut</div>
+                    </div>
+                    <div className="mstat-card">
+                        <div className="mstat-num">3,000+</div>
+                        <div className="mstat-title">Global Graduates</div>
+                        <div className="mstat-desc">Alumni berkarier di Asia Tenggara dan internasional</div>
+                    </div>
+                    <div className="mstat-card">
+                        <div className="mstat-num">5+</div>
+                        <div className="mstat-title">Member Countries</div>
+                        <div className="mstat-desc">Jaringan representasi mahasiswa lintas batas negara</div>
+                    </div>
+                    <div className="mstat-card">
+                        <div className="mstat-num">100+</div>
+                        <div className="mstat-title">Industry Partners</div>
+                        <div className="mstat-desc">Kerjasama korporasi untuk magang dan rekrutmen karier</div>
                     </div>
                 </div>
             </div>
