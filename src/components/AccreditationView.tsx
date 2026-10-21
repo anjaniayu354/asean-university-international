@@ -143,7 +143,7 @@ export default function AccreditationView({ onNavigate }: AccreditationViewProps
       </section>
 
       {/* QUICK STATS / CREDENTIALS STRIP */}
-      <div className="qstrip">
+      <div className="qstrip accred-qstrip">
         <div className="wrap">
           <div className="qs">
             <b>EAHEA Accredited</b>

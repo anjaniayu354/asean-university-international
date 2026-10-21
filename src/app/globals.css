@@ -4650,7 +4650,9 @@
             grid-template-columns: repeat(3, 1fr);
         }
 
-        #view-academic .qstrip .wrap {
+        #view-academic .qstrip .wrap,
+        #view-accreditation .qstrip .wrap,
+        .accred-qstrip .wrap {
             grid-template-columns: repeat(4, 1fr);
         }
 
@@ -5525,8 +5527,10 @@
                 grid-column: span 2;
             }
             .qstrip .wrap,
-            #view-academic .qstrip .wrap {
-                grid-template-columns: 1fr;
+            #view-academic .qstrip .wrap,
+            #view-accreditation .qstrip .wrap,
+            .accred-qstrip .wrap {
+                grid-template-columns: 1fr !important;
             }
             .qs {
                 border-right: 0;
@@ -5602,10 +5606,43 @@
 }
 
 /* Quick Strip for Accreditation */
-#view-accreditation .qstrip {
+#view-accreditation .qstrip,
+.accred-qstrip {
     background: #ffffff;
     border-bottom: 1px solid var(--line-soft);
     box-shadow: 0 4px 16px rgba(11, 25, 44, 0.04);
+}
+
+#view-accreditation .qstrip .wrap,
+.accred-qstrip .wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) !important;
+}
+
+#view-accreditation .qs,
+.accred-qstrip .qs {
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#view-accreditation .qs b,
+.accred-qstrip .qs b {
+    font-family: var(--serif);
+    font-size: 18px;
+    color: var(--brand);
+    margin-bottom: 6px;
+    line-height: 1.25;
+}
+
+#view-accreditation .qs span,
+.accred-qstrip .qs span {
+    font-size: 12.5px;
+    line-height: 1.45;
+    color: var(--muted);
 }
 
 /* Toolbar & Filter Tabs */
