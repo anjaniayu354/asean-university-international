@@ -6003,8 +6003,24 @@
 }
 
 .pillar-icon {
-    font-size: 32px;
-    margin-bottom: 18px;
+    width: 54px;
+    height: 54px;
+    border: 1px solid rgba(241, 196, 15, 0.45);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: var(--gold);
+    background: rgba(241, 196, 15, 0.08);
+    font-size: 22px;
+    margin-bottom: 22px;
+    transition: all 0.25s ease;
+}
+
+.pillar-card:hover .pillar-icon {
+    border-color: var(--gold);
+    background: rgba(241, 196, 15, 0.18);
+    transform: scale(1.06);
+    box-shadow: 0 0 16px rgba(241, 196, 15, 0.25);
 }
 
 .pillar-card h3 {

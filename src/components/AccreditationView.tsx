@@ -218,7 +218,21 @@ export default function AccreditationView({ onNavigate }: AccreditationViewProps
             </div>
 
             <div className="accred-search">
-              <span className="search-icon">🔍</span>
+              <span className="search-icon">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </span>
               <input
                 type="text"
                 placeholder="Cari sertifikat, nomor registrasi, atau lembaga..."
@@ -365,7 +379,7 @@ export default function AccreditationView({ onNavigate }: AccreditationViewProps
 
           <div className="accred-pillars-grid">
             <div className="pillar-card rv">
-              <div className="pillar-icon">🏛️</div>
+              <div className="pillar-icon ic">◉</div>
               <h3>Penyelarasan Kurikulum Eropa &amp; Internasional</h3>
               <p>
                 Kurikulum program sarjana, magister, dan doktoral AUI dirancang dengan mengadopsi
@@ -375,7 +389,7 @@ export default function AccreditationView({ onNavigate }: AccreditationViewProps
             </div>
 
             <div className="pillar-card rv">
-              <div className="pillar-icon">📊</div>
+              <div className="pillar-icon ic">✦</div>
               <h3>Audit Berkala Mutu Independen (Rating 3.5)</h3>
               <p>
                 Evaluasi penjaminan mutu kelembagaan dilakukan secara berkala oleh auditor independen.
@@ -385,7 +399,7 @@ export default function AccreditationView({ onNavigate }: AccreditationViewProps
             </div>
 
             <div className="pillar-card rv">
-              <div className="pillar-icon">🌐</div>
+              <div className="pillar-icon ic">◎</div>
               <h3>Validasi QAHE &amp; Standar ISO 17011:2017</h3>
               <p>
                 Status keanggotaan dan akreditasi QAHE (Institution ID 120875) menjamin kepatuhan sistem
@@ -395,7 +409,7 @@ export default function AccreditationView({ onNavigate }: AccreditationViewProps
             </div>
 
             <div className="pillar-card rv">
-              <div className="pillar-icon">💼</div>
+              <div className="pillar-icon ic">◐</div>
               <h3>Relevansi Industri &amp; Kemitraan Dagang Regional</h3>
               <p>
                 Sertifikasi institusional dari ICCAC dan pengakuan oleh BRICS &amp; ASEAN Chamber of
@@ -478,7 +492,7 @@ export default function AccreditationView({ onNavigate }: AccreditationViewProps
                   onClick={toggleZoom}
                   title="Ubah perbesaran gambar (1x / 1.5x / 2x)"
                 >
-                  🔍 {zoomLevel}x
+                  Zoom {zoomLevel}x
                 </button>
                 <a
                   href={selectedCert.image}
@@ -554,7 +568,7 @@ export default function AccreditationView({ onNavigate }: AccreditationViewProps
                     className="btn btn-outline-brand"
                     style={{ width: '100%', textAlign: 'center', justifyContent: 'center' }}
                   >
-                    Unduh Sertifikat (WebP) 📥
+                    Unduh Sertifikat (WebP) ↓
                   </a>
                   <button
                     type="button"
