@@ -44,9 +44,9 @@ export default function Footer({ onNavigate }: FooterProps) {
               <img
                 src="/img/logo-footer.png"
                 alt="ASEAN University International logo"
-                width={210}
-                height={56}
-                style={{ height: '56px', width: 'auto' }}
+                width={250}
+                height={88}
+                style={{ height: '88px', width: 'auto', display: 'block' }}
               />
             </Link>
             <p>
