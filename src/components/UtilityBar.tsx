@@ -1,7 +1,22 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
+import { AppView } from './Header';
 
-export default function UtilityBar() {
+interface UtilityBarProps {
+  onNavigate?: (view: AppView) => void;
+}
+
+export default function UtilityBar({ onNavigate }: UtilityBarProps) {
+  const handleView = (e: React.MouseEvent, view: AppView) => {
+    if (onNavigate) {
+      e.preventDefault();
+      onNavigate(view);
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+  };
+
   return (
     <div className="util">
       <div className="wrap">
@@ -20,10 +35,14 @@ export default function UtilityBar() {
         </ul>
         <ul>
           <li>
-            <Link href="/payment-information">Payment Information</Link>
+            <Link href="/payment-information" onClick={(e) => handleView(e, 'payment')}>
+              Payment Information
+            </Link>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <Link href="/contact" onClick={(e) => handleView(e, 'contact')}>
+              Contact
+            </Link>
           </li>
           <li>
             <a href="#">EN</a>

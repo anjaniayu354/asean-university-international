@@ -592,14 +592,14 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
                     </div>
                     <div className="about-figure rv">
                         <img loading="lazy"
-                            src="/img/depan-asen-university-international.webp"
-                            alt="Gedung Kampus Utama ASEAN University International" />
+                            src="/img/Kompleks%20Kampus%20Bata%20dengan%20Langit%20Putih.png"
+                            alt="AUI campus institution" />
                         <img loading="lazy"
-                            src="/img/bawah-asean-university-international.webp"
-                            alt="Kompleks Riset & Akademik AUI" />
+                            src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=500&q=70"
+                            alt="Professional lecturer" />
                         <img loading="lazy"
-                            src="/img/89376r98172e09812r.jpeg"
-                            alt="Graduation Achievement ASEAN University International" />
+                            src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=500&q=70"
+                            alt="Students in class" />
                     </div>
                 </div>
             </div>

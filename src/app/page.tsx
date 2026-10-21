@@ -21,7 +21,7 @@ export default function HomePage() {
 
   return (
     <>
-      <UtilityBar />
+      <UtilityBar onNavigate={setCurrentView} />
       <Header currentView={currentView} onNavigate={setCurrentView} />
       {currentView === 'home' && <HomeView onNavigate={setCurrentView} />}
       {(currentView === 'detail' || currentView === 'academic') && (
