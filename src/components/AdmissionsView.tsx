@@ -626,47 +626,9 @@ export default function AdmissionsView({ onNavigate }: AdmissionsViewProps) {
             <a href="#tracks" className="btn btn-brand">
               Choose Your Track
             </a>
-            <a href="#contact" className="btn btn-ghost">
+            <Link href="/contact" className="btn btn-ghost">
               Contact Admissions
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* CONTACT */}
-      <section className="cband" id="contact">
-        <div className="wrap">
-          <div className="cband-grid rv">
-            <div className="cband-item">
-              <div className="ic">✉</div>
-              <div>
-                <b>Email</b>
-                <a href="mailto:admin@aui.university">admin@aui.university</a>
-              </div>
-            </div>
-            <div className="cband-item">
-              <div className="ic">☎</div>
-              <div>
-                <b>Phone / WhatsApp</b>
-                <a href="tel:+60165680906">+60 165 680 906</a>
-              </div>
-            </div>
-            <div className="cband-item">
-              <div className="ic">◎</div>
-              <div>
-                <b>Student Portal</b>
-                <a href="https://aui.university/students-information/" target="_blank" rel="noopener noreferrer">
-                  portal-aui
-                </a>
-              </div>
-            </div>
-            <div className="cband-item">
-              <div className="ic">⌂</div>
-              <div>
-                <b>Address</b>
-                <span>F-2-23, Jalan BG 3B/1 Bangi Gateway 3B, Seksyen 15, 43650 Bandar Baru Bangi, Selangor, Malaysia</span>
-              </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
