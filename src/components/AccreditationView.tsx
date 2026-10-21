@@ -127,8 +127,8 @@ export default function AccreditationView({ onNavigate }: AccreditationViewProps
       <section className="ahero accred-hero">
         <img
           className="ahero-img"
-          src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1800&q=70"
-          alt="AUI Accreditation & Quality Assurance"
+          src="/img/Perayaan%20Wisuda%20di%20Bawah%20Menara%20Kota.png"
+          alt="Perayaan Wisuda di Bawah Menara Kota - ASEAN University International Accreditation"
         />
         <div className="wrap">
           <div className="eyebrow">ACCREDITATION &amp; QUALITY ASSURANCE</div>

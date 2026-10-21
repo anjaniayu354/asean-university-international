@@ -38,7 +38,7 @@ export default function AccreditationPage() {
 
   return (
     <>
-      <UtilityBar />
+      <UtilityBar onNavigate={handleNavigate} />
       <Header currentView="accreditation" onNavigate={handleNavigate} />
       <AccreditationView onNavigate={handleNavigate} />
       <Footer onNavigate={handleNavigate} />

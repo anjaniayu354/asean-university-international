@@ -38,7 +38,7 @@ export default function StructurePage() {
 
   return (
     <>
-      <UtilityBar />
+      <UtilityBar onNavigate={handleNavigate} />
       <Header currentView="structure" onNavigate={handleNavigate} />
       <StructureView onNavigate={handleNavigate} />
       <Footer onNavigate={handleNavigate} />

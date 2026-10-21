@@ -38,7 +38,7 @@ export default function AcademicPage() {
 
   return (
     <>
-      <UtilityBar />
+      <UtilityBar onNavigate={handleNavigate} />
       <Header currentView="academic" onNavigate={handleNavigate} />
       <AcademicView onNavigate={handleNavigate} />
       <Footer onNavigate={handleNavigate} />

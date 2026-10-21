@@ -55,6 +55,11 @@ export default function StructureView({ onNavigate: _onNavigate }: StructureView
 
       {/* 1. PAGE HERO */}
       <section className="struct-hero">
+        <img
+          src="/img/bawah-asean-university-international.webp"
+          alt="ASEAN University International Campus & Leadership Background"
+          className="struct-hero-bg"
+        />
         <div className="wrap">
           <div className="eyebrow">ASEAN UNIVERSITY INTERNATIONAL</div>
           <h1>University Leadership &amp; Governance Structure</h1>

@@ -397,8 +397,8 @@ export default function AcademicView({ onNavigate }: AcademicViewProps) {
       <section className="ahero">
         <img
           className="ahero-img"
-          src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1800&q=70"
-          alt="AUI academic"
+          src="/img/Halaman%20Kampus%20Merah%20Putih%20Dikelilingi%20Pepohonan.png"
+          alt="Halaman Kampus Merah Putih Dikelilingi Pepohonan - ASEAN University International"
         />
         <div className="wrap">
           <div className="eyebrow">Academic · Faculties &amp; Divisions</div>
