@@ -104,7 +104,7 @@ export default function ContactView({ onNavigate }: ContactViewProps) {
       <section className="ahero">
         <img
           className="ahero-img"
-          src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1800&q=70"
+          src="/img/depan-asen-university-international.webp"
           alt="ASEAN University International Campus & Headquarters"
         />
         <div className="wrap">

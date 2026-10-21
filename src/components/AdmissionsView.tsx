@@ -135,8 +135,8 @@ export default function AdmissionsView({ onNavigate }: AdmissionsViewProps) {
                 <div className="track-visual">
                   <img
                     loading="lazy"
-                    src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=70"
-                    alt="Undergraduate students"
+                    src="/img/campus-life.jpg"
+                    alt="Undergraduate students - ASEAN University International"
                   />
                 </div>
               </div>
